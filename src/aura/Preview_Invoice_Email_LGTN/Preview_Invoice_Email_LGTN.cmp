@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global"
+                controller="InvoiceEmailSender">
+    
+    
+    <aura:attribute name="recordId" type="String" description="Contact's Id"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+</aura:component>
