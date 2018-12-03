@@ -5,5 +5,8 @@
         dt = new Date(dt.getFullYear(), dt.getMonth(),1);
         console.log('Id and date in CS controller: '+id+' '+dt);
         helper.previewInvoiceEmail(id, dt, component);
-	}
+	},
+    closeModel: function(component, event, helper) {
+      component.set("v.isOpen", false);
+   }
 })

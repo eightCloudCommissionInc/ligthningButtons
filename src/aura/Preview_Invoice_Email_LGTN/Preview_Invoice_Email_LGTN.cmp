@@ -2,8 +2,39 @@
                 access="global"
                 controller="InvoiceEmailSender">
     
-    
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="resp"   type="String" default=""/>
     <aura:attribute name="recordId" type="String" description="Contact's Id"/>
     
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    
+          <aura:if isTrue="{!v.isOpen}">
+            
+            <!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p><b>{!resp}
+                            </b>
+                        </p>
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+            
+        </aura:if>
+    
+    
+    
 </aura:component>

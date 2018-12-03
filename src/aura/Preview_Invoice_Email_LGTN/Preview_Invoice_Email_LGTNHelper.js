@@ -21,9 +21,11 @@
             	console.log("Helper success");
                 
                 var res = response.getReturnValue();
-                var win = window.open("","","menubar=no,location=no,resizable=yes,scrollbars=yes,centerscreen=yes,chrome=yes,height=700,width=700");
-                win.document.write(res);
-                
+                //var win = window.open("","","menubar=no,location=no,resizable=yes,scrollbars=yes,centerscreen=yes,chrome=yes,height=700,width=700");
+                //win.document.write(res);
+                component.set("v.isOpen", true);
+                component.set("v.resp", res);
+
                 console.log('res: '+res);
  
             }
