@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Micro-Course, Area 1: Supporting Social-Emotional Development</fullName>
+        <default>false</default>
+        <label>Micro-Course, Area 1: Supporting Social-Emotional Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Micro-Course, Area 2: Supporting Cognitive Development</fullName>
+        <default>false</default>
+        <label>Micro-Course, Area 2: Supporting Cognitive Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Micro-Course, Area 3: Supporting Language and Literacy Development</fullName>
+        <default>false</default>
+        <label>Micro-Course, Area 3: Supporting Language and Literacy Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Full Course, Areas 1, 2, and 3</fullName>
+        <default>false</default>
+        <label>Full Course, Areas 1, 2, and 3</label>
+    </customValue>
+    <masterLabel>Interest: CC Infant Toddler Ed Online</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

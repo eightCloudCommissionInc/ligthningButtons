@@ -1,0 +1,222 @@
+<apex:page controller="FON_TransactionReportCntrl" contentType="application/vnd.ms-excel#Transc.xls" cache="true" action="{!pageAction}">
+<apex:outputText value="{!xlsHeader}"/>
+    
+    <Workbook  xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+     xmlns:o="urn:schemas-microsoft-com:office:office"
+     xmlns:x="urn:schemas-microsoft-com:office:excel"
+     xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+     xmlns:html="http://www.w3.org/TR/REC-html40">
+        <Styles>
+            <Style ss:ID="s1">
+                <Alignment ss:Vertical="Center" ss:Horizontal="Right" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#264C72" ss:Pattern="Solid" />
+                <NumberFormat/>
+                <Protection/>
+            </Style>
+            
+            <Style ss:ID="s2">
+                <Alignment ss:Vertical="Center" ss:Horizontal="Left" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Font ss:Bold="1" ss:Color="#000000"/> 
+                <Interior ss:Color="#cccccc" ss:Pattern="Solid"/>
+                <NumberFormat/>
+                <Protection/>
+            </Style>
+            
+            <Style ss:ID="s3">
+                <Alignment ss:Vertical="Center" ss:Horizontal="Left" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Font ss:Bold="1" ss:Color="#000000"/>
+                <Interior ss:Color="#FFFFFF" ss:Pattern="Solid" />
+                <NumberFormat/>
+                <Protection/>
+            </Style>
+            
+            <Style ss:ID="s4">
+                <Alignment ss:Vertical="Center" ss:Horizontal="Center" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#264C72" ss:Pattern="Solid" />
+                <NumberFormat/>
+                <Protection/>
+            </Style>
+            
+            <Style ss:ID="s5">
+                <Alignment ss:Vertical="Center" ss:Horizontal="Left" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="0"/>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="0"/>
+                </Borders>
+                <Font ss:Bold="0" ss:Color="#000000"/>
+                <Interior ss:Color="#FFFFFF" ss:Pattern="Solid" />
+                <NumberFormat/>
+                <Protection/>
+            </Style>
+    
+            <Style ss:ID="s6">
+                <Alignment ss:Vertical="Center" ss:Horizontal="Left" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="0"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="0"/>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="0"/>
+                </Borders>
+                <Font ss:Bold="0" ss:Color="#FF0000"/>
+                <Interior ss:Color="#FFFFFF" ss:Pattern="Solid" />
+                <NumberFormat/>
+                <Protection/>
+            </Style>           
+        
+        </Styles>
+        <Worksheet ss:Name="Attendee List">
+            <Table  x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="150">
+                
+                <Row ss:Height="50">
+                    <!--<Cell ss:StyleID="s4" ><Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF">Person Id</Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data><NamedCell ss:Name="_FilterDatabase"/></Cell>  -->         
+                    <!--<Cell ss:StyleID="s4"><Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF">Employer</Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data><NamedCell ss:Name="_FilterDatabase"/></Cell> -->
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF">TRANSACTION DATE</Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF"></Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF">Created Date</Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF">GL Account</Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF">Account Number</Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF">General</Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF">Project Number</Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF"></Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF"></Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF"></Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF"></Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF"></Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF"></Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF"></Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF"></Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF"></Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF">Type</Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                    
+                    <Cell ss:StyleID="s4">
+                        <Data ss:Type="String" ><B xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#FFFFFF">Total</Font></B><Font html:Color="#DD0806" xmlns="http://www.w3.org/TR/REC-html40">*</Font></Data>
+                        <NamedCell ss:Name="_FilterDatabase"/>
+                    </Cell>
+                </Row>
+                
+                
+                <apex:repeat value="{!lstReportdata}" var="rep">
+                    <Row>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String">{!rep.order_Date}</Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String"></Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String">{!rep.transCreateDate}</Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String">G/L Account</Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String">{!rep.Fon_AccountNumber}</Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String">General</Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String">{!rep.Fon_ProjectNumber}</Data></Cell>                      
+                        <Cell ss:StyleID="s5"><Data ss:Type="String"></Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String"></Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String"></Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String"></Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String"></Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String"></Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String"></Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String"></Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String"></Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String">{!rep.Type}</Data></Cell>
+                        <Cell ss:StyleID="s5"><Data ss:Type="String">{!rep.total}</Data></Cell>
+                        
+                    </Row>
+                </apex:repeat>
+                
+            </Table>
+            <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+                <Selected/>
+                <FreezePanes/>
+                <FrozenNoSplit/>
+                <SplitHorizontal>1</SplitHorizontal>
+                <TopRowBottomPane>1</TopRowBottomPane>
+            </WorksheetOptions>
+        </Worksheet>
+    </Workbook>
+</apex:page>

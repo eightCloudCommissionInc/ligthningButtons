@@ -1,0 +1,10 @@
+<aura:component implements="FDService:SparkPlugComponentInterface" controller="Fon_PushGTMCodeApex" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent type="FDService:SparkPlugCompleteEvent" name="SparkPlugCompleteEvent"/>
+    <aura:registerEvent type="FDService:SparkPlugLoadedEvent" name="SparkPlugLoadedEvent"/>
+    <aura:attribute name="jsonSTR" type="String" />
+    <aura:attribute name="jsonOBJ" type="Object" />
+    <aura:attribute name="productUrl" type="String" />
+    <!-- Google Tag Manager (noscript) -->
+
+</aura:component>

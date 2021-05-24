@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Badge__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Badge</label>
+        <referenceTo>OrderApi__Badge__c</referenceTo>
+        <relationshipLabel>CEU Surveys</relationshipLabel>
+        <relationshipName>CEU_Surveys</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>CEU Surveys</relationshipLabel>
+        <relationshipName>CEU_Surveys</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_0_10_Event_Recommendation__c</fullName>
+        <externalId>false</externalId>
+        <label>0-10 Event Recommendation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0</fullName>
+                    <default>false</default>
+                    <label>0</label>
+                </value>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                    <label>6</label>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                    <label>7</label>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                    <label>8</label>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                    <label>9</label>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                    <label>10</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Additional_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Attendee_Confirmation_Checkbox__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Attendee Confirmation Checkbox</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Instructor_Presentation__c</fullName>
+        <externalId>false</externalId>
+        <label>Instructor Presentation Satisfaction</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Instructor_Responsiveness__c</fullName>
+        <externalId>false</externalId>
+        <label>Instructor Responsiveness</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Instructor_Technology_Usage__c</fullName>
+        <externalId>false</externalId>
+        <label>Instructor Technology Usage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Instructor_s_Content_Knowledge__c</fullName>
+        <externalId>false</externalId>
+        <label>Instructor's Content Knowledge</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Instructors_Limitations_Review__c</fullName>
+        <externalId>false</externalId>
+        <label>Instructors Limitations Review</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Name</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Learning_Experience_Expecations__c</fullName>
+        <externalId>false</externalId>
+        <label>Learning Experience Expecations</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Learning_Objective_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Learning Objective 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Learning_Objective_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Learning Objective 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_New_Ideas__c</fullName>
+        <externalId>false</externalId>
+        <label>New Ideas</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Overall_satisfaction__c</fullName>
+        <externalId>false</externalId>
+        <label>Overall satisfaction</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Survey_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>CEU Survey URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Technology_Experience__c</fullName>
+        <externalId>false</externalId>
+        <label>Technology Experience Satisfcation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Topic_is_relevant_to_my_work__c</fullName>
+        <externalId>false</externalId>
+        <label>Topic is relevant to my work</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_CEU_Using_New_Learned_Skills__c</fullName>
+        <externalId>false</externalId>
+        <label>Using New Learned Skills</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FON_Learning_Objective_10__c</fullName>
+        <externalId>false</externalId>
+        <label>Learning Objective 10</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_Learning_Objective_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Learning Objective 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_Learning_Objective_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Learning Objective 4</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_Learning_Objective_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Learning Objective 5</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_Learning_Objective_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Learning Objective 6</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_Learning_Objective_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Learning Objective 7</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_Learning_Objective_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Learning Objective 8</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FON_Learning_Objective_9__c</fullName>
+        <externalId>false</externalId>
+        <label>Learning Objective 9</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strongly Agree</fullName>
+                    <default>false</default>
+                    <label>Strongly Agree</label>
+                </value>
+                <value>
+                    <fullName>Agree</fullName>
+                    <default>false</default>
+                    <label>Agree</label>
+                </value>
+                <value>
+                    <fullName>Slightly Agree</fullName>
+                    <default>false</default>
+                    <label>Slightly Agree</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Slightly Disagree</fullName>
+                    <default>false</default>
+                    <label>Slightly Disagree</label>
+                </value>
+                <value>
+                    <fullName>Disagree</fullName>
+                    <default>false</default>
+                    <label>Disagree</label>
+                </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>CEU Survey</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>CEU Survey Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>CEU Surveys</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

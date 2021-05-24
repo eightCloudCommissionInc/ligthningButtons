@@ -1,0 +1,7 @@
+<!--
+ - Created by dfitzgerald on 6/11/20.
+ -->
+
+<aura:event type="APPLICATION" description="refreshEvent">
+
+</aura:event>

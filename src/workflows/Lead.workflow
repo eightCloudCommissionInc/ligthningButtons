@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?><Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>GW_Volunteers__Volunteer_Signup_Notification_Email_Alert_Lead</fullName>
+        <description>Volunteer Signup Notification Email Alert - Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>GW_Volunteers__Volunteers_Email_Templates/GW_Volunteers__Volunteer_Signup_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>GW_Volunteers__Volunteer_Signup_Thank_You_Email_Alert_Lead</fullName>
+        <description>Volunteer Signup Thank You Email Alert - Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>GW_Volunteers__Volunteers_Email_Templates/GW_Volunteers__Volunteer_Signup_Thank_You</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>kwzd__KW_CountyDistrict</fullName>
+        <field>kwzd__KW_CountyDistrict__c</field>
+        <name>ZDM:Account:County District</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__KW_CountyDistrictDesc</fullName>
+        <field>kwzd__KW_CountyDistrictDesc__c</field>
+        <name>ZDM:Account:County District Desc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__KW_MunicipalDistrict</fullName>
+        <field>kwzd__KW_MunicipalDistrict__c</field>
+        <name>ZDM:Account:Municipal District</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__KW_MunicipalDistrictDesc</fullName>
+        <field>kwzd__KW_MunicipalDistrictDesc__c</field>
+        <name>ZDM:Account:Municipal District Desc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__KW_StateHouseDesc</fullName>
+        <field>kwzd__KW_StateHouseDesc__c</field>
+        <name>ZDM:Account:State House Desc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__KW_StateSenateDesc</fullName>
+        <field>kwzd__KW_StateSenateDesc__c</field>
+        <name>ZDM:Account:State Senate Desc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__KW_USHouseDesc</fullName>
+        <field>kwzd__KW_USHouseDesc__c</field>
+        <name>ZDM:Account:US House Desc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__KW_USSenateDesc</fullName>
+        <field>kwzd__KW_USSenateDesc__c</field>
+        <name>ZDM:Account:US Senate Desc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__Reset_KnowWho_Address_Flag</fullName>
+        <field>kwzd__KnowWho_Address_Update__c</field>
+        <literalValue>0</literalValue>
+        <name>Reset KnowWho Address Flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__Reset_Last_Processed_Date</fullName>
+        <field>kwzd__KWD_Last_Processed_DT__c</field>
+        <name>Reset Last Processed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__Update_City_with_USPS_Verified_Addres</fullName>
+        <field>City</field>
+        <formula>kwzd__USPS_City__c</formula>
+        <name>Update City with USPS Verified Addres</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__Update_State_with_USPS_Verified_Addres</fullName>
+        <field>State</field>
+        <formula>kwzd__USPS_State__c</formula>
+        <name>Update State with USPS Verified Addres</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__Update_Street_with_USPS_Verified_Addres</fullName>
+        <field>Street</field>
+        <formula>IF(ISBLANK(kwzd__USPS_Street_2__c),
+kwzd__USPS_Street__c,
+kwzd__USPS_Street__c &amp; ", " &amp; kwzd__USPS_Street_2__c
+)</formula>
+        <name>Update Street with USPS Verified Addres</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__Update_Zipcode_with_USPS_Verified_Addres</fullName>
+        <field>PostalCode</field>
+        <formula>kwzd__USPS_Zip__c</formula>
+        <name>Update Zipcode with USPS Verified Addres</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Account_County_Name</fullName>
+        <field>kwzd__KW_CountyName__c</field>
+        <name>ZDM:Account:County Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_County_Code</fullName>
+        <field>kwzd__KW_CountyCode__c</field>
+        <name>ZDM:Lead:County Code</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_County_Name</fullName>
+        <field>kwzd__KW_CountyName__c</field>
+        <name>ZDM:Lead:County Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_Error_Code</fullName>
+        <field>kwzd__KW_Error_Code__c</field>
+        <name>ZDM:Lead:Error Code</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_House</fullName>
+        <field>kwzd__KW_USHouseDistrict__c</field>
+        <name>ZDM:Lead:House</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_Latitude</fullName>
+        <field>kwzd__Latitude__c</field>
+        <name>ZDM:Lead:Latitude</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_Longitude</fullName>
+        <field>kwzd__Longitude__c</field>
+        <name>ZDM:Lead:Longitude</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_Muni_Code</fullName>
+        <field>kwzd__KW_MunicipalCode__c</field>
+        <name>ZDM:Lead:Municipal Code</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_Muni_Name</fullName>
+        <field>kwzd__KW_MunicipalName__c</field>
+        <name>ZDM:Lead:Municipal Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_Muni_Type</fullName>
+        <field>kwzd__KW_MunicipalType__c</field>
+        <name>ZDM:Lead:Municipal Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_PO_Box_Reset</fullName>
+        <field>kwzd__PO_Box__c</field>
+        <literalValue>0</literalValue>
+        <name>ZDM:Lead:PO Box Reset</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_Senate</fullName>
+        <field>kwzd__KW_USSenateDistrict__c</field>
+        <name>ZDM:Lead:Senate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_State_House</fullName>
+        <field>kwzd__KW_StateHouseDistrict__c</field>
+        <name>ZDM:Lead:State House</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_State_Senate</fullName>
+        <field>kwzd__KW_StateSenateDistrict__c</field>
+        <name>ZDM:Lead:State Senate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>kwzd__ZDM_Lead_Zip_4_Reset</fullName>
+        <field>kwzd__Zip_4__c</field>
+        <name>ZDM:Lead:Zip 4 Reset</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>GW_Volunteers__Volunteer Signup - Lead</fullName>
+        <actions>
+            <name>GW_Volunteers__Volunteer_Signup_Notification_Email_Alert_Lead</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>GW_Volunteers__Volunteer_Signup_Thank_You_Email_Alert_Lead</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>GW_Volunteers__Volunteer_Signup_Thank_You_Sent_Lead</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.GW_Volunteers__Volunteer_Status__c</field>
+            <operation>equals</operation>
+            <value>New Sign Up</value>
+        </criteriaItems>
+        <description>When a new lead is created from a volunteer signup, send a thank you and notify the volunteer manager</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>kwzd__Reset ZDM Lead Descr Fields on Address Update</fullName>
+        <actions>
+            <name>kwzd__KW_CountyDistrict</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__KW_CountyDistrictDesc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__KW_MunicipalDistrict</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__KW_MunicipalDistrictDesc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__KW_StateHouseDesc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__KW_StateSenateDesc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__KW_USHouseDesc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__KW_USSenateDesc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Reset ZDM Description Fields when address changed</description>
+        <formula>AND (   OR( ISCHANGED( Street),   ISCHANGED( City),  ISCHANGED( State),   ISCHANGED( PostalCode)   ),  kwzd__KnowWho_Address_Update__c = FALSE  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>kwzd__Reset ZDM Lead Fields on Address Update</fullName>
+        <actions>
+            <name>kwzd__Reset_Last_Processed_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_Error_Code</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_Latitude</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_Longitude</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_PO_Box_Reset</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_Zip_4_Reset</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Reset ZDM Lead Fields on address change</description>
+        <formula>AND (   OR( ISCHANGED( Street),   ISCHANGED( City),  ISCHANGED( State),   ISCHANGED( PostalCode)   ),  kwzd__KnowWho_Address_Update__c = FALSE  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>kwzd__Reset ZDM Lead Fields on Address Update %282%29</fullName>
+        <actions>
+            <name>kwzd__ZDM_Lead_County_Code</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_County_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_House</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_Muni_Code</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_Muni_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_Muni_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_Senate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_State_House</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__ZDM_Lead_State_Senate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Reset ZDM Fields when address changes</description>
+        <formula>AND (   OR( ISCHANGED( Street),   ISCHANGED( City),  ISCHANGED( State),   ISCHANGED( PostalCode)   ),  kwzd__KnowWho_Address_Update__c = FALSE  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>kwzd__Update Address with USPS Verified Address</fullName>
+        <actions>
+            <name>kwzd__Reset_KnowWho_Address_Flag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__Update_City_with_USPS_Verified_Addres</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__Update_State_with_USPS_Verified_Addres</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__Update_Street_with_USPS_Verified_Addres</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>kwzd__Update_Zipcode_with_USPS_Verified_Addres</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.kwzd__USPS_Verified__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.kwzd__KnowWho_Address_Update__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Use USPS Verified Address from KnowWho ZDM Process to update standard address fields</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>kwzd__Update KW Flag when Non USPS Verified Address</fullName>
+        <actions>
+            <name>kwzd__Reset_KnowWho_Address_Flag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.kwzd__USPS_Verified__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.kwzd__KnowWho_Address_Update__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>When not a USPS Deliverable Address from KnowWho ZDM , just reset the field so new updates trigger reset</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>GW_Volunteers__Volunteer_Signup_Thank_You_Sent_Lead</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>An automatic email has been sent to the lead thanking them for signing up to be a volunteer.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Volunteer Signup Thank You Sent - Lead</subject>
+    </tasks>
+</Workflow>

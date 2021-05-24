@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>Assign_Filename_to_Media_Asset</name>
+        <label>Assign Filename to Media Asset</label>
+        <locationX>915</locationX>
+        <locationY>334</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PagesApi__Filename__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GetFilenamefromPath</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_MIME_Type</name>
+        <label>Assign MIME Type</label>
+        <locationX>412</locationX>
+        <locationY>341</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PagesApi__MIME_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>application/octet-stream</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_FileName_If_Blank_and_Fonteva_Customer_Community_Login_User</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Assign_FileName_If_Blank_and_Fonteva_Customer_Community_Login_User</name>
+        <label>Assign Filename If Blank and Fonteva Customer Community Login User</label>
+        <locationX>637</locationX>
+        <locationY>338</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Filename_Blank_and_Fonteva</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PagesApi__Filename__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PagesApi__Path__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>UserProfileisFontevaCustomerCommunityLoginUser</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Filename_to_Media_Asset</targetReference>
+            </connector>
+            <label>Filename Blank and Fonteva</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>MIME_Type_is_NULL_And_Created_By_Fonteva_Customer_Community_Login_User</name>
+        <label>MIME Type is NULL And Created By Fonteva Customer Community Login User</label>
+        <locationX>167</locationX>
+        <locationY>331</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>MIME_Type_Blank_and_Fonteva</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PagesApi__MIME_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>UserProfileisFontevaCustomerCommunityLoginUser</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_MIME_Type</targetReference>
+            </connector>
+            <label>MIME Type Blank and Fonteva</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <name>GetFilenamefromPath</name>
+        <dataType>String</dataType>
+        <expression>MID({!$Record.PagesApi__Path__c}, FIND(&quot;00D&quot;, {!$Record.PagesApi__Path__c}) + 19 , LEN({!$Record.PagesApi__Path__c}) - (FIND(&quot;00D&quot;, {!$Record.PagesApi__Path__c}) + 18))</expression>
+    </formulas>
+    <formulas>
+        <name>UserProfileisFontevaCustomerCommunityLoginUser</name>
+        <dataType>Boolean</dataType>
+        <expression>{!$User.ProfileId} == &quot;00ef4000000vrRQ&quot;</expression>
+    </formulas>
+    <interviewLabel>FS Save Media Asset From Form {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FS Save Media Asset From Form</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>MIME_Type_is_NULL_And_Created_By_Fonteva_Customer_Community_Login_User</targetReference>
+        </connector>
+        <object>PagesApi__Media_Asset__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

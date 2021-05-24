@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Early Brain Development</fullName>
+        <default>false</default>
+        <label>Early Brain Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Importance of Play</fullName>
+        <default>false</default>
+        <label>Importance of Play</label>
+    </customValue>
+    <customValue>
+        <fullName>Infant and Early Childhood Mental Health</fullName>
+        <default>false</default>
+        <label>Infant and Early Childhood Mental Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Leadership Development</fullName>
+        <default>false</default>
+        <label>Leadership Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Reflective Supervision &amp; Relationship Based Practice</fullName>
+        <default>false</default>
+        <label>Reflective Supervision &amp; Relationship Based Practice</label>
+    </customValue>
+    <customValue>
+        <fullName>Supporting Early Science, Technology, Engineering and Math</fullName>
+        <default>false</default>
+        <label>Supporting Early Science, Technology, Engineering and Math</label>
+    </customValue>
+    <masterLabel>Interest: Topical Sessions</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

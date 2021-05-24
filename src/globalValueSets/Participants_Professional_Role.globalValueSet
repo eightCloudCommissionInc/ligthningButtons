@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Direct Service Staff</fullName>
+        <default>false</default>
+        <label>Direct Service Staff</label>
+    </customValue>
+    <customValue>
+        <fullName>Directors, Supervisors, Managers, Coordinators</fullName>
+        <default>false</default>
+        <label>Directors, Supervisors, Managers, Coordinators</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Visitors</fullName>
+        <default>false</default>
+        <label>Home Visitors</label>
+    </customValue>
+    <customValue>
+        <fullName>Trainers</fullName>
+        <default>false</default>
+        <label>Trainers</label>
+    </customValue>
+    <customValue>
+        <fullName>TA Providers (Coaches, Mentors, Consultants, etc.)</fullName>
+        <default>false</default>
+        <label>TA Providers (Coaches, Mentors, Consultants, etc.)</label>
+    </customValue>
+    <customValue>
+        <fullName>Higher Education Faculty</fullName>
+        <default>false</default>
+        <label>Higher Education Faculty</label>
+    </customValue>
+    <customValue>
+        <fullName>Other - Write In (Required)</fullName>
+        <default>false</default>
+        <label>Other - Write In (Required)</label>
+    </customValue>
+    <masterLabel>Participants: Professional Role</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

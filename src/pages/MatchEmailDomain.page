@@ -1,0 +1,150 @@
+<apex:page docType="html-5.0"
+           showHeader="false"
+           standardStylesheets="false"
+           applyBodyTag="false"
+           applyHtmlTag="false"
+           controller="GSA_JPMembershipCtrl" action="{!upateAccountOnContact}">
+           
+    <apex:composition template="CPBase__template">
+        
+        <apex:define name="pageTitle">
+            Email Matching
+        </apex:define>
+        <apex:define name="pageStyles">
+            <style>
+                .ui-autocomplete-loading { background: white url("/auraFW/resources/aura/images/spinner.gif") right center no-repeat; }
+                
+                body{
+                    background-color:#fff;
+                    background:#fff;
+                }
+                    .ui-autocomplete-loading { 
+                    background: white url right center no-repeat; 
+                }
+                
+                ul.ui-autocomplete {
+                        list-style: none;
+                    }
+                 .ui-menu .ui-menu-item {
+                    margin:0;
+                    padding: 0 60px;
+                    zoom: 1;
+                    float: left;
+                    clear: left;
+                    width: 100%;
+                    background-color:#f4f4f4 !important;
+                    background: url('/profilephoto/005/T') no-repeat;
+                }   
+                #container {
+                    display: block; 
+                    position:relative
+                } 
+                .ui-autocomplete {
+                    position: absolute;
+                    margin: 0px;
+                    padding: 0px;
+                }
+                </style>
+        </apex:define>   
+        <apex:define name="supernavRight">
+           
+        </apex:define>
+        <apex:define name="pageMain">
+            <apex:pageMessages ></apex:pageMessages>
+            <Framework:messages />
+                <div class="container noprint">
+                    <div class="well">
+                        <apex:form html-novalidate="true">
+                            <apex:outputpanel >
+                                <div class="form-horizontal" role="form">
+                                    <div class="container ">
+                                    <h3 class="section-heading">Select Account</h3>
+                                        <apex:outputpanel >
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-3 p-l-15 required-true">
+                                                        <apex:outputText value="Account" /> 
+                                                    </label >                                        
+                                                                   
+                                                    <div class="col-sm-8">
+                                                         <input id="autocomplete_textbox" Class="form-control"/>
+                                                         <apex:inputHidden value="{!searchedRecordId}" id="searchId"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 text-center">
+                                                    <apex:commandButton action="{!save}" value="Save" styleClass="btn btn-primary about-me-save-info ladda-button" id="theButton"/> 
+                                                </div>
+                                            </div>
+                                         </apex:outputpanel>
+                                    </div> 
+                                </div>  
+                            </apex:outputpanel>   
+                       </apex:form>
+                    </div>
+                </div>  
+        </apex:define>
+        <apex:define name="pageScripts">
+            
+             <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+             <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            
+            <script type="text/javascript">
+                    var js$ = jQuery.noConflict();   
+                    var autoCompleteTextBoxId = "input[id$='autocomplete_textbox']";
+                    js$("input#autocomplete_textbox").autocomplete({
+                        minLength: 0,
+                        source:  function(request, response) {
+                                    queryTerm = request.term;
+                                    var sObjects;
+                                    var searchText = js$(autoCompleteTextBoxId).val();
+                                    if(searchText==''){
+                                        searchText = '{!UserContactData.Email}';
+                                    }
+                                    GSA_JPMembershipCtrl.checkAccountsV2(searchText,function(result, event){
+                                        if(event.type == 'exception') {
+                                              alert(event.message);
+                                        } else {
+                                             sObjects = result;
+                                             response(sObjects);
+                                        }
+                                    });
+                               },
+                        focus: function( event, ui ) {
+                                   js$(autoCompleteTextBoxId).val( ui.item.Name );
+                                   return false;
+                               },
+                         select: function( event, ui ) {
+                                   js$(autoCompleteTextBoxId).val( ui.item.Name ); 
+                                   if(js$(autoCompleteTextBoxId).val()){                               
+                                     js$("input[id$='searchId']").val(ui.item.Id);
+                                    }
+                                  return false;
+                             },
+                      }).focus(function() {
+                            js$(this).autocomplete("search", "");
+                      }).data( "uiAutocomplete" )._renderItem = function( ul, item ) {
+                              var entry = "<a>" + item.Name;
+                              js$.each("".split(",") , function(key, value) {
+                                    entry = entry + '<br>' + item.category + '(' + item.country + ')</br>';
+                              });
+                              entry = entry + "</a>";
+                              entry = entry.replace(queryTerm, "<b>" + queryTerm + "</b>");
+                             return js$( "<li style='border:1px solid #e5e9ec;'></li>" )
+                                    .data( "item.autocomplete", item )
+                                    .append( entry )
+                                     .appendTo( ul );
+                         };
+                
+                    js$(autoCompleteTextBoxId).blur(function () {
+                            if ($.trim($(this).val()) < 1) {
+                                js$("input[id$='searchId']").val('');
+                            }
+                    });
+            </script>
+        </apex:define>
+         
+    </apex:composition>
+   
+</apex:page>

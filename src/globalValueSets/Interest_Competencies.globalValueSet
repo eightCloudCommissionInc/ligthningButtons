@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>SE-1. Building Warm, Positive, and Nurturing Relationships</fullName>
+        <default>false</default>
+        <label>SE-1. Building Warm, Positive, and Nurturing Relationships</label>
+    </customValue>
+    <customValue>
+        <fullName>SE-2. Providing Consistent and Responsive Caregiving</fullName>
+        <default>false</default>
+        <label>SE-2. Providing Consistent and Responsive Caregiving</label>
+    </customValue>
+    <customValue>
+        <fullName>SE-3. Supporting Emotional Expression and Regulation</fullName>
+        <default>false</default>
+        <label>SE-3. Supporting Emotional Expression and Regulation</label>
+    </customValue>
+    <customValue>
+        <fullName>SE-4. Promoting Socialization</fullName>
+        <default>false</default>
+        <label>SE-4. Promoting Socialization</label>
+    </customValue>
+    <customValue>
+        <fullName>SE-5. Guiding Behavior</fullName>
+        <default>false</default>
+        <label>SE-5. Guiding Behavior</label>
+    </customValue>
+    <customValue>
+        <fullName>SE-6. Promoting Children’s Sense of Identity and Belonging</fullName>
+        <default>false</default>
+        <label>SE-6. Promoting Children’s Sense of Identity and Belonging</label>
+    </customValue>
+    <customValue>
+        <fullName>C-1. Facilitating Exploration and Concept Development</fullName>
+        <default>false</default>
+        <label>C-1. Facilitating Exploration and Concept Development</label>
+    </customValue>
+    <customValue>
+        <fullName>C-2. Building Meaningful Curriculum</fullName>
+        <default>false</default>
+        <label>C-2. Building Meaningful Curriculum</label>
+    </customValue>
+    <customValue>
+        <fullName>C-3. Promoting Imitation, Symbolic Representation, and Play</fullName>
+        <default>false</default>
+        <label>C-3. Promoting Imitation, Symbolic Representation, and Play</label>
+    </customValue>
+    <customValue>
+        <fullName>C-4. Supporting Reasoning and Problem Solving</fullName>
+        <default>false</default>
+        <label>C-4. Supporting Reasoning and Problem Solving</label>
+    </customValue>
+    <customValue>
+        <fullName>L &amp; L-1. Promoting Communication Exchange</fullName>
+        <default>false</default>
+        <label>L &amp; L-1. Promoting Communication Exchange</label>
+    </customValue>
+    <customValue>
+        <fullName>L &amp; L-2. Expanding Expressive and Receptive Language and Vocabulary</fullName>
+        <default>false</default>
+        <label>L &amp; L-2. Expanding Expressive and Receptive Language and Vocabulary</label>
+    </customValue>
+    <customValue>
+        <fullName>L &amp; L-3. Promoting Early Literacy</fullName>
+        <default>false</default>
+        <label>L &amp; L-3. Promoting Early Literacy</label>
+    </customValue>
+    <customValue>
+        <fullName>Family-Centered Practice</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Family-Centered Practice</label>
+    </customValue>
+    <masterLabel>Interest: Competencies</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

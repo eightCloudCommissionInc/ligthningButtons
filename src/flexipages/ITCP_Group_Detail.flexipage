@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>header</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>detailsTabLabel</name>
+                    <value>Details</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>engagementManagersOnly</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>engagementTabLabel</name>
+                    <value>Engagement</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>feedTabLabel</name>
+                    <value>Feed</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>recordId</name>
+                    <value>{!recordId}</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>relatedTabLabel</name>
+                    <value>Related</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:groupRecordHomeTabs</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>footer</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>description</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>metaTags</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>{!Record._Object}: {!Record._Title}</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:seoAssistant</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+    background-color: rgb(16,64,107);
+    height: 10px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;
+    background-position: center left;
+    background-color: rgb(16,64,107);
+    height: 120px;
+    background-image: url(https://zerotothree--staging--c.cs34.content.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Jpg&amp;versionId=0682f000001eiiP&amp;operationContext=CHATTER&amp;contentId=05T2f000009bESJ);
+    background-size: 85%;    
+    background-repeat: no-repeat;&quot;&gt;&lt;/div&gt;
+
+&lt;div style=&quot;
+    background-color: rgb(16,64,107);
+    height: 5px;&quot;&gt;&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>LTE:Navbar</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+    background-position: center;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(https://zerotothree--staging--c.cs34.content.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=0682f000001eihg&amp;operationContext=CHATTER&amp;contentId=05T2f000009bERk);
+  
+    		background-repeat: no-repeat;
+            background-size: 100%;  
+            text-align: center;
+            height: 290px;&quot;&gt;
+    
+    &lt;p style=&quot;
+    Font-family: Montserrat;
+   	Font-size: 3.1rem;
+    line-height: 1.1;
+    Text-align: center; 
+    top: 10%;
+    position:relative;
+	Color: rgb(16,64,107);&quot;&gt;
+        Access the 2020 &lt;br&gt; State of Babies Yearbook
+    &lt;/p&gt;
+
+        &lt;p style=&quot;
+    Font-family: Montserrat;
+   	Font-size: 1.5rem;
+    line-height: 1.1;
+    Text-align: center; 
+    Margin-top: 20px;
+    position:relative;
+	Color: rgb(198, 221, 230);&quot;&gt;
+        &lt;br&gt;Updated as of 06/08/2020
+    &lt;/p&gt;
+
+    &lt;button style=&quot;
+    border-radius: 4px; 
+    border-color: rgb(16,64,107);
+    background-color: rgb(16,64,107);
+    color: rgb(255, 255, 255);
+    border-width: 2px; 
+    border-style: solid;
+    padding: 5px; 24px; 
+    min-width: 135px; 
+    min-height: 50px;                
+    trasition: all .2s; 
+    Font-family: Montserrat;
+   	Font-size: 2.5 rem;
+    Text-align: center; 
+	display: inline-block;
+    margin-top: 35px;
+	&quot;&gt;        
+        2020 STOBY&lt;/button&gt;
+    
+    
+    
+        &lt;button style=&quot;
+    border-radius: 4px; 
+    border-color: rgb(16,64,107);
+    background-color: transparant;
+    color: rgb(16,64,107);
+    border-width: 2px; 
+    border-style: solid;
+    padding: 5px; 24px; 
+    min-width: 135px; 
+    min-height: 50px;                
+    trasition: all .2s; 
+    Font-family: Montserrat;
+   	Font-size: 2.5 rem;
+    Text-align: center; 
+
+                   
+                       margin-left: 15px;
+	&quot;&gt;        
+        2019 STOBY&lt;/button&gt;
+
+
+&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>contentHeader</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>recordId</name>
+                    <value>{!recordId}</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:groupHeadline</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;margin-bottom:16px&quot;&gt;&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+background: linear-gradient(to bottom, #33ccff 0%, #3366cc 100%);
+min-height: 20px;
+Text-align: left;
+padding: 10px;
+text-align: left  ;
+background: rgb(4, 17, 88);
+color: white;
+font-size: 15px;
+Font-family: Montserrat; &quot;&gt;
+    
+    &lt;p&gt;
+        Create a new post
+    &lt;/p&gt;
+
+
+&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>context</name>
+                    <value>RECORD</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>recordId</name>
+                    <value>{!recordId}</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>width</name>
+                    <value>MEDIUM</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:feedPublisher</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;margin-bottom:16px&quot;&gt;&lt;/div&gt;
+
+&lt;div style=&quot;
+background: linear-gradient(to bottom, #33ccff 0%, #3366cc 100%);
+min-height: 20px;
+Text-align: left;
+padding: 10px;
+text-align: left  ;
+background: rgb(4, 17, 88);
+color: white;
+font-size: 15px;
+Font-family: Montserrat; &quot;&gt;
+    
+    &lt;p&gt;
+        Discussion Posts
+    &lt;/p&gt;
+
+
+&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>canChangeSorting</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>defaultSortOrderHomeFeed</name>
+                    <value>Relevance</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>defaultSortOrderTopicsFeed</name>
+                    <value>Relevance</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>feedDesign</name>
+                    <value>DEFAULT</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hasFeedSearch</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>subjectId</name>
+                    <value>{!recordId}</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>type</name>
+                    <value>Record</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:forceCommunityFeed</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>leftContent</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+background: linear-gradient(to bottom, #33ccff 0%, #3366cc 100%);
+min-height: 20px;
+Text-align: left;
+padding: 10px;
+text-align: left  ;
+background: rgb(4, 17, 88);
+color: white;
+font-size: 15px;
+Font-family: Montserrat; &quot;&gt;
+    
+    &lt;p&gt;
+        ITCP Events
+    &lt;/p&gt;
+
+
+&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>LTE:FontevaGroupEvents</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>accessDeniedMessage</name>
+                    <value>You do not have access to files in this group.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>notLoggedInMessage</name>
+                    <value>You must be logged in to access files.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>uploadFieldId</name>
+                    <value>a2W2f000000G1j5EAC</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>uploadFormId</name>
+                    <value>a2a2f000000E2o3AAC</value>
+                </componentInstanceProperties>
+                <componentName>FS_FoldersWithFiles</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+background: linear-gradient(to bottom, #33ccff 0%, #3366cc 100%);
+min-height: 20px;
+Text-align: left;
+padding: 10px;
+text-align: left  ;
+background: rgb(4, 17, 88);
+color: white;
+font-size: 15px;
+Font-family: Montserrat; &quot;&gt;
+    
+    &lt;p&gt;
+        ITCP Group Details
+    &lt;/p&gt;
+
+
+&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>headerLabel</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>recordId</name>
+                    <value>{!recordId}</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:groupDetail</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>rightContent</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+    background-color: rgb(16,64,107);
+    height: 5px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;
+    background-position: center;
+    background-color: rgb(16,64,107);
+    background-image: url(https://zerotothree--staging--c.cs34.content.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Jpg&amp;versionId=0682f000001er0F&amp;operationContext=CHATTER&amp;contentId=05T2f000009bmhr);
+    height: 120px;
+    background-size: 20%;    
+    background-repeat: no-repeat;&quot;&gt;
+&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>contentFooter</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Group Detail</masterLabel>
+    <sobjectType>CollaborationGroup</sobjectType>
+    <template>
+        <name>LTE:FontevaPortalGroupDetailLayout</name>
+    </template>
+    <type>CommRecordPage</type>
+</FlexiPage>

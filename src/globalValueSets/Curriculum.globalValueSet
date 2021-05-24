@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Critical Competencies for Infant Toddler Educators</fullName>
+        <default>false</default>
+        <label>Critical Competencies for Infant Toddler Educators</label>
+    </customValue>
+    <customValue>
+        <fullName>Critical Competencies for Infant Toddler Educators Online Courses</fullName>
+        <default>false</default>
+        <label>Critical Competencies for Infant Toddler Educators Online Courses</label>
+    </customValue>
+    <customValue>
+        <fullName>DC: 0-5</fullName>
+        <default>false</default>
+        <label>DC: 0-5</label>
+    </customValue>
+    <customValue>
+        <fullName>The Growing Brain: From Birth to Five Years Old Training of Trainers and Trainer Certification</fullName>
+        <default>false</default>
+        <label>The Growing Brain: From Birth to Five Years Old Training of Trainers and Trainer Certification</label>
+    </customValue>
+    <customValue>
+        <fullName>Knowledge and Know-How: Nurturing Child Well-Being Online Courses</fullName>
+        <default>false</default>
+        <label>Knowledge and Know-How: Nurturing Child Well-Being Online Courses</label>
+    </customValue>
+    <customValue>
+        <fullName>Prenatal to Age Five (P-5) Cross-Sector Core Competencies Online Course</fullName>
+        <default>false</default>
+        <label>Prenatal to Age Five (P-5) Cross-Sector Core Competencies Online Course</label>
+    </customValue>
+    <customValue>
+        <fullName>Topical Sessions</fullName>
+        <default>false</default>
+        <label>Topical Sessions</label>
+    </customValue>
+    <masterLabel>Curriculum</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

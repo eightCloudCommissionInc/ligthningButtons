@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Training of Trainers and Trainer Certification</fullName>
+        <default>false</default>
+        <label>Training of Trainers and Trainer Certification</label>
+    </customValue>
+    <customValue>
+        <fullName>Faculty Institute</fullName>
+        <default>false</default>
+        <label>Faculty Institute</label>
+    </customValue>
+    <customValue>
+        <fullName>Coaching Program</fullName>
+        <default>false</default>
+        <label>Coaching Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Critical Competencies for Infant-Toddler Educators</fullName>
+        <default>false</default>
+        <label>Critical Competencies for Infant-Toddler Educators</label>
+    </customValue>
+    <customValue>
+        <fullName>DC:0-5</fullName>
+        <default>false</default>
+        <label>DC:0-5</label>
+    </customValue>
+    <customValue>
+        <fullName>Online Modules Critical Competencies for Infant-Toddler Educators</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Online Modules Critical Competencies for Infant-Toddler Educators</label>
+    </customValue>
+    <customValue>
+        <fullName>The Growing Brain Training of Trainers</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>The Growing Brain Training of Trainers</label>
+    </customValue>
+    <customValue>
+        <fullName>Knowledge and Know-How Online Modules</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Knowledge and Know-How Online Modules</label>
+    </customValue>
+    <customValue>
+        <fullName>Prenatal to Age Five (P-5)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prenatal to Age Five (P-5)</label>
+    </customValue>
+    <customValue>
+        <fullName>Nurturing Child 8-Lesson Online Course</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Nurturing Child 8-Lesson Online Course</label>
+    </customValue>
+    <masterLabel>Interest: CC Infant Toddler Educators</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

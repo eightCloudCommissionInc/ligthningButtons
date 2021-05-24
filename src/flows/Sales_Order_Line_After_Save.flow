@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <name>Assign_Sales_Order_Line</name>
+        <label>Assign Sales Order Line</label>
+        <locationX>849</locationX>
+        <locationY>506</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Merchandise_Items__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OrderApi__Quantity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Sales_Order_Line</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Sales_Order_Line_0</name>
+        <label>Assign Sales Order Line</label>
+        <locationX>708</locationX>
+        <locationY>720</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Merchandise_Items_Refunded__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxQtyRefunded</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Sales_Order_Line_0</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Amount_Refunded_Changed</name>
+        <label>Amount Refunded Changed</label>
+        <locationX>514</locationX>
+        <locationY>664</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Refund_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OrderApi__Amount_Refunded__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.OrderApi__Amount_Refunded__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Sales_Order_Line_0</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>excludes Shipping</description>
+        <name>Merch_Class</name>
+        <label>Merch Class</label>
+        <locationX>697</locationX>
+        <locationY>439</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_MerchClass</name>
+            <conditionLogic>1 AND Not( 2 )</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OrderApi__Item_Class__r.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Merchandise</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OrderApi__Item_Class__r.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Shipping</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Sales_Order_Line</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>New_or_Item_Class_Changed</name>
+        <label>New or Item Class Changed</label>
+        <locationX>516</locationX>
+        <locationY>376</locationY>
+        <defaultConnector>
+            <targetReference>Amount_Refunded_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_New_Changed</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OrderApi__Item_Class__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.OrderApi__Item_Class__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OrderApi__Quantity__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.OrderApi__Quantity__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Merch_Class</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Updates merchandise quantity of items where Item Class is Merchandise (*contains &apos;merchandise&apos; but not &apos;shipping&apos;) to be used in Sales Order rollup summary fields.</description>
+    <formulas>
+        <name>fxQtyRefunded</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.OrderApi__Amount_Refunded__c} / {!$Record.OrderApi__Overall_Total__c} * {!$Record.OrderApi__Quantity__c}</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Sales Order Line - Merch Count {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Sales Order Line - After Save</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Sales_Order_Line</name>
+        <label>Update Sales Order Line</label>
+        <locationX>1020</locationX>
+        <locationY>555</locationY>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Sales_Order_Line_0</name>
+        <label>Update Sales Order Line</label>
+        <locationX>903</locationX>
+        <locationY>787</locationY>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>458</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>New_or_Item_Class_Changed</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OrderApi__Item_Class__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>OrderApi__Sales_Order_Line__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

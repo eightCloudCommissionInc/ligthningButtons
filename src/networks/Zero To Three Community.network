@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>false</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <changePasswordTemplate>all_templates/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <communityRoles/>
+    <disableReputationRecordConversations>true</disableReputationRecordConversations>
+    <emailSenderAddress>Communities@zerotothree.org</emailSenderAddress>
+    <emailSenderName>Zero To Three Community</emailSenderName>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>false</enableDirectMessages>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableGuestFileAccess>true</enableGuestFileAccess>
+    <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>true</enableKnowledgeable>
+    <enableMemberVisibility>true</enableMemberVisibility>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>true</enableReputation>
+    <enableShowAllNetworkSettings>true</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <enableTalkingAboutStats>true</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
+    <enableTopicSuggestions>true</enableTopicSuggestions>
+    <enableUpDownVote>true</enableUpDownVote>
+    <forgotPasswordTemplate>all_templates/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>true</gatherCustomerSentimentData>
+    <networkMemberGroups>
+        <permissionSet>KnowWho_Action_Center_Site_Access</permissionSet>
+        <permissionSet>View_Donations</permissionSet>
+        <permissionSet>Edit_Donations</permissionSet>
+        <permissionSet>Edit_Donations_and_Payments</permissionSet>
+        <permissionSet>APXTConga4__Composer_Administrator</permissionSet>
+        <permissionSet>APXTConga4__Composer_User</permissionSet>
+        <permissionSet>qualtrics__Qualtrics_Admin</permissionSet>
+        <permissionSet>qualtrics__Qualtrics_User</permissionSet>
+        <permissionSet>dlrs__LookupRollupSummariesFull</permissionSet>
+        <permissionSet>dlrs__LookupRollupSummariesReadOnly</permissionSet>
+        <permissionSet>pi__Pardot</permissionSet>
+        <permissionSet>pi__Pardot_Connector_User</permissionSet>
+        <permissionSet>pi__Pardot_Integration_User</permissionSet>
+        <permissionSet>pi__Sales_Edge</permissionSet>
+        <permissionSet>KnowWho_User_Read_Access</permissionSet>
+        <permissionSet>KnowWho_Data_Update_Access</permissionSet>
+        <permissionSet>KnowWho_ZDM_Read_Access</permissionSet>
+        <permissionSet>KnowWho_ZDM_Update_Access</permissionSet>
+        <permissionSet>PagesApi__Fonteva_Communities_Customer_Community_Login_User</permissionSet>
+        <permissionSet>PagesApi__Fonteva_Communities_Salesforce_Platform_User</permissionSet>
+        <permissionSet>PagesApi__Fonteva_Communities_Salesforce_User</permissionSet>
+        <permissionSet>OrderApi__Fonteva_eBusiness_Customer_Community_Login_User</permissionSet>
+        <permissionSet>OrderApi__Fonteva_eBusiness_Salesforce_Platform_User</permissionSet>
+        <permissionSet>OrderApi__Fonteva_eBusiness_Salesforce_User</permissionSet>
+        <permissionSet>CPBase__Fonteva_Communities_Portal_Customer_Community_Login_User</permissionSet>
+        <permissionSet>CPBase__Fonteva_Communities_Portal_Salesforce_Platform_User</permissionSet>
+        <permissionSet>CPBase__Fonteva_Communities_Portal_Salesforce_User</permissionSet>
+        <permissionSet>DonorApi__Fonteva_DonorApi_Customer_Community_Login_User</permissionSet>
+        <permissionSet>DonorApi__Fonteva_DonorApi_Salesforce_Platform_User</permissionSet>
+        <permissionSet>DonorApi__Fonteva_DonorApi_Salesforce_User</permissionSet>
+        <profile>Admin</profile>
+        <profile>Communications User</profile>
+        <profile>Development User</profile>
+        <profile>Finance User</profile>
+        <profile>Fonteva Customer Community Login User</profile>
+        <profile>Fonteva Standard Platform User</profile>
+        <profile>Fonteva Standard User</profile>
+        <profile>HealthySteps User</profile>
+        <profile>Policy%2FAdvocacy User</profile>
+        <profile>Professional Development User</profile>
+        <profile>Executive Management</profile>
+        <profile>Fundraising and Development</profile>
+        <profile>Office Staff</profile>
+        <profile>Program Staff</profile>
+        <profile>Volunteer</profile>
+        <profile>ContractManager</profile>
+        <profile>MarketingProfile</profile>
+        <profile>SolutionManager</profile>
+        <profile>Standard</profile>
+        <profile>Read Only</profile>
+        <profile>Chatter Free User</profile>
+        <profile>StandardAul</profile>
+        <profile>Chatter Moderator User</profile>
+        <profile>Higher Logic Profile</profile>
+        <profile>API Only</profile>
+        <profile>CMS Integration</profile>
+        <profile>LMS Profile</profile>
+        <profile>Customer Community Login User</profile>
+        <profile>Business Ops User</profile>
+        <profile>Non-Accounting Fonteva Standard Platform User</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Designer</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>Designer</homePageOverrideSetting>
+        <loginPageOverrideSetting>Designer</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Designer</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>Zero_To_Three_Community1</picassoSite>
+    <reputationLevels>
+        <level>
+            <label>Beginner</label>
+            <lowerThreshold>0.0</lowerThreshold>
+        </level>
+        <level>
+            <label>Bronze</label>
+            <lowerThreshold>51.0</lowerThreshold>
+        </level>
+        <level>
+            <label>Silver</label>
+            <lowerThreshold>151.0</lowerThreshold>
+        </level>
+        <level>
+            <label>Gold</label>
+            <lowerThreshold>401.0</lowerThreshold>
+        </level>
+        <level>
+            <label>Platinum</label>
+            <lowerThreshold>801.0</lowerThreshold>
+        </level>
+        <level>
+            <label>Diamond</label>
+            <lowerThreshold>1501.0</lowerThreshold>
+        </level>
+        <level>
+            <label>Legend</label>
+            <lowerThreshold>2501.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>4001.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>6001.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>10001.0</lowerThreshold>
+        </level>
+    </reputationLevels>
+    <reputationPointsRules>
+        <pointsRule>
+            <eventType>FeedItemMarkAnswerAsBest</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>EndorseSomeoneForKnowledgeOnATopic</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveAnAnswer</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemYourAnswerMarkedBest</eventType>
+            <points>20</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveAComment</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemSomeoneSharesYourPost</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemPostQuestion</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemMentionSomeone</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemLikeSomething</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>EndorsedForKnowledgeOnATopic</eventType>
+            <points>20</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemWriteAComment</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveALike</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemWriteAPost</eventType>
+            <points>2</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveAMention</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemShareAPost</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemAnswerAQuestion</eventType>
+            <points>5</points>
+        </pointsRule>
+    </reputationPointsRules>
+    <selfRegProfile>Fonteva Customer Community Login User</selfRegProfile>
+    <selfRegistration>true</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Zero_To_Three_Community</site>
+    <status>Live</status>
+    <tabs>
+        <defaultTab>Chatter</defaultTab>
+        <standardTab>Chatter</standardTab>
+        <standardTab>UserProfile</standardTab>
+    </tabs>
+    <urlPathPrefix>ZT3StagingCommunity</urlPathPrefix>
+    <welcomeTemplate>all_templates/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

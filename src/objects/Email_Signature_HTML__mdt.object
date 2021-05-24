@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This holds the HTML for the various Email Signatures</description>
+    <fields>
+        <fullName>HTML__c</fullName>
+        <description>This holds the HTML for the Rich Tex Signature field.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>This holds the HTML for the Rich Tex Signature field.</inlineHelpText>
+        <label>HTML</label>
+        <length>11000</length>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <label>Email Signature HTML</label>
+    <pluralLabel>Email Signature HTML</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

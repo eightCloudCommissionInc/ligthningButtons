@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>8-Lesson Online Course</fullName>
+        <default>false</default>
+        <label>8-Lesson Online Course</label>
+    </customValue>
+    <customValue>
+        <fullName>8-Lesson Online Course in Spanish</fullName>
+        <default>false</default>
+        <label>8-Lesson Online Course in Spanish</label>
+    </customValue>
+    <masterLabel>Interest: Nurturing Child Well Being</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

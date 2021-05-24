@@ -1,0 +1,26 @@
+/**
+ * Created by dfitzgerald on 6/11/20.
+ */
+
+.THIS {
+    /*background-color: #00a6e4;*/
+}
+
+.THIS .accordion-body {
+    background-color: WHITE;
+}
+
+.THIS .asset:hover {
+    background-color: #F5FAFD;
+}
+
+.THIS .highlight {
+    background-color: #cccccc;
+}
+
+/*.THIS .fs-rounded {*/
+/*    margin-top: 5px;*/
+/*    margin-bottom: 5px;*/
+/*    background-color: #00a6e4;*/
+/*    border-radius: 5px;*/
+/*}*/

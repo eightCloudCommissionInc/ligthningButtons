@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Training</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object tracks details of Training sessions held with both HealthySteps Sites overall and individual HealthySteps Site staff members.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>C4G_Cost_of_Training__c</fullName>
+        <externalId>false</externalId>
+        <label>Cost of Training</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>C4G_HealthySteps_Institute_Training_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>C4G_HealthySteps_Site__r.C4G_HealthySteps_Institute_Training_Date__c</formula>
+        <label>HealthySteps Institute Training Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C4G_HealthySteps_Site__c</fullName>
+        <externalId>false</externalId>
+        <label>HealthySteps Site</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Trainings</relationshipLabel>
+        <relationshipName>Training</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>C4G_Number_of_Training_Days__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Training Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C4G_Number_of_people_trained__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of People Trained</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C4G_NumberofSitesTrained__c</fullName>
+        <description>This field automatically calculates the total number of Sites who had Contacts attend the Training session.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field automatically calculates the total number of Sites who had Contacts attend the Training session.</inlineHelpText>
+        <label>Number of Sites Trained</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C4G_Trainers__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Search and select the HealthySteps contact who assisted/co-facilitated the HSI training.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Search and select the HealthySteps contact who assisted/co-facilitated the HSI training.</inlineHelpText>
+        <label>Alt Trainer 1</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Training</relationshipLabel>
+        <relationshipName>Training</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>C4G_TrainingDate__c</fullName>
+        <description>The date that the Training session is scheduled for.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date that the Training session is scheduled for.</inlineHelpText>
+        <label>HealthySteps Institute Training Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CFG_Trainer1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Search and select the HealthySteps National Office staff member who conducted the HSI training.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Search and select the HealthySteps National Office staff member who conducted the HSI training.</inlineHelpText>
+        <label>Trainer 1</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Trainings1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CFG_Trainer2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Search and select the HealthySteps National Office staff member who conducted the HSI training.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Search and select the HealthySteps National Office staff member who conducted the HSI training.</inlineHelpText>
+        <label>Trainer 2</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Trainings2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CFG_Trainer3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Search and select the HealthySteps National Office staff member who conducted the HSI training.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Search and select the HealthySteps National Office staff member who conducted the HSI training.</inlineHelpText>
+        <label>Trainer 3</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Trainings3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Attendee_Form_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK("https://www.tfaforms.com/4682613?Id="&amp; Id,"https://www.tfaforms.com/4682613?Id="&amp; Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Attendee Form Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Form_Site_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>HealthySteps Site 2</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Trainings (Contact Form Site 2)</relationshipLabel>
+        <relationshipName>Trainings</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Form_Site_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>HealthySteps Site 3</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Trainings (Contact Form Site 3)</relationshipLabel>
+        <relationshipName>Trainings1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Form_Site_4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>HealthySteps Site 4</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Trainings (HealthySteps Site 4)</relationshipLabel>
+        <relationshipName>Trainings2</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Form_Number_of_Options__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK( Contact_Form_Site_2__c ), 1, IF(ISBLANK( Contact_Form_Site_3__c ), 2,IF(ISBLANK( Contact_Form_Site_4__c ), 3, 4 )))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Form Number of Options</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Form_Option_1_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>C4G_HealthySteps_Site__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Form Option 1 Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Form_Option_2_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact_Form_Site_2__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Form Option 2 Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Form_Option_3_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact_Form_Site_3__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Form Option 3 Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Form_Option_4_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact_Form_Site_4__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Form Option 4 Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IMPL_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE ( 
+  MOD( C4G_TrainingDate__c - DATE( 1900, 1, 7 ), 7 ),
+  3, C4G_TrainingDate__c + 2 + (C4G_Number_of_Training_Days__c ),
+  4, C4G_TrainingDate__c + 2 + (C4G_Number_of_Training_Days__c ),
+  5, C4G_TrainingDate__c + 2 + (C4G_Number_of_Training_Days__c ),
+  6, C4G_TrainingDate__c + 1 + (C4G_Number_of_Training_Days__c ),
+  C4G_TrainingDate__c + (C4G_Number_of_Training_Days__c)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IMPL_Start_Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Report__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Report</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>c4g_Link_to_File__c</fullName>
+        <description>Please insert a link to PPT/supporting docs associated with this training</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please insert a link to PPT/supporting docs associated with this training</inlineHelpText>
+        <label>Link to File</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>c4g_Trainer_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>For individually offered trainings, select the HealthySteps Site staff member to associate the training record to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For individually offered trainings, select the HealthySteps Site staff member to associate the training record to.</inlineHelpText>
+        <label>Alt Trainer 2</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Training</relationshipLabel>
+        <relationshipName>Trainings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c4g_Trainer_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>For individually offered trainings, select the HealthySteps Site staff member to associate the training record to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For individually offered trainings, select the HealthySteps Site staff member to associate the training record to.</inlineHelpText>
+        <label>Alt Trainer 3</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Training</relationshipLabel>
+        <relationshipName>Trainings1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Training</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>HealthySteps_Training</fullName>
+        <columns>NAME</columns>
+        <columns>C4G_HealthySteps_Institute_Training_Date__c</columns>
+        <columns>C4G_Number_of_Training_Days__c</columns>
+        <columns>C4G_Number_of_people_trained__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>HealthySteps Training</label>
+    </listViews>
+    <nameField>
+        <label>Training Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Trainings</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

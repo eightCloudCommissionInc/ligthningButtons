@@ -1,0 +1,112 @@
+<apex:page controller="EC_AccountGroupsReportCtrl" readonly="true" sidebar="false" showheader="true" lightningstylesheets="true" standardStylesheets="false">
+    <!-- contentType="application/vnd.ms-excel#SalesForceExport.xls" -->
+    <style>
+    .bPageTitle{
+        background: #f3f2f2;
+        border-radius: 3px;
+  box-shadow: 1px 1px #e6e6e6;
+    border: 1px solid #e6e6e6;
+        
+    font-weight: bold;
+        }
+        body .bPageTitle .ptBody h1.noSecondHeader {
+    
+    font-size: 1.5em !important;
+    font-weight: bold !important;
+}
+    </style>
+    <script>
+    function openlink(value){
+        var theme='{!$User.UITheme}';
+        var host='';
+        if(theme=='Theme4d') host='https://zerotothree--devmay19.lightning.force.com'
+        else  host='';
+        var url=host+'/'+value;
+        var win = window.open(url, '_blank');
+        win.focus();
+        
+        
+        }
+    
+    </script>
+    <apex:slds />
+   
+        
+    
+    <apex:sectionHeader title="HS Groups and Organizations Report" />
+    
+ 
+        <div style="float:right;padding:5px;">
+            
+            <!--a href="/apex/EC_AccountGroupsReportPDF" class="btn" style="text-decoration:none;" target="_blank">Export as PDF</a--> &nbsp;
+            <a href="/apex/EC_AccountGroupsReportExcel" class="btn" style="text-decoration:none;" target="_blank">Export as Excel</a>
+        </div>
+    <body> 
+        <div style="margin-top:5px;padding:10px;">
+    <table border="1" style="border:1px solid #CDCDCD;" class="list" width="100%" cellspacing="0" cellpadding="0">
+        <tr class="headerRow" >
+            <th align="center"  style="border:1px solid #CDCDCD;" >Group #</th>
+            <th  style="border:1px solid #CDCDCD;">Account Type</th>
+            <th  style="border:1px solid #CDCDCD;" >Account Name</th>
+            <th  style="border:1px solid #CDCDCD;" >Primary Contact</th>
+            
+            <th  style="border:1px solid #CDCDCD;">Group Type</th>
+            <th style="border:1px solid #CDCDCD;" >Description</th>
+            <th style="border:1px solid #CDCDCD;" >Created By</th>
+            <th style="border:1px solid #CDCDCD;" >LastModified By</th>
+            <th style="border:1px solid #CDCDCD;" >Owner</th>
+        </tr>
+        <apex:variable var="c" value="{!1}" />
+        <apex:repeat value="{!dwList}" var="data">
+            
+
+        <tr class="dataRow" >
+            <apex:outputpanel rendered="{!IF(c==1,true,false)}" layout="none">
+                <td rowspan="{!data.size}" align="center"  style="vertical-align:middle;border:1px solid #CDCDCD;" >
+                    <a href="/{!data.groupId}" target="_blank">
+                    {!data.groupNo}
+                        </a>
+                </td>
+                
+            </apex:outputpanel>
+             <td  style="border:1px solid #CDCDCD;" >{!data.accType}</td>
+            
+            <td  style="border:1px solid #CDCDCD;">
+                <a href="/{!data.accId}" target="_blank">
+                {!data.accName}
+                </a></td>
+            <td  style="border:1px solid #CDCDCD;">
+                <a href="/{!data.primaryContactId}" target="_blank">
+                    {!data.primaryContact}
+                </a></td>
+           
+            <td  style="border:1px solid #CDCDCD;">{!data.groupType}</td>
+            <td  style="border:1px solid #CDCDCD;">{!data.Description}</td>
+            <td  style="border:1px solid #CDCDCD;">
+                <a href="/{!data.createdById}" target="_blank">
+                    {!data.createdBy}
+                </a></td>
+            <td  style="border:1px solid #CDCDCD;">
+                <a href="/{!data.lastModifiedById}" target="_blank">
+                    {!data.lastModifiedBy}
+                </a></td>
+            <td  style="border:1px solid #CDCDCD;">
+                <a  onclick="/{!data.ownerId}" target="_blank">
+                    {!data.owner}
+                </a></td>
+            
+        </tr>
+            
+            <apex:outputpanel rendered="{!IF(c==data.size,true,false)}" layout="none">
+                <apex:variable var="c" value="{!0}" />
+            </apex:outputpanel>
+            <apex:variable var="c" value="{!c+1}" />
+        </apex:repeat>
+        
+    </table>
+            
+        </div>
+        </body>
+        
+        
+</apex:page>

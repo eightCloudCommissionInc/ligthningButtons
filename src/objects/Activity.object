@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ComposeGmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ComposeGmail</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ComposeGmail</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LogCall</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LogCall</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LogCall</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MailMerge</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MailMerge</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MailMerge</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SendEmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SendEmail</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SendEmail</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewAll</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewAll</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewAll</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Assign_To_Group__c</fullName>
+        <externalId>false</externalId>
+        <label>Assign To Group</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Triage, Sales, and Information Gathering</fullName>
+                    <default>false</default>
+                    <label>Triage, Sales, and Information Gathering</label>
+                </value>
+                <value>
+                    <fullName>Training &amp; Technical Assistance Group</fullName>
+                    <default>false</default>
+                    <label>Training &amp; Technical Assistance Group</label>
+                </value>
+                <value>
+                    <fullName>Operations Group</fullName>
+                    <default>false</default>
+                    <label>Operations Group</label>
+                </value>
+                <value>
+                    <fullName>Duke/North Carolina Group</fullName>
+                    <default>false</default>
+                    <label>Duke/North Carolina Group</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C4G_Call_Type__c</fullName>
+        <description>Select the category of call.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the category of call.</inlineHelpText>
+        <label>Call Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Triage, Sales, and Information Gathering Call</fullName>
+                    <default>false</default>
+                    <label>Triage, Sales, and Information Gathering Call</label>
+                </value>
+                <value>
+                    <fullName>Practice Assessment Call</fullName>
+                    <default>false</default>
+                    <label>Practice Assessment Call</label>
+                </value>
+                <value>
+                    <fullName>Training</fullName>
+                    <default>false</default>
+                    <label>HSI Preparation Call (all calls prior to on-site training)</label>
+                </value>
+                <value>
+                    <fullName>Technical Assistance</fullName>
+                    <default>false</default>
+                    <label>Technical Assistance Call (all calls after on-site training)</label>
+                </value>
+                <value>
+                    <fullName>Finance and Sustainability Call</fullName>
+                    <default>false</default>
+                    <label>Finance and Sustainability Call</label>
+                </value>
+                <value>
+                    <fullName>Data and Evaluation Call</fullName>
+                    <default>false</default>
+                    <label>Data and Evaluation Call</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Onboarding</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Onboarding</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C4G_Current_Site_Status_at_End_of_Call__c</fullName>
+        <description>Site Pending - select this when a site is still evaluating opportunities to become a HS site. Site Planning to Become a Site - select this when a site has decided to move forward with training.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Site Pending - select this when a site is still evaluating opportunities to become a HS site. Site Planning to Become a Site - select this when a site has decided to move forward with training.</inlineHelpText>
+        <label>Current Site Status at End of Call</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Site Decided Not to Advance</fullName>
+                    <default>false</default>
+                    <label>Site Decided Not to Advance</label>
+                </value>
+                <value>
+                    <fullName>Site Planning to Become a Site</fullName>
+                    <default>false</default>
+                    <label>Site Planning to Become a Site</label>
+                </value>
+                <value>
+                    <fullName>Site Established</fullName>
+                    <default>false</default>
+                    <label>Site Established</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C4G_Date_Complete__c</fullName>
+        <description>The date the next step task was completed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the next step task was completed.</inlineHelpText>
+        <label>Date Complete</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C4G_Date_of_Call__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <externalId>false</externalId>
+        <label>Date of Call</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C4G_Due_Date__c</fullName>
+        <description>The day the next step task is complete.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The day the next step task is complete.</inlineHelpText>
+        <label>Due Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C4G_Major_Topics_Discussed__c</fullName>
+        <description>List the topics discussed during this call.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List the topics discussed during this call.</inlineHelpText>
+        <label>Major Topics Discussed</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>C4G_Next_Step__c</fullName>
+        <description>Next expected steps needed to complete any follow-up from the call.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Next expected steps needed to complete any follow-up from the call.</inlineHelpText>
+        <label>Next Steps</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>C4G_Note__c</fullName>
+        <defaultValue>"Search and select the name of every contact on the call in the Name field below regardless of the account name in the Related To field. A record of the call log will roll up to the contact’s record and their affiliated account record."</defaultValue>
+        <externalId>false</externalId>
+        <label>Note</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>C4G_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Notes</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>C4G_Person_Responsible__c</fullName>
+        <description>The staff responsible for next steps action items.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The staff responsible for next steps action items.</inlineHelpText>
+        <label>Person Responsible</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Instructions__c</fullName>
+        <defaultValue>"Note: Search and select the name of every contact on the call in the Name field below regardless of the account name in the Related To field. A record of the call log will roll up to the contact’s record and their affiliated account record."</defaultValue>
+        <description>Provides instructions for the Related To field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use these instructions as a reference when filling out the Related To field above.</inlineHelpText>
+        <label>Instructions</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>cfg_ActivityType__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Contact Form Follow-Up</fullName>
+                    <default>false</default>
+                    <label>Contact Form Follow-Up</label>
+                </value>
+                <value>
+                    <fullName>New Meeting</fullName>
+                    <default>false</default>
+                    <label>New Meeting</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>cfg_Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>cfg_Import_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Import ID</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>cfg_Solicitor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Solicitor</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <listViews>
+        <fullName>MyActivities</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyDelegatedActivities</fullName>
+        <filterScope>Delegated</filterScope>
+        <label>My Delegated Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyTeamsActivities</fullName>
+        <filterScope>Team</filterScope>
+        <label>My Team's Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>TodaysTasks</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>TASK.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>lessThan</operation>
+            <value>TOMORROW</value>
+        </filters>
+        <label>Today's Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>UpcomingEvents</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>greaterThan</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>Upcoming Events</label>
+    </listViews>
+    <searchLayouts>
+        <excludedStandardButtons>NewTask</excludedStandardButtons>
+        <searchResultsAdditionalFields>TASK.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHO_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHAT_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.DUE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

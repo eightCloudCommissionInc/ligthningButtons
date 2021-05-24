@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Webinar (Internal)</fullName>
+        <default>false</default>
+        <label>Webinar (Internal)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Webinar (External - hosted by anyone other than ZTT)</fullName>
+        <default>false</default>
+        <label>Webinar (External - hosted by anyone other than ZTT)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference Session/Plenary (ZTT National Conference)</fullName>
+        <default>false</default>
+        <label>Conference Session/Plenary (ZTT National Conference)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference Session/Plenary (external conference)</fullName>
+        <default>false</default>
+        <label>Conference Session/Plenary (external conference)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference Poster Presentation (Internal)</fullName>
+        <default>false</default>
+        <label>Conference Poster Presentation (Internal)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference Poster Presentation (External)</fullName>
+        <default>false</default>
+        <label>Conference Poster Presentation (External)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting (Internal)</fullName>
+        <default>false</default>
+        <label>Meeting (Internal)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting (External - hosted by anyone other than ZTT)</fullName>
+        <default>false</default>
+        <label>Meeting (External - hosted by anyone other than ZTT)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HealthySteps Institute</fullName>
+        <default>false</default>
+        <label>HealthySteps Institute</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+</StandardValueSet>

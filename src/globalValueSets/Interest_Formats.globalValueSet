@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Self-Paced Online Learning</fullName>
+        <default>false</default>
+        <label>Self-Paced Online Learning</label>
+    </customValue>
+    <customValue>
+        <fullName>Technical Assistance</fullName>
+        <default>false</default>
+        <label>Technical Assistance</label>
+    </customValue>
+    <customValue>
+        <fullName>In-Person: Coaching Program</fullName>
+        <default>false</default>
+        <label>In-Person: Coaching Program</label>
+    </customValue>
+    <customValue>
+        <fullName>In-Person: Conference Series</fullName>
+        <default>false</default>
+        <label>In-Person: Conference Series</label>
+    </customValue>
+    <customValue>
+        <fullName>In-Person: Faculty Institute</fullName>
+        <default>false</default>
+        <label>In-Person: Faculty Institute</label>
+    </customValue>
+    <customValue>
+        <fullName>In-Person: Full-Day</fullName>
+        <default>false</default>
+        <label>In-Person: Full-Day</label>
+    </customValue>
+    <customValue>
+        <fullName>In-Person: Half-Day/Keynote</fullName>
+        <default>false</default>
+        <label>In-Person: Half-Day/Keynote</label>
+    </customValue>
+    <customValue>
+        <fullName>In-Person: Training of Trainers</fullName>
+        <default>false</default>
+        <label>In-Person: Training of Trainers</label>
+    </customValue>
+    <customValue>
+        <fullName>In-Person: Two-Day</fullName>
+        <default>false</default>
+        <label>In-Person: Two-Day</label>
+    </customValue>
+    <customValue>
+        <fullName>Virtual Event</fullName>
+        <default>false</default>
+        <label>Virtual Event</label>
+    </customValue>
+    <customValue>
+        <fullName>HealthySteps Institute</fullName>
+        <default>false</default>
+        <label>HealthySteps Institute</label>
+    </customValue>
+    <customValue>
+        <fullName>Safe Babies Court Team</fullName>
+        <default>false</default>
+        <label>Safe Babies Court Team</label>
+    </customValue>
+    <customValue>
+        <fullName>On-Site Professional Development</fullName>
+        <default>false</default>
+        <label>On-Site Professional Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Online Event</fullName>
+        <default>false</default>
+        <label>Online Event</label>
+    </customValue>
+    <masterLabel>Interest: Formats</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

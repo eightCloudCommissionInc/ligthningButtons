@@ -1,0 +1,47 @@
+<apex:page controller="EC_AccountGroupsReportCtrl" readonly="true" sidebar="false" showheader="false" renderas="pdf">
+    <!-- contentType="application/vnd.ms-excel#SalesForceExport.xls" -->
+    <body style="padding:30px;">
+        
+    
+    <table border="1" style="border:1px solid #CDCDCD;" class="list" width="100%" cellspacing="0" cellpadding="0">
+        <tr class="headerRow" >
+        	<th align="center"  style="border:1px solid #CDCDCD;" >Group #</th>
+            <th  style="border:1px solid #CDCDCD;" >Account Name</th>
+            <th  style="border:1px solid #CDCDCD;" >Primary Contact</th>
+            <th  style="border:1px solid #CDCDCD;">Account Type</th>
+            <th  style="border:1px solid #CDCDCD;">Group Type</th>
+            <th style="border:1px solid #CDCDCD;" >Description</th>
+            <th style="border:1px solid #CDCDCD;" >Created By</th>
+            <th style="border:1px solid #CDCDCD;" >LastModified By</th>
+            <th style="border:1px solid #CDCDCD;" >Owner</th>
+        </tr>
+        <apex:variable var="c" value="{!1}" />
+        <apex:repeat value="{!dwList}" var="data">
+            
+
+		<tr class="dataRow" >
+            <apex:outputpanel rendered="{!IF(c==1,true,false)}" layout="none">
+            	<td rowspan="{!data.size}" align="center"  style="vertical-align:middle;border:1px solid #CDCDCD;" >{!data.groupNo}</td>
+                
+            </apex:outputpanel>
+            
+            <td  style="border:1px solid #CDCDCD;">{!data.accName}</td>
+            <td  style="border:1px solid #CDCDCD;">{!data.primaryContact}</td>
+            <td  style="border:1px solid #CDCDCD;" >{!data.accType}</td>
+            <td  style="border:1px solid #CDCDCD;">{!data.groupType}</td>
+            <td  style="border:1px solid #CDCDCD;">{!data.Description}</td>
+            <td  style="border:1px solid #CDCDCD;">{!data.createdBy}</td>
+            <td  style="border:1px solid #CDCDCD;">{!data.lastModifiedBy}</td>
+            <td  style="border:1px solid #CDCDCD;">{!data.owner}</td>
+            
+        </tr>
+            
+            <apex:outputpanel rendered="{!IF(c==data.size,true,false)}" layout="none">
+                <apex:variable var="c" value="{!0}" />
+            </apex:outputpanel>
+            <apex:variable var="c" value="{!c+1}" />
+        </apex:repeat>
+        
+    </table>
+        </body>
+</apex:page>

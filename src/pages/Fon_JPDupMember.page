@@ -1,0 +1,67 @@
+<apex:page docType="html-5.0"
+           showHeader="false"
+           standardStylesheets="false"
+           applyBodyTag="false"
+           applyHtmlTag="false"
+           controller="Fon_JPDupMemberCtrl" action="{!checkDuplicate}">
+    <apex:composition template="CPBase__template">
+        <apex:define name="pageTitle">
+            {!$Label.Fon_JPDupMemberTitle}
+        </apex:define>
+        <apex:define name="pageStyles">
+            <style type="text/css">
+            </style>    
+        </apex:define>   
+        <apex:define name="supernavRight">
+            {!$Label.Fon_JPUserAddrWelcome}  {!usr.FirstName} {!usr.LastName}! 
+        </apex:define>
+        
+        <apex:define name="pageMain">
+            <apex:pageMessages ></apex:pageMessages>
+            <Framework:messages />
+            <apex:form >
+                <div class="container m-t-30">
+                    <div class="well col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-horizontal" role="form" >                          
+                                    <br/>
+                                    <br/>
+                                    <apex:outputPanel rendered="{!allowRenew == true}">
+                                        <div class="legendalign">
+                                            <legend>{!$Label.Fon_JPDuplicateTextLegend}</legend>
+                                            <div style="padding:5px;border:1px;">
+                                                {!$Label.Fon_JPDuplicateText}                                  
+                                            </div>
+                                        </div>
+                                    </apex:outputPanel>  
+                                    <div style="padding:5px;border:1px;">
+                                    
+                                    <apex:outputPanel id="someBlock">
+                                        <apex:repeat value="{!subs}" var="a">
+                                            <b>{!a.OrderApi__Item__r.OrderApi__Display_Name__c}</b><br/>
+                                            <apex:outputText value="Term Start Date: {0,date,MM/dd/yy}">
+                                                <apex:param value="{!a.OrderApi__Current_Term_Start_Date__c}" /> </apex:outputText>
+                                            
+                                            
+                                            <apex:outputText value=", Term End Date: {0,date,MM/dd/yy}">
+                                                <apex:param value="{!a.OrderApi__Current_Term_End_Date__c}" /> </apex:outputText> 
+                                        </apex:repeat>
+                                    </apex:outputPanel>
+                                </div>                          
+                            </div>
+                        </div>  
+                        <br/>
+                        <br/>
+                        <div align="center" draggable="false" >
+                            <apex:commandButton action="{!cancelStep}" value="{!$Label.Fon_JPDuplicateProfile}" styleClass="btn btn-mini m-r-5 btn-neutral ladda-button nextStep btn-wrap"/>  
+                            <apex:outputlink value="{!$Site.BaseUrl}/cpbase__profile#em-subscriptions" styleClass="btn btn-mini m-r-5 btn-neutral ladda-button nextStep btn-wrap" target="_self">{!$Label.Fon_JPDuplicateRenew} </apex:outputlink>
+                        </div>      
+                    </div> 
+                </div>  
+                    </div>  
+            </apex:form> <br/><br/><br/>
+        </apex:define>
+        
+    </apex:composition>
+</apex:page>

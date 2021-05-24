@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://zerotothree.sharepoint.com/sites/ITCP/_layouts/15/OauthAuthorize.aspx</authorizeUrl>
+    <consumerKey>9daa2748-aa1b-4582-a6f3-14a8d1499c7d</consumerKey>
+    <consumerSecret>XLs1LWQJ/77aVamEWYaIknPrzf4rVE7ClMx6mqtnqEdYIqPiF7d27bDWx8QmSPcW</consumerSecret>
+    <friendlyName>Sharepoint</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>MicrosoftACS</providerType>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://accounts.accesscontrol.windows.net/ZeroToThree.onmicrosoft.com/tokens/OAuth/2?resource=00000003-0000-0ff1-ce00-000000000000/zerotothree.sharepoint.com@ZeroToThree.onmicrosoft.com</tokenUrl>
+</AuthProvider>

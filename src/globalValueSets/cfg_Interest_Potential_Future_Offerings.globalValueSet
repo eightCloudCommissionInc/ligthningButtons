@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Service Planning, Coordination, and Collaboration</fullName>
+        <default>false</default>
+        <label>Service Planning, Coordination, and Collaboration</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional and Ethical Practices</fullName>
+        <default>false</default>
+        <label>Professional and Ethical Practices</label>
+    </customValue>
+    <customValue>
+        <fullName>Family-Centered Practice</fullName>
+        <default>false</default>
+        <label>Family-Centered Practice</label>
+    </customValue>
+    <customValue>
+        <fullName>Early Childhood Development</fullName>
+        <default>false</default>
+        <label>Early Childhood Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Health and Development Risk and Protective Factors</fullName>
+        <default>false</default>
+        <label>Health and Development Risk and Protective Factors</label>
+    </customValue>
+    <customValue>
+        <fullName>Relationship-Based Practice</fullName>
+        <default>false</default>
+        <label>Relationship-Based Practice</label>
+    </customValue>
+    <customValue>
+        <fullName>Cultural and Linguistic Responsiveness</fullName>
+        <default>false</default>
+        <label>Cultural and Linguistic Responsiveness</label>
+    </customValue>
+    <customValue>
+        <fullName>Leadership to Meet Family Needs and Improve Service Systems</fullName>
+        <default>false</default>
+        <label>Leadership to Meet Family Needs and Improve Service Systems</label>
+    </customValue>
+    <masterLabel>Interest: Potential Future Offerings</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

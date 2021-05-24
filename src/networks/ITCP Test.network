@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>false</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <changePasswordTemplate>all_templates/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <communityRoles/>
+    <disableReputationRecordConversations>false</disableReputationRecordConversations>
+    <emailFooterLogo>Communities_Shared_Document_Folder/ztt_logo_blue_6bc291dc9d5b341e3548c59a9047b2426ee9e3de39d15d9913cdfcc0a08e991c.jpg</emailFooterLogo>
+    <emailFooterText>Copyright © 2020 ZERO TO THREE All rights reserved.1255 23rd Street, NW Suite 350 Washington, DC 20037</emailFooterText>
+    <emailSenderAddress>oiheukwumere@zerotothree.org</emailSenderAddress>
+    <emailSenderName>ITCP Test</emailSenderName>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>false</enableDirectMessages>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableGuestFileAccess>true</enableGuestFileAccess>
+    <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableMemberVisibility>true</enableMemberVisibility>
+    <enableNicknameDisplay>true</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableShowAllNetworkSettings>true</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <enableTalkingAboutStats>false</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
+    <enableTopicSuggestions>false</enableTopicSuggestions>
+    <enableUpDownVote>false</enableUpDownVote>
+    <forgotPasswordTemplate>all_templates/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>true</gatherCustomerSentimentData>
+    <networkMemberGroups>
+        <permissionSet>Dashboard_Permissions</permissionSet>
+        <permissionSet>Admin_Read_Only</permissionSet>
+        <permissionSet>open_water__Visualforce_community_permissions</permissionSet>
+        <permissionSet>View_Donations</permissionSet>
+        <permissionSet>Edit_Donations</permissionSet>
+        <permissionSet>Edit_Donations_and_Payments</permissionSet>
+        <permissionSet>APXTConga4__Composer_Administrator</permissionSet>
+        <permissionSet>APXTConga4__Composer_User</permissionSet>
+        <permissionSet>qualtrics__Qualtrics_Admin</permissionSet>
+        <permissionSet>qualtrics__Qualtrics_User</permissionSet>
+        <permissionSet>dlrs__LookupRollupSummariesFull</permissionSet>
+        <permissionSet>dlrs__LookupRollupSummariesReadOnly</permissionSet>
+        <permissionSet>pi__Pardot</permissionSet>
+        <permissionSet>pi__Pardot_Connector_User</permissionSet>
+        <permissionSet>pi__Pardot_Integration_User</permissionSet>
+        <permissionSet>pi__Sales_Edge</permissionSet>
+        <permissionSet>KnowWho_User_Read_Access</permissionSet>
+        <permissionSet>KnowWho_Data_Update_Access</permissionSet>
+        <permissionSet>KnowWho_ZDM_Read_Access</permissionSet>
+        <permissionSet>KnowWho_ZDM_Update_Access</permissionSet>
+        <permissionSet>geopointe__Geopointe_Admin</permissionSet>
+        <permissionSet>geopointe__Geopointe_Base_Permissions</permissionSet>
+        <permissionSet>Enable_Customer_User</permissionSet>
+        <permissionSet>Healthy_Steps_Users_with_Fonteva_Objects_Access</permissionSet>
+        <permissionSet>Disable_Community_User</permissionSet>
+        <permissionSet>Enable_Audit_Feild</permissionSet>
+        <permissionSet>WE_FW8_NP__WE_Connector_Salesforce_License</permissionSet>
+        <permissionSet>WE_FW8_NP__WE_Connector_Salesforce_Platform_License</permissionSet>
+        <permissionSet>Manage_Billing_view_Checkout</permissionSet>
+        <permissionSet>Business_Op_s_and_HS_profile</permissionSet>
+        <permissionSet>PagesApi__Fonteva_Communities_Customer_Community_Login_User</permissionSet>
+        <permissionSet>PagesApi__Fonteva_Communities_Salesforce_Platform_User</permissionSet>
+        <permissionSet>PagesApi__Fonteva_Communities_Salesforce_User</permissionSet>
+        <permissionSet>OrderApi__Fonteva_eBusiness_Customer_Community_Login_User</permissionSet>
+        <permissionSet>OrderApi__Fonteva_eBusiness_Salesforce_Platform_User</permissionSet>
+        <permissionSet>OrderApi__Fonteva_eBusiness_Salesforce_User</permissionSet>
+        <permissionSet>CPBase__Fonteva_Communities_Portal_Customer_Community_Login_User</permissionSet>
+        <permissionSet>CPBase__Fonteva_Communities_Portal_Salesforce_Platform_User</permissionSet>
+        <permissionSet>CPBase__Fonteva_Communities_Portal_Salesforce_User</permissionSet>
+        <permissionSet>DonorApi__Fonteva_DonorApi_Customer_Community_Login_User</permissionSet>
+        <permissionSet>DonorApi__Fonteva_DonorApi_Salesforce_Platform_User</permissionSet>
+        <permissionSet>DonorApi__Fonteva_DonorApi_Salesforce_User</permissionSet>
+        <permissionSet>KnowWho_Action_Center_Site_Access</permissionSet>
+        <profile>Admin</profile>
+        <profile>API Only</profile>
+        <profile>Fonteva Standard Platform User</profile>
+        <profile>Fonteva Standard User</profile>
+        <profile>Office Staff</profile>
+        <profile>Standard</profile>
+        <profile>StandardAul</profile>
+        <profile>Customer Community Login User</profile>
+        <profile>Fonteva Customer Community Login User</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Standard</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>Designer</homePageOverrideSetting>
+        <loginPageOverrideSetting>Standard</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Standard</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>ITCP_Test1</picassoSite>
+    <selfRegProfile>Fonteva Customer Community Login User</selfRegProfile>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>false</sendWelcomeEmail>
+    <site>ITCP_Test</site>
+    <status>Live</status>
+    <tabs>
+        <defaultTab>Chatter</defaultTab>
+        <standardTab>Chatter</standardTab>
+        <standardTab>Workspace</standardTab>
+    </tabs>
+    <urlPathPrefix>ITCPCommunity</urlPathPrefix>
+    <welcomeTemplate>all_templates/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

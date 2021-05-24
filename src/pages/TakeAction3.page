@@ -1,0 +1,915 @@
+<apex:page Controller="kwac.KWAC_TakeActionPageController" showHeader="FALSE" sidebar="FALSE" standardStylesheets="FALSE" docType="html-5.0" cache="FALSE" title="Take Action Today!" applyHtmlTag="false" applyBodyTag="false"> 
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="js cssgradients placeholder inlinesvg generatedcontent cssanimations csscolumns csscolumns-width no-csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth no-csscolumns-breakbefore no-csscolumns-breakafter no-csscolumns-breakinside flexbox csstransforms backgroundblendmode fonts-loaded" dir="ltr" lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="https://s3.amazonaws.com/zero-to-three-salesforce/bootstrap.min.css" />
+
+
+<meta charset="utf-8" />
+<title>TAKE ACTION • ZERO TO THREE</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="shortcut icon" type="image/x-icon" href="https://s3.amazonaws.com/zero-to-three-salesforce/favicon.ico" />
+<link rel="apple-touch-icon" href="https://s3.amazonaws.com/zero-to-three-salesforce/apple-touch-icon.png"/>
+<link rel="icon" sizes="196x196" href="https://s3.amazonaws.com/zero-to-three-salesforce/apple-touch-icon.png"/>
+
+<link rel="stylesheet" media="all" href="https://s3.amazonaws.com/zero-to-three-salesforce/fonts-1941d08d61d072485c8bbc2b37695064aafd307f4c43f363ade555c297605537.css"/>
+
+<link rel="stylesheet" media="all" href="https://s3.amazonaws.com/zero-to-three-salesforce/vendor-6613f4921736b450ba928c907981619b11af9743a0af4a542a88b533014dbeb2.css"/>
+    
+<link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/zero-to-three-salesforce/salsa.css"/>
+<link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/zero-to-three-salesforce/action.css" />
+
+<style>
+
+img {
+max-width:100%;
+width:auto !important;
+height: auto !important;
+}
+a.txlinks:link {color: #018dd1;text-decoration:underline;}
+
+a.formlinks:link {color: #ffffff;text-decoration:underline;}
+a.formlinks:hover {color: #ffffff;text-decoration:underline;}
+
+a.formlinks:link {color: #ffffff;text-decoration:underline;}
+a.formlinks:hover {color: #ffffff;text-decoration:underline;}
+
+a.electedlinks {color:  #2a6496;text-decoration:underline;}
+a.electedlinks:link {color:  #2a6496;text-decoration:underline;}
+a.electedlinks:hover {color: #2a6496;text-decoration:underline;}
+
+
+.container {
+    width: 750px;
+    max-width: 90%;
+    margin:auto;
+}
+
+h4 {
+border: 1px solid #cccccc;
+background-color: {!bHeaderColor};
+color: #ffffff;
+margin:left 10px;
+padding: 10px;
+display: block;
+
+}
+
+.form-group {
+margin-left: 30px;
+line-height: 1.1;
+}
+
+.form-group2 {
+margin: 0 auto;
+}
+
+
+.checkbox {
+margin-left: 30px;
+}
+
+
+label {
+font-size: 12px;
+
+}
+
+.top-buffer { 
+margin-top:20px;
+ }
+
+.col-centered{
+text-align:center;
+}
+
+
+.btn-danger { 
+border-color: {!sButtonDisplayColor}; 
+background-color: {!sButtonDisplayColor};
+
+.btn-danger:hover { 
+border-color: #000; 
+background-color: #000; 
+}
+
+</style>
+
+<script>
+
+var j$ = jQuery.noConflict();
+
+
+function kwscrolldown() {
+j$('html, body').animate({scrollTop:j$('#MessagetoOfficials').position().top}, 'fast');
+};
+
+
+function validate(){ 
+    var unit = j$("[id*='nmSalutationf']").val();  
+    if (unit == '') {  
+        document.getElementById("j_id0:action:nmSalutationf").setCustomValidity("You must enter a value");
+        return false;
+    }
+    else {
+       document.getElementById("j_id0:action:nmSalutationf").setCustomValidity("");
+       return true;
+   }
+}
+
+   
+</script>
+
+</head>
+
+  <body data-whatinput="mouse">
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-book" viewBox="0 0 1792 1792">
+  <path d="M1703 478q40 57 18 129l-275 906q-19 64-76.5 107.5t-122.5 43.5h-923q-77 0-148.5-53.5t-99.5-131.5q-24-67-2-127 0-4 3-27t4-37q1-8-3-21.5t-3-19.5q2-11 8-21t16.5-23.5 16.5-23.5q23-38 45-91.5t30-91.5q3-10 .5-30t-.5-28q3-11 17-28t17-23q21-36 42-92t25-90q1-9-2.5-32t.5-28q4-13 22-30.5t22-22.5q19-26 42.5-84.5t27.5-96.5q1-8-3-25.5t-2-26.5q2-8 9-18t18-23 17-21q8-12 16.5-30.5t15-35 16-36 19.5-32 26.5-23.5 36-11.5 47.5 5.5l-1 3q38-9 51-9h761q74 0 114 56t18 130l-274 906q-36 119-71.5 153.5t-128.5 34.5h-869q-27 0-38 15-11 16-1 43 24 70 144 70h923q29 0 56-15.5t35-41.5l300-987q7-22 5-57 38 15 59 43zm-1064 2q-4 13 2 22.5t20 9.5h608q13 0 25.5-9.5t16.5-22.5l21-64q4-13-2-22.5t-20-9.5h-608q-13 0-25.5 9.5t-16.5 22.5zm-83 256q-4 13 2 22.5t20 9.5h608q13 0 25.5-9.5t16.5-22.5l21-64q4-13-2-22.5t-20-9.5h-608q-13 0-25.5 9.5t-16.5 22.5z"></path>
+</symbol><symbol id="icon-bullhorn-circle" viewBox="0 0 26 26">
+  <path d="M11.5 11.3l.8 2.4c2.4-.5 5-.3 7.9.8l-3-8.5c-1.6 2.6-3.6 4.4-5.7 5.3z"></path>
+  <path d="M13 0C5.9 0 0 5.9 0 13c0 7.3 5.9 13 13 13s13-5.9 13-13S20.3 0 13 0zm7.6 16c-2-.8-5.3-1.8-8.5-1.1-.9.8-.9 2.1 0 2.6-.3 1.2.8 1.7 2 2.1-.2 1.2-2.6 2.1-3.6 1.5-1.1-1.4-2.4-2.7-2.4-5l-1.1.4c-.8.3-1.7-.2-2-.9l-.3-1.5c-.3-.8.2-1.7.9-2l4.4-1.4c3.5-1.2 5.6-4.1 7-6 .6-.2 1.4.2 1.5.8L19.7 9c.6-.2 1.4.2 1.5.8.2.6-.2 1.4-.8 1.5l1.2 3.5c0 .3-.3 1.1-1 1.2z"></path>
+</symbol><symbol id="icon-cart" viewBox="0 0 208 176">
+  <path d="M80 160c0 4.3-1.6 8-4.8 11.2s-7 4.8-11.2 4.8-8-1.6-11.2-4.8-4.8-7-4.8-11.2 1.6-8 4.8-11.2 7-4.8 11.2-4.8 8 1.6 11.2 4.8 4.8 7 4.8 11.2zm112 0c0 4.3-1.6 8-4.8 11.2s-7 4.8-11.2 4.8-8-1.6-11.2-4.8-4.8-7-4.8-11.2 1.6-8 4.8-11.2 7-4.8 11.2-4.8 8 1.6 11.2 4.8 4.8 7 4.8 11.2zm16-136v64c0 2-.7 3.8-2 5.3s-3.2 2.4-5.2 2.7L70.4 111.2c1 5 1.6 8 1.6 8.8 0 1.3-1 4-3 8h115c2.2 0 4 .8 5.6 2.4s2.4 3.5 2.4 5.6-.8 4-2.4 5.6-3.5 2.4-5.6 2.4H56c-2.2 0-4-.8-5.6-2.4S48 138.2 48 136c0-1 .3-2.2 1-4s1.3-3 2-4.4l2.7-5 2-3.7L33.4 16H8c-2.2 0-4-.8-5.6-2.4S0 10.2 0 8s.8-4 2.4-5.6S5.8 0 8 0h32c1.3 0 2.5.3 3.6.8s1.8 1.2 2.4 2 1 1.8 1.6 3 .8 2.5 1 3.3l.7 3.8.6 3.2h150c2.2 0 4 .8 5.6 2.4s2.4 3.4 2.4 5.6z"></path>
+</symbol><symbol id="icon-chev-double-left" viewBox="0 0 1792 1792"><path d="M1011 1376q0 13-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23zm384 0q0 13-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23z"></path></symbol><symbol id="icon-chev-double-right" viewBox="0 0 1792 1792"><path d="M979 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23zm384 0q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"></path></symbol><symbol id="icon-chev-down" viewBox="0 0 48 28">
+  <path d="M48 4c0 .4-.2.8-.5 1.1L25.1 27.5c-.3.3-.7.5-1.1.5-.4 0-.8-.2-1.1-.5L.5 5.1C.2 4.8 0 4.4 0 4c0-.4.2-.8.5-1.1L2.9.5C3.2.2 3.6 0 4 0c.4 0 .8.2 1.1.5L24 19.4 42.9.5c.3-.3.7-.5 1.1-.5s.8.2 1.1.5l2.4 2.4c.3.3.5.7.5 1.1z"></path>
+</symbol><symbol id="icon-chev-left" viewBox="0 0 28 48">
+  <path d="M0 24c0-.4.2-.8.5-1.1L22.9.5c.3-.3.7-.5 1.1-.5.4 0 .8.2 1.1.5l2.4 2.4c.3.3.5.7.5 1.1 0 .4-.2.8-.5 1.1L8.6 24l18.9 18.9c.3.3.5.7.5 1.1s-.2.8-.5 1.1l-2.4 2.4c-.3.3-.7.5-1.1.5s-.8-.2-1.1-.5L.5 25.1c-.3-.3-.5-.7-.5-1.1z"></path>
+</symbol><symbol id="icon-chev-right" viewBox="0 0 28 48">
+  <path d="M28 24c0 .4-.2.8-.5 1.1L5.1 47.5c-.3.3-.7.5-1.1.5s-.8-.2-1.1-.5L.5 45.1c-.3-.3-.5-.7-.5-1.1 0-.4.2-.8.5-1.1L19.4 24 .5 5.1C.2 4.8 0 4.4 0 4c0-.4.2-.8.5-1.1L2.9.5C3.2.2 3.6 0 4 0s.8.2 1.1.5l22.4 22.4c.3.3.5.7.5 1.1z"></path>
+</symbol><symbol id="icon-chev-up" viewBox="0 0 48 28">
+  <path d="M0 24c0-.4.2-.8.5-1.1L22.9.5c.3-.3.7-.5 1.1-.5s.8.2 1.1.5l22.4 22.4c.3.3.5.7.5 1.1s-.2.8-.5 1.1l-2.4 2.4c-.3.3-.7.5-1.1.5s-.8-.2-1.1-.5L24 8.6 5.1 27.5c-.3.3-.7.5-1.1.5s-.8-.2-1.1-.5L.5 25.1c-.3-.3-.5-.7-.5-1.1z"></path>
+</symbol><symbol id="icon-close" viewBox="0 0 24 24">
+  <path d="M24 4l-8 8 8 8-4 4-8-8-8 8-4-4 8-8-8-8 4-4 8 8 8-8 4 4z"></path>
+</symbol><symbol id="icon-document" viewBox="0 0 53 70">
+  <path d="M52.6 13.4l-13-13C39.2 0 38.8 0 38 0H3.2C1.6 0 0 1.6 0 3.2v63.9C0 68.8 1.2 70 2.8 70h47.3c1.6 0 2.8-1.2 2.8-2.8V14.6c.1-.4.1-.8-.3-1.2zm-9.7 47.7h-34c-1.6 0-2.8-1.2-2.8-2.8 0-1.6 1.2-2.8 2.8-2.8h34.4c1.6 0 2.8 1.2 2.8 2.8 0 1.6-1.6 2.8-3.2 2.8zm0-13.8h-34c-1.6 0-2.8-1.2-2.8-2.8s1.2-2.8 2.8-2.8h34.4c1.6 0 2.8 1.2 2.8 2.8s-1.6 2.8-3.2 2.8zm0-13.7h-34c-1.6 0-2.8-1.2-2.8-2.8S7.3 28 8.9 28h34.4c1.6 0 2.8 1.2 2.8 2.8s-1.6 2.8-3.2 2.8zM49 17.4H38.4c-1.6 0-2.8-1.2-2.8-2.8V4.5h.4L49 17v.4z"></path>
+</symbol><symbol id="icon-documents" viewBox="0 0 13 16">
+  <path d="M12.9 2.6L10.3.1c0-.1 0-.1-.2-.1H3.3c-.2 0-.5.3-.5.5v.9h4.5c.4 0 .9.2 1.2.5l.9.9s.2.2.2 0V.9c0-.1 0-.1.1 0l2.5 2.4v.1h-2c-.1 0 0 .1 0 .1l.9.9c.3.3.5.7.5 1.2v7.9h.9c.3 0 .5-.3.5-.5V2.7s0-.1-.1-.1z"></path>
+  <path d="M10.1 5.3L7.5 2.8l-.1-.1H.6c-.3 0-.6.3-.6.5v12.2c0 .4.3.6.5.6h9.1c.3 0 .5-.3.5-.5v-10-.2zm-1.9 9.1H1.7c-.3 0-.5-.3-.5-.5s.3-.5.5-.5h6.6c.3 0 .5.3.5.5s-.2.5-.6.5zm0-2.7H1.7c-.3 0-.5-.3-.5-.5 0-.3.3-.5.5-.5h6.6c.3 0 .5.3.5.5 0 .3-.2.5-.6.5zm0-2.6H1.7c-.3 0-.5-.3-.5-.5 0-.3.3-.6.5-.6h6.6c.3 0 .5.3.5.5 0 .3-.2.6-.6.6zM9.3 6h-2c-.3 0-.5-.2-.5-.5v-2c0-.1 0-.1.1 0L9.3 6c.1 0 .1 0 0 0z"></path>
+</symbol><symbol id="icon-download" viewBox="0 0 60 73">
+  <path d="M22,0v31H9l21,26l21-26H38V0H22z M0,65v8h60v-8H0z"></path>
+</symbol><symbol id="icon-email-circle" viewBox="0 0 26 26">
+  <path d="M13 0C5.9 0 0 5.9 0 13c0 7.3 5.9 13 13 13s13-5.9 13-13S20.3 0 13 0zm8.5 18.1c0 .9-.8 1.5-1.5 1.5H6c-.9 0-1.5-.8-1.5-1.5v-7.6c.3.3.6.6.9.8 1.5 1.1 3.2 2.1 4.7 3.3.8.6 1.8 1.4 2.9 1.4 1.1 0 2-.8 2.9-1.4 1.5-1.1 3.2-2.3 4.7-3.3.3-.2.6-.5.9-.8v7.6zm-1.7-7.7c-1.5 1.1-3 2.1-4.4 3-.6.5-1.7 1.4-2.4 1.4-.8 0-1.8-.9-2.4-1.4-1.5-1.1-3-2.1-4.4-3C5.4 10 4.5 8.9 4.5 8S5 6.3 6 6.3h14c.8 0 1.5.8 1.5 1.5 0 1.1-.8 2-1.7 2.6z"></path>
+</symbol><symbol id="icon-email" viewBox="0 0 1792 1792">
+  <path d="M1792 710v794q0 66-47 113t-113 47H160q-66 0-113-47T0 1504V710q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123l-468 325q-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38T639 1015q-91-64-262-182.5T172 690q-62-42-117-115.5T0 438q0-78 41.5-130T160 256h1472q65 0 112.5 47t47.5 113z"></path>
+</symbol><symbol id="icon-external" viewBox="0 0 1792 1792">
+  <path d="M1408 928v320q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h704q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113v-320q0-14 9-23t23-9h64q14 0 23 9t9 23zm384-864v512q0 26-19 45t-45 19-45-19l-176-176-652 652q-10 10-23 10t-23-10l-114-114q-10-10-10-23t10-23l652-652-176-176q-19-19-19-45t19-45 45-19h512q26 0 45 19t19 45z"></path>
+</symbol><symbol id="icon-facebook" viewBox="0 0 50 50">
+  <path d="M50 40.6c0 2.6-.9 4.8-2.8 6.6-1.8 1.8-4 2.8-6.6 2.8h-6.2V30.2H41l1-7.3h-7.6v-4.7c0-1.2.3-2.1.9-2.7.6-.6 1.7-.9 3.1-.9h4.3V7.8c-2.1-.2-4-.3-5.9-.3-3 0-5.3.9-7.1 2.6-1.8 1.7-2.7 4.2-2.7 7.3v5.4h-7.3v7.3H27V50H9.4c-2.6 0-4.8-.9-6.6-2.8S0 43.2 0 40.6V9.4c0-2.6.9-4.8 2.7-6.6S6.8 0 9.4 0h31.2c2.6 0 4.8.9 6.6 2.7C49 4.5 50 6.7 50 9.3v31.3z"></path>
+</symbol><symbol id="icon-flickr" viewBox="0 0 16 16">
+  <path d="M0 8.5C0 6.5 1.6 5 3.5 5S7 6.6 7 8.5c0 2-1.6 3.5-3.5 3.5S0 10.4 0 8.5zm9 0c0-2 1.6-3.5 3.5-3.5S16 6.6 16 8.5c0 2-1.6 3.5-3.5 3.5S9 10.4 9 8.5z"></path>
+</symbol><symbol id="icon-globe" viewBox="0 0 1792 1792">
+  <path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5-103 385.5-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103zm274 521q-2 1-9.5 9.5t-13.5 9.5q2 0 4.5-5t5-11 3.5-7q6-7 22-15 14-6 52-12 34-8 51 11-2-2 9.5-13t14.5-12q3-2 15-4.5t15-7.5l2-22q-12 1-17.5-7t-6.5-21q0 2-6 8 0-7-4.5-8t-11.5 1-9 1q-10-3-15-7.5t-8-16.5-4-15q-2-5-9.5-10.5t-9.5-10.5q-1-2-2.5-5.5t-3-6.5-4-5.5-5.5-2.5-7 5-7.5 10-4.5 5q-3-2-6-1.5t-4.5 1-4.5 3-5 3.5q-3 2-8.5 3t-8.5 2q15-5-1-11-10-4-16-3 9-4 7.5-12t-8.5-14h5q-1-4-8.5-8.5t-17.5-8.5-13-6q-8-5-34-9.5t-33-.5q-5 6-4.5 10.5t4 14 3.5 12.5q1 6-5.5 13t-6.5 12q0 7 14 15.5t10 21.5q-3 8-16 16t-16 12q-5 8-1.5 18.5t10.5 16.5q2 2 1.5 4t-3.5 4.5-5.5 4-6.5 3.5l-3 2q-11 5-20.5-6t-13.5-26q-7-25-16-30-23-8-29 1-5-13-41-26-25-9-58-4 6-1 0-15-7-15-19-12 3-6 4-17.5t1-13.5q3-13 12-23 1-1 7-8.5t9.5-13.5.5-6q35 4 50-11 5-5 11.5-17t10.5-17q9-6 14-5.5t14.5 5.5 14.5 5q14 1 15.5-11t-7.5-20q12 1 3-17-5-7-8-9-12-4-27 5-8 4 2 8-1-1-9.5 10.5t-16.5 17.5-16-5q-1-1-5.5-13.5t-9.5-13.5q-8 0-16 15 3-8-11-15t-24-8q19-12-8-27-7-4-20.5-5t-19.5 4q-5 7-5.5 11.5t5 8 10.5 5.5 11.5 4 8.5 3q14 10 8 14-2 1-8.5 3.5t-11.5 4.5-6 4q-3 4 0 14t-2 14q-5-5-9-17.5t-7-16.5q7 9-25 6l-10-1q-4 0-16 2t-20.5 1-13.5-8q-4-8 0-20 1-4 4-2-4-3-11-9.5t-10-8.5q-46 15-94 41 6 1 12-1 5-2 13-6.5t10-5.5q34-14 42-7l5-5q14 16 20 25-7-4-30-1-20 6-22 12 7 12 5 18-4-3-11.5-10t-14.5-11-15-5q-16 0-22 1-146 80-235 222 7 7 12 8 4 1 5 9t2.5 11 11.5-3q9 8 3 19 1-1 44 27 19 17 21 21 3 11-10 18-1-2-9-9t-9-4q-3 5 .5 18.5t10.5 12.5q-7 0-9.5 16t-2.5 35.5-1 23.5l2 1q-3 12 5.5 34.5t21.5 19.5q-13 3 20 43 6 8 8 9 3 2 12 7.5t15 10 10 10.5q4 5 10 22.5t14 23.5q-2 6 9.5 20t10.5 23q-1 0-2.5 1t-2.5 1q3 7 15.5 14t15.5 13q1 3 2 10t3 11 8 2q2-20-24-62-15-25-17-29-3-5-5.5-15.5t-4.5-14.5q2 0 6 1.5t8.5 3.5 7.5 4 2 3q-3 7 2 17.5t12 18.5 17 19 12 13q6 6 14 19.5t0 13.5q9 0 20 10t17 20q5 8 8 26t5 24q2 7 8.5 13.5t12.5 9.5l16 8 13 7q5 2 18.5 10.5t21.5 11.5q10 4 16 4t14.5-2.5 13.5-3.5q15-2 29 15t21 21q36 19 55 11-2 1 .5 7.5t8 15.5 9 14.5 5.5 8.5q5 6 18 15t18 15q6-4 7-9-3 8 7 20t18 10q14-3 14-32-31 15-49-18 0-1-2.5-5.5t-4-8.5-2.5-8.5 0-7.5 5-3q9 0 10-3.5t-2-12.5-4-13q-1-8-11-20t-12-15q-5 9-16 8t-16-9q0 1-1.5 5.5t-1.5 6.5q-13 0-15-1 1-3 2.5-17.5t3.5-22.5q1-4 5.5-12t7.5-14.5 4-12.5-4.5-9.5-17.5-2.5q-19 1-26 20-1 3-3 10.5t-5 11.5-9 7q-7 3-24 2t-24-5q-13-8-22.5-29t-9.5-37q0-10 2.5-26.5t3-25-5.5-24.5q3-2 9-9.5t10-10.5q2-1 4.5-1.5t4.5 0 4-1.5 3-6q-1-1-4-3-3-3-4-3 7 3 28.5-1.5t27.5 1.5q15 11 22-2 0-1-2.5-9.5t-.5-13.5q5 27 29 9 3 3 15.5 5t17.5 5q3 2 7 5.5t5.5 4.5 5-.5 8.5-6.5q10 14 12 24 11 40 19 44 7 3 11 2t4.5-9.5 0-14-1.5-12.5l-1-8v-18l-1-8q-15-3-18.5-12t1.5-18.5 15-18.5q1-1 8-3.5t15.5-6.5 12.5-8q21-19 15-35 7 0 11-9-1 0-5-3t-7.5-5-4.5-2q9-5 2-16 5-3 7.5-11t7.5-10q9 12 21 2 7-8 1-16 5-7 20.5-10.5t18.5-9.5q7 2 8-2t1-12 3-12q4-5 15-9t13-5l17-11q3-4 0-4 18 2 31-11 10-11-6-20 3-6-3-9.5t-15-5.5q3-1 11.5-.5t10.5-1.5q15-10-7-16-17-5-43 12zm-163 877q206-36 351-189-3-3-12.5-4.5t-12.5-3.5q-18-7-24-8 1-7-2.5-13t-8-9-12.5-8-11-7q-2-2-7-6t-7-5.5-7.5-4.5-8.5-2-10 1l-3 1q-3 1-5.5 2.5t-5.5 3-4 3 0 2.5q-21-17-36-22-5-1-11-5.5t-10.5-7-10-1.5-11.5 7q-5 5-6 15t-2 13q-7-5 0-17.5t2-18.5q-3-6-10.5-4.5t-12 4.5-11.5 8.5-9 6.5-8.5 5.5-8.5 7.5q-3 4-6 12t-5 11q-2-4-11.5-6.5t-9.5-5.5q2 10 4 35t5 38q7 31-12 48-27 25-29 40-4 22 12 26 0 7-8 20.5t-7 21.5q0 6 2 16z"></path>
+</symbol><symbol id="icon-heart-circle" viewBox="0 0 26 26">
+  <path d="M13 0C5.9 0 0 5.9 0 13c0 7.3 5.9 13 13 13s13-5.9 13-13S20.3 0 13 0zm6.3 15.1l-5.9 5.7c-.1.2-.2.2-.4.2s-.3 0-.5-.2l-5.9-5.7s-2.1-2-2.1-4.2c0-2.7 1.7-4.4 4.5-4.4 1.7 0 3.2 1.4 3.9 2.1.8-.8 2.3-2.1 3.9-2.1 2.9 0 4.5 1.7 4.5 4.4.2 2.3-2 4.1-2 4.2z"></path>
+</symbol><symbol id="icon-image" viewBox="0 0 30 28">
+  <path d="M10 9q0 1.25-.88 2.13T7 12t-2.13-.88T4 9t.88-2.13T7 6t2.13.88T10 9zm16 6v7H4v-3l5-5 2.5 2.5 8-8zm1.5-11h-25q-.2 0-.35.15T2 4.5v19q0 .2.15.35t.35.15h25q.2 0 .35-.15t.15-.35v-19q0-.2-.15-.35T27.5 4zm2.5.5v19q0 1.03-.73 1.77T27.5 26h-25q-1.03 0-1.77-.73T0 23.5v-19q0-1.03.73-1.77T2.5 2h25q1.03 0 1.77.73T30 4.5z"></path>
+</symbol><symbol id="icon-instagram" viewBox="0 0 20 20">
+  <path d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zM9.98 15.52c3.06 0 5.54-2.48 5.54-5.54 0-.33-.04-.66-.1-.98H17v7.22c0 .38-.3.7-.7.7H3.7c-.4 0-.7-.32-.7-.7V9h1.55c-.06.32-.1.65-.1.98 0 3.06 2.48 5.54 5.53 5.54zM6.52 9.98c0-1.9 1.55-3.46 3.47-3.46s3.45 1.55 3.45 3.46-1.55 3.47-3.47 3.47c-1.9 0-3.46-1.55-3.46-3.47zM16.32 6h-1.63c-.4 0-.7-.3-.7-.7V3.7c0-.4.3-.7.7-.7h1.6c.4 0 .7.3.7.7v1.6c0 .4-.3.7-.7.7z"></path>
+</symbol><symbol id="icon-linkedin" viewBox="0 0 47 45">
+  <path d="M10.7 14.6v30.3H.6V14.6h10.1zm.6-9.4c0 1.5-.5 2.8-1.6 3.8s-2.4 1.5-4.1 1.5c-1.7 0-3-.5-4-1.5S0 6.7 0 5.2s.5-2.7 1.6-3.7S4 0 5.7 0s3.1.5 4.1 1.5 1.6 2.3 1.5 3.7zM47 27.6V45H36.9V28.7c0-2.1-.4-3.8-1.2-5-.8-1.2-2.1-1.8-3.9-1.8-1.3 0-2.4.4-3.2 1.1s-1.5 1.6-2 2.6c-.2.6-.3 1.4-.3 2.5V45h-10c0-8.1.1-14.7.1-19.8s0-8.1-.1-9.2v-1.5h10.1V19h-.1c.4-.7.8-1.2 1.3-1.7.4-.5 1-1 1.7-1.6.7-.5 1.6-1 2.7-1.4 1.1-.4 2.2-.5 3.5-.5 3.5 0 6.3 1.2 8.4 3.5C46 19.7 47 23.1 47 27.6z"></path>
+</symbol><symbol id="icon-logout" viewBox="0 0 150 113">
+  <path d="M51.8 56.5c-7.8 0-14.5-2.8-20-8.3s-8.3-12.2-8.3-20 2.8-14.5 8.3-20S44 0 51.8 0s14.5 2.8 20 8.3 8.3 12.2 8.3 20-2.8 14.5-8.3 20-12.2 8.2-20 8.2zM131 80l18.3 18.3c.4.4.7 1 .7 1.7 0 .6-.2 1.2-.7 1.6l-10 10c-.4.4-1 .7-1.6.7-.7 0-1.3-.2-1.7-.7l-18.3-18.3-18.3 18.3c-.4.4-1 .7-1.7.7-.6 0-1.2-.2-1.6-.7l-10-10c-.4-.4-.7-1-.7-1.6 0-.7.2-1.3.7-1.7L104.4 80 86.1 61.7c-.4-.4-.7-1-.7-1.7 0-.6.2-1.2.7-1.6l10-10c.4-.4 1-.7 1.6-.7.7 0 1.3.2 1.7.7l18.3 18.3L136 48.4c.4-.4 1-.7 1.7-.7.6 0 1.2.2 1.6.7l10 10c.4.4.7 1 .7 1.6 0 .7-.2 1.3-.7 1.7L131 80zm-36.6 0L81.1 93.4c-1.8 1.8-2.7 4-2.7 6.7 0 2.6.9 4.8 2.7 6.6l6.1 6.1c-1 .1-2.1.2-3.2.2H19.6c-5.9 0-10.7-1.7-14.3-5.1s-5.4-8-5.4-14c0-2.6.1-5.1.3-7.6.2-2.5.5-5.1 1-8 .5-2.9 1.2-5.5 1.9-8s1.8-4.8 3.2-7.2 2.8-4.3 4.6-6 3.8-3 6.3-3.9c2.5-1 5.2-1.5 8.2-1.5.9 0 1.9.4 2.9 1.3 7.6 6 15.4 9 23.5 9s15.9-3 23.5-9c1-.8 1.9-1.3 2.9-1.3 1.4 0 2.8.1 4.2.4-1.4 1.3-2.4 2.6-3 3.7-.6 1.1-1 2.5-1 4.1 0 2.6.9 4.9 2.7 6.7L94.4 80z"></path>
+</symbol><symbol id="icon-pencil" viewBox="0 0 23.7 23.7">
+  <path d="M5.7 21.7l1.4-1.4-3.7-3.7L2 18v1.7h2v2h1.7zm8.1-14.5c0-.2-.1-.3-.3-.3-.1 0-.2 0-.3.1l-8.5 8.5c-.1.1-.1.2-.1.3.1.1.2.2.4.2.1 0 .2 0 .3-.1l8.5-8.5v-.2zm-.8-3l6.5 6.5-13 13H0v-6.5l13-13zm10.7 1.5c0 .6-.2 1-.6 1.4l-2.6 2.6L14 3.2 16.6.6c.4-.4.8-.6 1.4-.6.6 0 1 .2 1.4.6l3.7 3.7c.4.4.6.8.6 1.4z"></path>
+</symbol><symbol id="icon-phone" viewBox="0 0 1792 1792">
+  <path d="M1600 1240q0 27-10 70.5t-21 68.5q-21 50-122 106-94 51-186 51-27 0-52.5-3.5t-57.5-12.5-47.5-14.5-55.5-20.5-49-18q-98-35-175-83-128-79-264.5-215.5t-215.5-264.5q-48-77-83-175-3-9-18-49t-20.5-55.5-14.5-47.5-12.5-57.5-3.5-52.5q0-92 51-186 56-101 106-122 25-11 68.5-21t70.5-10q14 0 21 3 18 6 53 76 11 19 30 54t35 63.5 31 53.5q3 4 17.5 25t21.5 35.5 7 28.5q0 20-28.5 50t-62 55-62 53-28.5 46q0 9 5 22.5t8.5 20.5 14 24 11.5 19q76 137 174 235t235 174q2 1 19 11.5t24 14 20.5 8.5 22.5 5q18 0 46-28.5t53-62 55-62 50-28.5q14 0 28.5 7t35.5 21.5 25 17.5q25 15 53.5 31t63.5 35 54 30q70 35 76 53 3 7 3 21z"></path>
+</symbol><symbol id="icon-pinterest" viewBox="0 0 28 28">
+  <path d="M24 14q0 3.27-1.6 6.02T18 24.4 12 26q-1.73 0-3.4-.5.92-1.45 1.2-2.56.15-.53.86-3.3.3.6 1.14 1.05t1.78.44q1.9 0 3.37-1.07t2.3-2.94.8-4.22q0-1.78-.92-3.34T16.43 7t-3.97-.97q-1.65 0-3.07.45t-2.42 1.2-1.7 1.73-1.05 2.04-.34 2.1q0 1.62.62 2.85t1.82 1.72q.47.2.6-.3.03-.12.12-.5t.13-.46q.08-.36-.18-.67-.8-.97-.8-2.37 0-2.36 1.63-4.06t4.28-1.7q2.36 0 3.68 1.3t1.33 3.32q0 2.64-1.07 4.5t-2.75 1.86q-.94 0-1.52-.68t-.36-1.63q.13-.55.42-1.46t.47-1.62.2-1.18q0-.78-.44-1.3t-1.2-.5q-.97 0-1.64.88t-.67 2.22q0 1.14.4 1.9l-1.56 6.53q-.27 1.1-.2 2.77-3.23-1.42-5.2-4.4T0 14q0-3.27 1.6-6.02T6 3.6 12 2t6.02 1.6T22.4 8 24 14z"></path>
+</symbol><symbol id="icon-print" viewBox="0 0 1792 1792">
+  <path d="M448 1536h896v-256h-896v256zm0-640h896v-384h-160q-40 0-68-28t-28-68v-160h-640v640zm1152 64q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128 0v416q0 13-9.5 22.5t-22.5 9.5h-224v160q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-160h-224q-13 0-22.5-9.5t-9.5-22.5v-416q0-79 56.5-135.5t135.5-56.5h64v-544q0-40 28-68t68-28h672q40 0 88 20t76 48l152 152q28 28 48 76t20 88v256h64q79 0 135.5 56.5t56.5 135.5z"></path>
+</symbol><symbol id="icon-search" viewBox="0 0 26 28">
+  <path d="M18 13q0-2.9-2.06-4.95T11 6 6.05 8.06 4 13t2.05 4.95T11 20t4.95-2.06T18 13zm8 13q0 .8-.6 1.4T24 28q-.84 0-1.4-.6l-5.37-5.34Q14.43 24 11 24q-2.23 0-4.27-.87T3.2 20.8.88 17.26 0 13t.87-4.27T3.2 5.2t3.53-2.33T11 2t4.27.87T18.8 5.2t2.33 3.53T22 13q0 3.44-1.94 6.23l5.36 5.36q.58.57.58 1.4z"></path>
+</symbol><symbol id="icon-twitter" viewBox="0 0 26 28">
+  <path d="M25.31 6.38q-1.05 1.53-2.53 2.61 0.02 0.22 0.02 0.66 0 2.03-0.59 4.06t-1.8 3.88-2.88 3.29-4.03 2.28-5.05 0.85q-4.23 0-7.75-2.27 0.55 0.06 1.22 0.06 3.52 0 6.27-2.16-1.64-0.03-2.94-1.01t-1.78-2.49q0.52 0.08 0.95 0.08 0.67 0 1.33-0.17-1.75-0.36-2.9-1.74t-1.15-3.21v-0.06q1.06 0.59 2.28 0.64-1.03-0.69-1.64-1.8t-0.61-2.41q0-1.37 0.69-2.55 1.89 2.33 4.6 3.73t5.81 1.56q-0.12-0.59-0.12-1.16 0-2.09 1.48-3.57t3.57-1.48q2.19 0 3.69 1.59 1.7-0.33 3.2-1.22-0.58 1.8-2.22 2.78 1.45-0.16 2.91-0.78z"></path>
+</symbol><symbol id="icon-user" viewBox="0 0 99 108">
+  <path d="M99 89.8c0 5.6-1.7 10.1-5.1 13.3s-8 4.9-13.6 4.9H18.8c-5.7 0-10.2-1.6-13.6-4.9S0 95.4 0 89.8c0-2.5.1-4.9.2-7.3s.5-4.9 1-7.7 1.1-5.3 1.9-7.6 1.8-4.6 3-6.9 2.7-4.1 4.4-5.7 3.6-2.8 6-3.8 5-1.4 7.8-1.4c.4 0 1.4.5 3 1.5s3.3 2.1 5.2 3.4 4.5 2.4 7.6 3.4 6.2 1.5 9.4 1.5 6.3-.5 9.4-1.5c3.1-1 5.6-2.1 7.6-3.4s3.7-2.4 5.2-3.4 2.5-1.5 3-1.5c2.9 0 5.5.5 7.8 1.4s4.4 2.2 6 3.8 3.1 3.5 4.4 5.7 2.3 4.5 3 6.9 1.4 4.9 1.9 7.6.8 5.3 1 7.7.2 4.8.2 7.3zM76.5 27c0 7.5-2.6 13.8-7.9 19.1S57 54 49.5 54s-13.8-2.6-19.1-7.9-7.9-11.6-7.9-19.1 2.6-13.8 7.9-19.1S42 0 49.5 0s13.8 2.6 19.1 7.9 7.9 11.6 7.9 19.1z"></path>
+</symbol><symbol id="icon-vimeo" viewBox="0 0 16 16">
+  <path d="M0 4.82l.65.85S2 4.6 2.45 5.14s2.14 6.9 2.7 8.08c.5 1.04 1.87 2.4 3.38 1.43s6.5-5.24 7.4-10.28C16.8-.66 9.9.4 9.17 4.77c1.83-1.1 2.8.45 1.87 2.2-.94 1.75-1.8 2.88-2.24 2.88s-.78-1.16-1.3-3.2C7 4.52 7 .72 4.8 1.14 2.7 1.58 0 4.83 0 4.83z"></path>
+</symbol><symbol id="icon-youtube" viewBox="0 0 28 28">
+<path d="M20 14q0-0.578-0.469-0.844l-8-5q-0.484-0.313-1.016-0.031-0.516 0.281-0.516 0.875v10q0 0.594 0.516 0.875 0.25 0.125 0.484 0.125 0.313 0 0.531-0.156l8-5q0.469-0.266 0.469-0.844zM28 14q0 1.5-0.016 2.344t-0.133 2.133-0.352 2.305q-0.25 1.141-1.078 1.922t-1.937 0.906q-3.469 0.391-10.484 0.391t-10.484-0.391q-1.109-0.125-1.945-0.906t-1.086-1.922q-0.219-1.016-0.336-2.305t-0.133-2.133-0.016-2.344 0.016-2.344 0.133-2.133 0.352-2.305q0.25-1.141 1.078-1.922t1.937-0.906q3.469-0.391 10.484-0.391t10.484 0.391q1.109 0.125 1.945 0.906t1.086 1.922q0.219 1.016 0.336 2.305t0.133 2.133 0.016 2.344z"></path>
+</symbol></svg>
+      <svg xmlns="http://www.w3.org/2000/svg">
+  <!-- Linear gradients don’t work inside of symbol elements in Firefox -->
+  <defs>
+    <linearGradient id="logo-sprite-a" gradientUnits="userSpaceOnUse" x1="-235.83" y1="-138.14" x2="-234.83" y2="-138.14" gradientTransform="rotate(-45.263 -72434.608 -54566.748) scale(255.9572)">
+      <stop offset="0" stop-color="#EB8123"></stop>
+      <stop offset="1" stop-color="#F3D712"></stop>
+    </linearGradient>
+    <linearGradient id="logo-sprite-b" gradientUnits="userSpaceOnUse" x1="-235.68" y1="-137.62" x2="-234.68" y2="-137.62" gradientTransform="translate(31739.762 18616.338) scale(134.6563)">
+      <stop offset="0" stop-color="#2C9ED8"></stop>
+      <stop offset="1" stop-color="#2387C3"></stop>
+    </linearGradient>
+  </defs>
+  <symbol id="logo-icon" viewBox="0 0 130.2 130">
+    <path fill="url(#logo-sprite-a)" d="M80.5 1.9c-35-8.5-70.1 12.9-78.6 47.8C-2.3 67.1.8 84.1 9.4 98.3c.1.1.3.5.4.6.9.6 7.1-1.8 8.2-2.2 4.7-1.8 9.3-4.3 12.1-7.9 1.4-1.8 2.5-3.6 3-5.7.1-.3 0-.6-.1-.8-.2-.2-.4-.5-.6-.6-1.9-1.3-4-3-5.1-4.1-3.1-3.2-5.7-5.9-8.2-10.6-1.3-2.4-1.7-5.1-.3-7.4.8-1.2 1.8-2.3 2.8-3.3.5-.5.6-.8.4-1.5-.7-2.8.3-4.5 3-4.8 1-.1 2.7.7 3.2.7.1 0 .2-.1.1-.2-.8-1.5-2.3-4.1-1.9-5.3.8-2.2 2.1-2.5 4.1-3.5 1.6-.8 1.9-2.6 1.7-4.3 0-.5-.2-1-.2-1.5-.2-2.3 1.8-4.4 4.1-4 1 .1 2 .5 3 .7.8.2 2.2.6 3 .8 1.1.3 2 .2 2.8-.3-.4-1.5-.9-2.8-1.3-4.2.1 0 .2-.1.4-.1.6.7 1.1 1.5 1.7 2.2.9 1.1 1.2 1.1 2 0 .6-.8 1.2-1.8 1.7-2.6 2.7-4.3 6-9.4 10.5-12 4-2.4 8.8-3.2 13.4-3.9 10.7-1.7 27.5 1.2 44.4 14.3-8.7-12-21.6-21.2-37.2-24.9z"></path>
+    <path fill="url(#logo-sprite-b)" d="M129.8 70.8c-.2-1.4-.3-3.8-.5-5.1-.5-5.4-.4-10.5-2.5-14.1-.1-.1-.4-.7-.4-.7-1.4-3.6-2.6-7.2-3.6-11.3h-.3c-.4 0-.8-.1-1.2-.2-.4-.1-.8-.2-1.2-.2-.4 0-.8.1-1.2.3-1.9.9-2.7 2.5-3 4.3-.1.5-.2 1.8-.2 2.4-.1 2.7.9 5.3 1.6 8 .3 1.2.6 2.3.5 3.6-.2 4.6-.6 11-.5 15.7.1 3.4-3.3 5.6-8.6 14.6-.6 1-2 1.4-3.8 2.5-1.1.7-3.2 2.6-4.5 3.5-1.6 1.1-5.2 3.4-8.8 4.7-2.2.8-3.4-1.7-2.5-2.8.5-.6 1.8-1.8 2.4-2.4.7-.6 2.7-2.2 3.4-2.7 1.3-1 3.8-2.7 5.8-4 2-1.4 5.1-5.7 6.3-8.1 1.5-2.9 2.3-6.2 1.3-9-.6-1.8-2.4-2.7-3.9-2.8-2.7-.2-6.3 2.3-8.4 4.5-2 2-4.5 3.7-6.6 5.3-1.7 1.2-4.1 4.2-6.1 6.1-2 1.9-8.4 6.1-10.9 7.8-1.6 1.2-7.4 4.7-8.5 5.8-1.6 1.7-1.5 1.7-2.6 3-2.8 3.2-5.3 9.3-7.4 12.7-.4.7-1.3 1.4-2.3 2.3-1.3 1.1-3 1.8-4.7 1.9-.6 0-1.2.1-1.8.1-11 0-22.4-4.6-27.7-7.5 8.4 9.2 19.5 16.1 32.6 19.3 11.8 2.9 24.3 2.2 35.2-1 5.9-1.7 9.9-3.6 13.7-5.6 3.4-1.7 19.1-12.1 21.3-16.2.5-.9 1-1.8 1.4-2.7 1.3-2.8 4.3-11.5 4.7-12.4.7-1.5 3.4-9.8 3.7-12 .5-3.5.2-4.4-.2-7.6z"></path>
+  </symbol>
+  <symbol id="logo-text" viewBox="0 0 318.3 63.1" preserveAspectRatio="xMidYMid meet">
+    <path class="st0" d="M0 43.7h8.7v1.8H2.1v4.7h5.4V52H2.1v4.8h7v1.8H0V43.7z"></path>
+    <path d="M17.7 52h.5v-.2c0-1.8-1-2.3-2.4-2.3-1.7 0-3 1-3 1L12 49s1.6-1.3 4-1.3c2.7 0 4.3 1.5 4.3 4.2v6.8h-1.9v-1.8s-.9 2.1-3.5 2.1c-1.9 0-3.7-1.1-3.7-3.3 0-3.6 4.7-3.7 6.5-3.7zm-2.4 5.2c1.7 0 2.9-1.8 2.9-3.4v-.3h-.5c-1.6 0-4.4.1-4.4 2 0 .9.7 1.7 2 1.7zM23.6 47.9h2v2.7c.5-1.6 1.7-2.8 3.4-2.8h.5v2s-.3-.1-.6-.1c-1.3 0-2.5.9-3 2.5-.2.6-.3 1.3-.3 1.9v4.4h-2.1V47.9zM31.7 43.7h2.1v11.7c0 1.3.5 1.5 1.2 1.5h.4v1.8h-.7c-1.2 0-2.9-.3-2.9-3v-12zM36.8 60.9s.6.4 1.3.4c.8 0 1.5-.6 1.9-1.6l.5-1.2L36 47.9h2.3l2.7 7c.2.6.4 1.3.4 1.3s.2-.7.4-1.3l2.6-7h2.2l-5.1 12.6c-.7 1.6-2 2.5-3.5 2.5-1.2 0-2.1-.7-2.1-.7l.9-1.4zM59.8 47.7c2.7 0 4 1.6 4 1.6l-1 1.4s-1.2-1.2-3-1.2c-2.2 0-3.8 1.6-3.8 3.8 0 2.2 1.6 3.8 3.8 3.8 2 0 3.3-1.4 3.3-1.4l.8 1.5s-1.5 1.7-4.3 1.7c-3.4 0-5.8-2.4-5.8-5.6.2-3.2 2.6-5.6 6-5.6zM71.5 47.7c3.2 0 5.8 2.3 5.8 5.6s-2.6 5.6-5.8 5.6c-3.2 0-5.8-2.4-5.8-5.6 0-3.3 2.6-5.6 5.8-5.6zm0 9.4c2 0 3.7-1.6 3.7-3.8 0-2.2-1.7-3.8-3.7-3.8s-3.7 1.6-3.7 3.8c0 2.2 1.7 3.8 3.7 3.8zM80 47.9h2v2.2c.4-.9 1.7-2.5 4-2.5 2.5 0 3.7 1.4 3.7 4.1v6.9h-2.1v-6.4c0-1.5-.3-2.7-2-2.7-1.6 0-3 1.1-3.4 2.6-.1.4-.2.9-.2 1.4v5h-2V47.9zM93.2 47.9h2v2.2c.4-.9 1.7-2.5 4-2.5 2.5 0 3.7 1.4 3.7 4.1v6.9h-2.1v-6.4c0-1.5-.3-2.7-2-2.7-1.6 0-3 1.1-3.4 2.6-.1.4-.2.9-.2 1.4v5h-2.1V47.9zM111 47.7c3 0 4.7 2.2 4.7 5 0 .3-.1.9-.1.9h-7.9c.1 2.3 1.8 3.5 3.7 3.5 1.9 0 3.2-1.2 3.2-1.2l.9 1.5s-1.6 1.5-4.2 1.5c-3.4 0-5.7-2.4-5.7-5.6 0-3.4 2.3-5.6 5.4-5.6zm2.6 4.3c-.1-1.8-1.2-2.7-2.6-2.7-1.6 0-2.9 1-3.2 2.7h5.8zM123.5 47.7c2.7 0 4 1.6 4 1.6l-1 1.4s-1.2-1.2-3-1.2c-2.2 0-3.8 1.6-3.8 3.8 0 2.2 1.6 3.8 3.8 3.8 2 0 3.3-1.4 3.3-1.4l.8 1.5s-1.5 1.7-4.3 1.7c-3.4 0-5.8-2.4-5.8-5.6.3-3.2 2.7-5.6 6-5.6zM131 49.7h-1.4V48h1.5v-3h2v3.1h2.6v1.7h-2.6v4.8c0 2.1 1.5 2.4 2.3 2.4h.5v1.8h-.7c-1.4 0-4.1-.4-4.1-4v-5.1zM138.2 43.7h2.1v2.1h-2.1v-2.1zm0 4.2h2.1v10.7h-2.1V47.9zM148.9 47.7c3.2 0 5.8 2.3 5.8 5.6s-2.6 5.6-5.8 5.6c-3.2 0-5.8-2.4-5.8-5.6-.1-3.3 2.5-5.6 5.8-5.6zm0 9.4c2 0 3.7-1.6 3.7-3.8 0-2.2-1.7-3.8-3.7-3.8s-3.7 1.6-3.7 3.8c0 2.2 1.6 3.8 3.7 3.8zM157.4 47.9h2v2.2c.4-.9 1.7-2.5 4-2.5 2.5 0 3.7 1.4 3.7 4.1v6.9H165v-6.4c0-1.5-.3-2.7-2-2.7-1.6 0-3 1.1-3.4 2.6-.1.4-.2.9-.2 1.4v5h-2.1V47.9zM170.7 55.9s1.2 1.2 3.1 1.2c.9 0 1.8-.5 1.8-1.3 0-2-5.5-1.6-5.5-5.1 0-1.9 1.7-3 3.9-3 2.4 0 3.5 1.2 3.5 1.2l-.8 1.5s-1-1-2.7-1c-.9 0-1.8.4-1.8 1.3 0 1.9 5.5 1.5 5.5 5 0 1.8-1.5 3.1-3.9 3.1-2.6 0-4.1-1.6-4.1-1.6l1-1.3zM186.3 43.7h2.1v11.7c0 1.3.5 1.5 1.2 1.5h.4v1.8h-.7c-1.2 0-2.9-.3-2.9-3v-12zM198.1 52h.5v-.2c0-1.8-1-2.3-2.4-2.3-1.7 0-3 1-3 1l-.9-1.5s1.6-1.3 4-1.3c2.7 0 4.3 1.5 4.3 4.2v6.8h-1.9v-1.8s-.9 2.1-3.5 2.1c-1.9 0-3.7-1.1-3.7-3.3.1-3.6 4.8-3.7 6.6-3.7zm-2.4 5.2c1.7 0 2.9-1.8 2.9-3.4v-.3h-.5c-1.6 0-4.4.1-4.4 2 0 .9.7 1.7 2 1.7zM204.2 55.9s1.2 1.2 3.1 1.2c.9 0 1.8-.5 1.8-1.3 0-2-5.5-1.6-5.5-5.1 0-1.9 1.7-3 3.9-3 2.4 0 3.5 1.2 3.5 1.2l-.8 1.5s-1-1-2.7-1c-.9 0-1.8.4-1.8 1.3 0 1.9 5.5 1.5 5.5 5 0 1.8-1.5 3.1-3.9 3.1-2.6 0-4.1-1.6-4.1-1.6l1-1.3zM214.3 49.7h-1.4V48h1.5v-3h2v3.1h2.6v1.7h-2.6v4.8c0 2.1 1.5 2.4 2.3 2.4h.5v1.8h-.7c-1.4 0-4.1-.4-4.1-4v-5.1zM233.4 52h.5v-.2c0-1.8-1-2.3-2.4-2.3-1.7 0-3 1-3 1l-.9-1.5s1.6-1.3 4-1.3c2.7 0 4.3 1.5 4.3 4.2v6.8H234v-1.8s-.9 2.1-3.5 2.1c-1.9 0-3.7-1.1-3.7-3.3.1-3.6 4.8-3.7 6.6-3.7zm-2.3 5.2c1.7 0 2.9-1.8 2.9-3.4v-.3h-.5c-1.6 0-4.4.1-4.4 2-.1.9.6 1.7 2 1.7zM245.3 43.7h2.1v11.7c0 1.3.5 1.5 1.2 1.5h.4v1.8h-.7c-1.2 0-2.9-.3-2.9-3v-12zM251.2 43.7h2.1v2.1h-2.1v-2.1zm.1 4.2h2.1v10.7h-2.1V47.9zM257.3 49.7H256V48h1.3v-.5c0-3.5 2.7-4 4.1-4 .5 0 .8.1.8.1v1.8h-.5c-.8 0-2.3.3-2.3 2.2v.5h2.6v1.7h-2.6v8.9h-2v-9zM268.6 47.7c3 0 4.7 2.2 4.7 5 0 .3-.1.9-.1.9h-7.9c.1 2.3 1.8 3.5 3.7 3.5 1.9 0 3.2-1.2 3.2-1.2l.9 1.5s-1.6 1.5-4.2 1.5c-3.4 0-5.7-2.4-5.7-5.6 0-3.4 2.4-5.6 5.4-5.6zm2.6 4.3c-.1-1.8-1.2-2.7-2.6-2.7-1.6 0-2.9 1-3.2 2.7h5.8zM276.4 49.7H275V48h1.5v-3h2v3.1h2.6v1.7h-2.6v4.8c0 2.1 1.5 2.4 2.3 2.4h.5v1.8h-.7c-1.4 0-4.1-.4-4.1-4v-5.1zM283.6 43.7h2.1v2.1h-2.1v-2.1zm0 4.2h2.1v10.7h-2.1V47.9zM289.1 47.9h2v2.2c.5-1.2 2-2.5 3.7-2.5 1.8 0 2.9.8 3.2 2.4.6-1.3 2.1-2.4 3.8-2.4 2.4 0 3.6 1.4 3.6 4.1v6.9h-2.1v-6.4c0-1.5-.3-2.7-1.9-2.7-1.5 0-2.6 1.3-3 2.7-.1.4-.1.9-.1 1.5v4.9h-2.1v-6.4c0-1.4-.2-2.7-1.9-2.7-1.6 0-2.7 1.3-3.1 2.8-.1.4-.1.9-.1 1.4v4.9H289V47.9zM313.6 47.7c3 0 4.7 2.2 4.7 5 0 .3-.1.9-.1.9h-7.9c.1 2.3 1.8 3.5 3.7 3.5 1.9 0 3.2-1.2 3.2-1.2l.9 1.5s-1.6 1.5-4.2 1.5c-3.4 0-5.7-2.4-5.7-5.6 0-3.4 2.3-5.6 5.4-5.6zm2.6 4.3c-.1-1.8-1.2-2.7-2.6-2.7-1.6 0-2.9 1-3.2 2.7h5.8zM23.5 33H1.1C.5 33 0 32.5 0 31.9v-2.7c0-.2.1-.5.2-.6l14-20c.7-1 1.4-1.8 1.8-2.3H1.8C1.2 6.3.7 5.8.7 5.2V1.7c0-.6.5-1.1 1.1-1.1h21.4c.6 0 1.1.5 1.1 1.1v2.7c0 .2-.1.4-.2.6L10.2 25c-.7 1-1.4 1.8-1.8 2.3h15c.6 0 1.1.5 1.1 1.1v3.5c.1.6-.4 1.1-1 1.1zM48.9 33H30.7c-.6 0-1.1-.5-1.1-1.1V1.7c0-.6.5-1.1 1.1-1.1h17.5c.6 0 1.1.5 1.1 1.1v3.5c0 .6-.5 1.1-1.1 1.1H36.1v7.6h9.6c.6 0 1.1.5 1.1 1.1v3.5c0 .6-.5 1.1-1.1 1.1h-9.6v7.8h12.8c.6 0 1.1.5 1.1 1.1V32c0 .5-.5 1-1.1 1zM78.1 33h-4.7c-.4 0-.8-.2-1-.6l-6-11.3h-4.9v10.7c0 .6-.5 1.1-1.1 1.1h-4.3c-.6 0-1.1-.5-1.1-1.1V1.7c0-.6.5-1.1 1.1-1.1h9.5c3.3 0 5 .2 6.5.9 3.4 1.5 5.4 4.8 5.4 9 0 3.9-2 7.4-5.2 8.8.2.3.5.7.8 1.3L79 31.3c.2.3.2.8 0 1.1-.1.4-.5.6-.9.6zM61.5 15.4h4.8c2.9 0 4.6-1.7 4.6-4.6 0-2.4-.7-4.5-5.4-4.5h-4v9.1zM97.9 33.6c-9.4 0-16.8-7.5-16.8-17C81.1 7.3 88.5 0 97.9 0s16.8 7.3 16.8 16.6c0 9.5-7.4 17-16.8 17zm0-27.6c-5.7 0-10.1 4.6-10.1 10.5 0 6.3 4.3 11 10.1 11s10.1-4.7 10.1-11C108 10.7 103.6 6 97.9 6zM195.3 33H191c-.6 0-1.1-.5-1.1-1.1V6.2h-9.3c-.6 0-1.1-.5-1.1-1.1V1.7c0-.6.5-1.1 1.1-1.1h25.1c.6 0 1.1.5 1.1 1.1v3.5c0 .6-.5 1.1-1.1 1.1h-9.3V32c0 .5-.5 1-1.1 1zM236.8 33h-4.3c-.6 0-1.1-.5-1.1-1.1V19.7h-13.8v12.2c0 .6-.5 1.1-1.1 1.1h-4.3c-.6 0-1.1-.5-1.1-1.1V1.7c0-.6.5-1.1 1.1-1.1h4.3c.6 0 1.1.5 1.1 1.1V14h13.8V1.7c0-.6.5-1.1 1.1-1.1h4.3c.6 0 1.1.5 1.1 1.1V32c.1.5-.4 1-1.1 1zM267 33h-4.7c-.4 0-.8-.2-1-.6l-6-11.3h-4.9v10.7c0 .6-.5 1.1-1.1 1.1H245c-.6 0-1.1-.5-1.1-1.1V1.7c0-.6.5-1.1 1.1-1.1h9.5c3.3 0 5 .2 6.5.9 3.4 1.5 5.4 4.8 5.4 9 0 3.9-2 7.4-5.2 8.8.2.3.5.7.8 1.3l5.9 10.7c.2.3.2.8 0 1.1-.1.4-.5.6-.9.6zm-16.6-17.6h4.8c2.9 0 4.6-1.7 4.6-4.6 0-2.4-.7-4.5-5.4-4.5h-4v9.1zM291.5 33h-18.2c-.6 0-1.1-.5-1.1-1.1V1.7c0-.6.5-1.1 1.1-1.1h17.5c.6 0 1.1.5 1.1 1.1v3.5c0 .6-.5 1.1-1.1 1.1h-12.1v7.6h9.6c.6 0 1.1.5 1.1 1.1v3.5c0 .6-.5 1.1-1.1 1.1h-9.6v7.8h12.8c.6 0 1.1.5 1.1 1.1V32c0 .5-.5 1-1.1 1zM317.1 33h-18.2c-.6 0-1.1-.5-1.1-1.1V1.7c0-.6.5-1.1 1.1-1.1h17.5c.6 0 1.1.5 1.1 1.1v3.5c0 .6-.5 1.1-1.1 1.1h-12.1v7.6h9.6c.6 0 1.1.5 1.1 1.1v3.5c0 .6-.5 1.1-1.1 1.1h-9.6v7.8h12.8c.6 0 1.1.5 1.1 1.1V32c.1.5-.4 1-1.1 1zM138.3 28.5H134c-.4 0-.6-.3-.6-.6V11.7h-7.1c-.4 0-.6-.3-.6-.6V7.4c0-.4.3-.6.6-.6h19.8c.4 0 .6.3.6.6v3.7c0 .4-.3.6-.6.6H139v16.1c0 .4-.3.7-.7.7zM161.4 28.7c-6.3 0-11.2-5-11.2-11.4 0-6.2 4.9-11.1 11.2-11.1 6.3 0 11.2 4.9 11.2 11.1 0 6.4-4.9 11.4-11.2 11.4zm0-17.5c-3.3 0-5.9 2.7-5.9 6.2 0 3.7 2.5 6.4 5.9 6.4 3.4 0 5.9-2.8 5.9-6.4 0-3.5-2.6-6.2-5.9-6.2z"></path>
+  </symbol>
+</svg>
+    </div>
+
+    <div class="Main-wrapper">
+      <div id="Header" class="Header" role="banner">
+  <div class="Header-wrap no-padding">
+    <div class="l-wrap l-wrap--no-padding">
+
+      <div class="Header-logo">
+        <a class="Header-logo-link" href="https://www.zerotothree.org/" title="ZERO TO THREE homepage">
+          <span class="u-screenreader">ZERO TO THREE</span>
+
+          <span class="Header-logo-icon">
+            <svg viewBox="0 0 130.2 130" width="39" height="39">
+              <use xlink:href="#logo-icon"></use>
+            </svg>
+          </span>
+
+          <span class="Header-logo-text">
+            <svg viewBox="0 0 318.3 63.1" width="137" height="27">
+              <use xlink:href="#logo-text"></use>
+
+            </svg>
+          </span>
+        </a>
+</div>
+      <a class="Nav-button Nav-button--open" id="Nav-toggle" href="#Footer" data-no-scroll="">
+        <span class="Nav-button--open-icon">
+          <span class="Nav-button--open-icon-inner"></span>
+        </span>
+        <span class="Nav-button--open-text">Menu</span>
+      </a>
+
+      <div id="Nav" class="Nav js-init">
+  <button class="Nav-button Nav-button--close" type="button">
+    <svg class="icon Nav-button--close-icon" viewBox="0 0 21 21" width="21" height="21" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="#icon-close"></use></svg>
+    <span class="Nav-button--close-text u-screenreader">Close</span>
+  </button>
+
+  <div class="Nav-wrap">
+    <div class="Nav-search Nav-search--mobile SearchBox">
+      <div class="l-wrap">
+        <div class="SearchBox-form" id="SearchBox-nav" role="search">
+          <form action="https://www.zerotothree.org/search" method="get">
+            <label for="SearchBox-input-nav" class="SearchBox-label u-screenreader">Search</label>
+            <input class="SearchBox-input" id="SearchBox-input-nav" name="q" type="search" placeholder="Search" />
+            <button class="SearchBox-submit" id="SearchBox-submit-nav" type="submit">
+              <span class="u-screenreader">Submit</span>
+              <svg class="icon SearchBox-submit-icon" viewBox="0 0 20 20" width="20" height="20" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="#icon-search"></use></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="Nav-menu" role="navigation" aria-label="Main Navigation">
+      <ul class="Nav-menu-list">
+
+        <li class="Nav-menu-item">
+          <a class="Nav-menu-toggle" href="https://www.zerotothree.org/policy-and-advocacy" aria-pressed="false" aria-expanded="false" aria-haspopup="true" aria-controls="Nav-menu-panel-0" id="Nav-menu-toggle-0">
+            <span class="Nav-menu-toggle-text u-nowrap">Policy &amp; Advocacy</span>
+          </a>
+        </li>
+
+        <li class="Nav-menu-item">
+          <a class="Nav-menu-toggle" href="https://www.zerotothree.org/advocate" aria-pressed="false" aria-expanded="false" aria-haspopup="true" aria-controls="Nav-menu-panel-1" id="Nav-menu-toggle-1">
+            <span class="Nav-menu-toggle-text">Action Center</span>
+          </a>
+        </li>
+
+        <li class="Nav-menu-item">
+          <a class="Nav-menu-toggle" href="https://www.zerotothree.org/policy-network" aria-pressed="false" aria-expanded="false" aria-haspopup="true" aria-controls="Nav-menu-panel-3" id="Nav-menu-toggle-3">
+            <span class="Nav-menu-toggle-text">Join Policy Network</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+
+      <div id="Main" class="Main " role="main">
+        
+<div class="Main-wrap l-padding u-mb8">
+  <div class="l-wrap--narrow">
+
+    <div class="u-richtext u-richtext--scale u-mt3">
+    
+        <div id="action">
+
+<div class="salsa actions" id="salsa">
+
+<!-- end wrapper top -->
+
+<!-- exiting content here -->
+
+    
+
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"/>
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"/>
+<apex:includeScript value="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"/>
+                                     
+<div id="globalcontainer" class="container">
+    
+    
+<apex:image rendered="{!NOT(ISBLANK(sImageSource))}" url="{!sImageSource}"/>
+
+<apex:pageMessages id="pmessages"/>
+
+
+<apex:outputPanel id="stateError">
+  <apex:outputPanel id="stateError2" rendered="{!!bValidState}">
+
+  <p class="alert alert-warning">
+    <b>Sorry - that action wasn't valid for your address - but here's a list of actions you can take right now! </b> 
+  </p>
+
+  </apex:outputPanel>
+</apex:outputPanel>
+
+<apex:outputPanel id="campaignlist">
+<apex:outputPanel id="campaignlisttable" rendered="{!bShowStateAction}">
+
+<kwac:KWAC_CampaignListComponent contacttoken="{!sToken}" contactstate="{!eocsrequest.kweos__State__c}"/>
+
+</apex:outputPanel>
+</apex:outputPanel>
+
+
+
+<apex:outputPanel id="thanks">
+<apex:outputPanel rendered="{!bshowthanks}">
+
+<script>
+!function(d,s,id){
+    var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+    if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js,fjs);
+        }
+    }
+    (document, 'script', 'twitter-wjs');
+</script>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}
+(document, 'script', 'facebook-jssdk'));
+
+</script>
+    <apex:outputPanel styleclass="txlinks" layout="block">
+    <apex:outputField value="{!kwcamp.camp.kwac__Thank_You_Page_Text__c}"/>
+    </apex:outputPanel>
+
+  <div class="row">
+        
+            <div class="col-md-10">
+            <a href="https://twitter.com/share" class="twitter-share-button"  data-url="{!kwcamp.camp.kwac__URL_to_Share__c}" data-text="{!kwcamp.camp.kwac__Twitter_Share_Text__c}" data-via="{!kwcamp.camp.kwac__Twitter_Handle__c}" data-size="medium">Tweet</a>
+            </div>
+            
+            <div class="col-md-10">
+               <div id="fb-root"></div>
+               <div class="fb-share-button" data-href="{!kwcamp.camp.kwac__URL_to_Share__c}" data-width="75" data-type="button_count"></div>
+            </div>
+   </div>
+    
+</apex:outputPanel>   
+</apex:outputPanel>
+
+
+<apex:outputPanel id="mainform">
+<apex:outputPanel id="mainformshow" rendered="{!bshowmainform}">
+
+<apex:form id="action" html-role="form">
+
+<div style="font-size:150%">
+<p>{!kwcamp.camp.kwac__Tagline__c}</p>
+</div>
+
+<div>
+<apex:outputField value="{!kwcamp.camp.kwac__Call_to_Action_Text__c}"/>
+</div>
+
+<apex:outputPanel id="PersName">
+
+    <h4>Your Information
+        <apex:outputPanel style="font-size:small; float:right;" >
+            <apex:commandLink styleclass="formlinks" action="{!sendtoemptypage}" value="click here for blank form" immediate="true" reRender="PersName,MatchedOfficialsPanel,mainform,campaignlist,stateError" />
+        </apex:outputPanel>
+        <br/>
+        <i>
+            <h5>All fields are required to ensure we can deliver your message directly to your elected officials.</h5></i>
+    </h4>
+
+ <apex:outputPanel id="existingactionid" rendered="{!bShowExistingActionMessage}">
+ 
+<div class="row">
+        
+            <div class="col-md-12">
+             <p class="alert alert-warning">
+         Thanks for your support, but looks like you have already taken an action for this campaign. <br/>
+         But if you are using a forwarded link, please fill in the form below to take action! <br/>
+            </p>
+            </div>
+            
+           
+    </div>
+ 
+ </apex:outputPanel>
+
+    <div class="row">
+        
+            <div class="col-md-3">
+                <div class="form-group" id="nmSaluation">
+                    <label>Prefix</label>
+                    <apex:inputField required="true" id="nmSalutationf" label="Prefix" value="{!eocsrequest.kweos__Prefix__c}" type="text" styleclass="form-control input-sm"/>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="form-group" id="nmFirstname">
+                    <label>First Name</label>
+                    <apex:inputField required="true"  id="nmFirstnamef" label="First Name" value="{!eocsrequest.kweos__First_Name__c}" type="text" styleclass="form-control input-sm"/>
+                </div>
+            </div>
+            
+            <div class="col-md-5">
+                <div class="form-group" id="nmLastname">
+                    <label>Last Name</label>
+                    <apex:inputField required="true"  id="nmLastnamef" label="Last Name" value="{!eocsrequest.kweos__Last_Name__c}" styleclass="form-control input-sm"/>
+                </div>
+            </div>
+            
+           
+    </div>
+        
+    <div class="row">
+           
+                <div class="col-md-4">
+                    <div class="form-group" id="adAddress1">  
+                      <label>Street Address</label>
+                      <apex:inputField id="adAddress1f" required="true"  label="Street Address" value="{!eocsrequest.kweos__Address1__c}" styleclass="form-control input-sm"/>
+                    </div>
+                </div>
+               
+             
+                <div class="col-md-3">
+                      <div class="form-group" id="adCity">
+                          <label>City</label>
+                          <apex:inputField id="adCityf" required="true"  label="City" value="{!eocsrequest.kweos__City__c}" styleclass="form-control input-sm"/>
+                      </div>
+               </div>
+
+                <div class="col-md-3" id="adState">
+                  <div class="form-group"> 
+                      <label>State</label>
+                      <apex:selectList size="1" value="{!eocsrequest.kweos__State__c}" styleclass="form-control input-sm">
+                      <apex:selectOptions value="{!slStates}"/>
+                      </apex:selectList>
+                  </div>
+                </div>
+ 
+                <div class="col-md-2">
+                  <div class="form-group" id="adZip">
+                      <label>Zip Code</label>
+                      <apex:inputField id="adZipf" required="true"  label="Zip/Postal Code" value="{!eocsrequest.kweos__Postal_Code__c}" styleclass="form-control input-sm"/>
+                  </div>
+                </div>
+                  
+    </div>
+
+   
+
+    <div class="row">
+
+                <div class="col-md-6">
+                        <div class="form-group" id="ciEmail">
+                            <label>Email Address</label>
+                            <apex:inputField required="true" id="ciEmailf" label="Email" type="email" value="{!eocsrequest.kweos__Email__c}" styleclass="form-control input-sm"/>
+                        </div>
+                </div>
+                <div class="col-md-6">
+                        <div class="form-group" id="ciPhone">
+                            <label>Phone Number</label>
+                            <apex:inputField required="true" id="ciPhonef" label="Phone" value="{!eocsrequest.kweos__Phone__c}" styleclass="form-control input-sm"/>
+                        </div>
+                </div>
+ 
+    </div>
+                
+    <div class="row"> 
+
+                <div class="col-md-4">
+                        <div class="checkbox" id="ciSubscribe">
+                <apex:outputPanel rendered="{!bShowSubscribe}">
+                            <label><strong>Subscribe to Email Alerts?</strong></label>
+                            <apex:inputCheckbox selected="true" id="ciSubscribecb" label="Subscribe" value="{!eocsrequest.kwac__Subscribe_to_Email_Alerts__c}"/>
+                </apex:outputPanel>
+               
+                        </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="col-right">    
+                               <div class="form-group" id="actionbutton">
+                                    <apex:actionStatus id="saveStatus">
+                                    <apex:facet name="stop">
+                                    <apex:commandButton status="saveStatus" action="{!RefreshMyData}" id="refreshbutton2" value="{!sRefreshButton}" styleclass="btn btn-danger btn-lg" onclick="validate()" reRender="PersName,MatchedOfficialsPanel,mainform,campaignlist,stateError" oncomplete="kwscrolldown()"/> 
+                                    </apex:facet>
+                                    <apex:facet name="start">
+                                    <apex:commandButton status="saveStatus" value="Refreshing Data..." styleclass="btn btn-danger btn-lg" disabled="TRUE"/> 
+                                    
+                                    </apex:facet>
+                                    </apex:actionStatus>
+                              
+                              
+                               </div>
+                    </div>
+                </div> 
+               
+
+    </div>
+
+    <apex:outputPanel rendered="{!bAddressError}">
+    <div class="row">
+      <div class="col-md-12 col-md-offset-3">
+        {!sAddressErrorCode}
+      </div>
+    </div>
+    </apex:outputPanel>
+
+</apex:outputPanel>
+
+<div id="MessagetoOfficials">
+
+<h4>Your Message</h4>
+
+<div class="row">
+
+        <div class="col-md-12">
+        
+                        <div class="form-group" id="ciSubjects">
+                            <label>Subject</label>
+                            <apex:inputText disabled="{!!kwcamp.camp.kwac__User_Can_Edit_Subject__c}" required="true" id="ciSubjectRW" label="text" value="{!eocsRequest.kweos__Subject__c}" styleclass="form-control input-sm"/>
+                           
+                        </div>
+                        
+        </div>
+</div>            
+<div class="row">
+         <apex:outputPanel rendered="{!kwcamp.camp.kwac__Display_Personal_Message_Option__c}">
+        <div class="col-md-12">
+                
+                        <div class="form-group" id="ciPersonalMessage">
+                            <label>Add a Personal Message</label>
+                            <apex:inputTextarea rows="3" id="ciPersonalMessageRW" label="PersonalMessage" value="{!eocsrequest.kweos__Personal_Message__c}" styleclass="form-control"/>
+                        </div>
+             
+        </div>
+        </apex:outputPanel> 
+
+        <div class="col-md-12">
+                
+                        <div class="form-group" id="ciMessages">
+                            <label>Message</label>
+                            <apex:inputTextarea rows="{!IF(kwcamp.camp.kwac__Message_Box_Rows__c <> null,kwcamp.camp.kwac__Message_Box_Rows__c, 5)}" disabled="{!!kwcamp.camp.kwac__User_Can_Edit_Message__c}" required="true" id="ciMessageRW" label="Message" value="{!eocsrequest.kweos__Message__c}" styleclass="form-control"/>
+                        </div>
+             
+        </div>
+</div> 
+
+
+
+<div id="MatchedElectedOfficials">
+    
+    <apex:outputPanel id="MatchedOfficialsPanel">
+    <h4>Your Elected Officials</h4>
+
+    <apex:repeat value="{!kwacdp.KW_ActionCenterDisplayWrapperList}" var="kw_wrapper">
+    
+    <div class="row top-buffer">
+    
+             
+            <apex:repeat value="{!kw_wrapper}" var="kwus">
+           
+             <apex:outputPanel rendered="{!kw_wrapper.size == 1}">
+               
+                <div class="col-md-12">
+                    <div class="col-centered" >
+                       <kwac:KWACElectedOfficialDisplay kwus="{!kwus}"/>
+                    </div>
+                </div>
+               
+                </apex:outputPanel> 
+            
+            
+                <apex:outputPanel rendered="{!kw_wrapper.size == 2}">
+               
+                <div class="col-md-6">
+                    <div class="col-centered" >
+                       <kwac:KWACElectedOfficialDisplay kwus="{!kwus}"/>
+                    </div>
+                </div>
+               
+                </apex:outputPanel> 
+            
+             <apex:outputPanel rendered="{!kw_wrapper.size >= 3}">
+               
+                <div class="col-md-4">
+                    <div class="col-centered" >
+                       <kwac:KWACElectedOfficialDisplay kwus="{!kwus}"/>
+                    </div>
+                </div>
+               
+                </apex:outputPanel> 
+            
+            
+           </apex:repeat>  
+     
+   </div>
+   <br/>
+  </apex:repeat>
+
+        <apex:outputPanel id="submitbuttonsection">
+            <apex:outputPanel rendered="{!bShowMessageButton}">
+                <div class="col-md-12">
+                    <div class="col-centered">
+                        <div class="form-group" id="submitbuttonform">
+                            <apex:actionStatus id="saveStatus2">
+                                <apex:facet name="stop">
+                                    <apex:commandButton status="saveStatus2" action="{!submitEOCSRequest}"
+                                                        id="submitbutton2" value="{!kwcamp.camp.kwac__Action_Button_Text__c}"
+                                                        styleclass="btn btn-danger btn-lg" onclick="validate()"
+                                                        reRender="PersName,MatchedOfficialsPanel,mainform,campaignlist,thanks,stateError"/>
+                                </apex:facet>
+                                <apex:facet name="start">
+                                    <apex:commandButton status="saveStatus2" value="Processing..."
+                                                        styleclass="btn btn-danger btn-lg" disabled="TRUE"/>
+
+                                </apex:facet>
+                            </apex:actionStatus>
+
+
+                        </div>
+                    </div>
+                </div>
+                `
+            </apex:outputPanel>
+        </apex:outputPanel>
+
+    </apex:outputPanel>    
+
+</div>
+
+
+
+
+
+</div>
+
+</apex:form>
+
+
+
+</apex:outputPanel>
+</apex:outputPanel>
+
+
+</div>
+                 
+                                     
+                                     
+                                     
+                                     
+                                     
+<!-- existing content -->
+
+<!-- begin wrapper bottom -->
+
+</div></div><!-- TemplateEndEditable -->
+    </div>
+
+  </div>
+</div>
+
+      </div>
+
+      <div class="FooterPromo">
+  <div class="FooterPromo-wrap l-wrap l-padding l-prefooter">
+
+    <ul class="FooterPromo-list js-equalHeights">
+
+      <li class="FooterPromo-item">
+        <div class="FooterPromo-item-wrap">
+          <svg class="icon FooterPromo-icon" viewBox="0 0 35 35" width="35" height="35" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="#icon-email-circle"></use></svg>
+          <p class="FooterPromo-heading">Connect</p>
+          <div class="FooterPromo-description">
+            <p>Stay informed by signing up for updates and notifications.</p>
+          </div>
+          <a class="FooterPromo-cta Button Button--light" href="https://www.zerotothree.org/connect">Get Updates</a>
+        </div>
+      </li>
+
+      <li class="FooterPromo-item">
+        <div class="FooterPromo-item-wrap">
+          <svg class="icon FooterPromo-icon" viewBox="0 0 35 35" width="35" height="35" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="#icon-heart-circle"></use></svg>
+          <p class="FooterPromo-heading">Support <span class="u-nowrap">ZERO TO THREE</span></p>
+          <div class="FooterPromo-description">
+            <p>Your gift helps ensure that all babies and toddlers have a strong start in life.</p>
+          </div>
+          <a class="FooterPromo-cta Button Button--orange-light" href="https://www.zerotothree.org/donate">Donate</a>
+        </div>
+      </li>
+
+      <li class="FooterPromo-item">
+        <div class="FooterPromo-item-wrap">
+          <svg class="icon FooterPromo-icon" viewBox="0 0 35 35" width="35" height="35" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="#icon-bullhorn-circle"></use></svg>
+          <p class="FooterPromo-heading">Become an Advocate</p>
+          <div class="FooterPromo-description">
+            <p>Become a big voice for little kids by joining our policy network.</p>
+          </div>
+          <a class="FooterPromo-cta Button Button--light" href="https://www.zerotothree.org/advocate">Take Action</a>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+</div>
+
+      <div id="Footer" class="Footer" role="contentinfo">
+  <div class="Footer-wrap l-wrap l-padding">
+
+    <div class="Footer-logo">
+      <a class="Footer-logo-link" href="https://www.zerotothree.org/" title="ZERO TO THREE homepage">
+        <span class="u-screenreader">ZERO TO THREE</span>
+        <svg class="Footer-logo-icon" viewBox="0 0 75 75" width="75" height="75" aria-hidden="true" role="presentation" focusable="false">
+          <use xlink:href="#logo-icon"></use>
+        </svg>
+        <svg class="Footer-logo-text" viewBox="0 0 183 37" width="183" height="37" aria-hidden="true" role="presentation" focusable="false">
+          <use xlink:href="#logo-text"></use>
+        </svg>
+      </a>
+    </div>
+
+
+    <div class="Footer-primary">
+
+        <div class="Footer-admin">
+          <ul class="Footer-admin-list Footer-linkRow">
+            <li class="Footer-admin-item">
+              <a class="Footer-admin-link" href="https://www.zerotothree.org/sessions">
+                <svg class="icon Footer-admin-link-icon" viewBox="0 0 10 10" width="10" height="10" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="#icon-user"></use></svg>
+                Sign In
+              </a>
+            </li>
+            <li class="Footer-admin-item">
+              <a class="Footer-admin-link" href="https://my.zerotothree.org/nc__createaccount">
+                <svg class="icon Footer-admin-link-icon" viewBox="0 0 10 10" width="10" height="10" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="#icon-pencil"></use></svg>
+                Register
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      <div class="Footer-misc">
+        <ul class="Footer-misc-list Footer-linkRow">
+          <li class="Footer-misc-item">
+            <a class="Footer-misc-link" href="https://my.zerotothree.org/communityhub/nc__store">Bookstore</a>
+          </li>
+          <li class="Footer-misc-item">
+            <a class="Footer-misc-link" href="https://www.zerotothree.org/resources/series/infant-toddler-policy-perspectives">Blog</a>
+          </li>
+          <li class="Footer-misc-item">
+            <a class="Footer-misc-link" href="https://www.zerotothree.org/press">Media</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="Footer-secondary">
+
+      <div class="Footer-contact vcard" itemscope="" itemtype="http://schema.org/Organization">
+        <p class="org u-hide" itemprop="name">ZERO TO THREE</p>
+        <p class="adr" itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">1255 23rd Street, NW 
+<br />Suite 350
+<br />Washington, DC 20037</p>
+        <p><span class="tel" itemprop="telephone">(202) 638-1144</span></p>
+        <p><span class="tel" itemprop="telephone">(800) 899-4301</span></p>
+      </div>
+
+      <div class="Footer-sitemap">
+        <div class="Footer-sitemap-primary">
+          <div class="Footer-sitemap-col">
+            <a class="Footer-sitemap-heading" href="https://www.zerotothree.org/about" data-icon="{&quot;icon&quot;:&quot;chev-right&quot;, &quot;width&quot;:&quot;8px&quot;, &quot;orphans&quot;:&quot;1&quot;, &quot;fallback&quot;:&quot;chev-right-white-8&quot;}">About <span class="u-nowrap">Us<svg class="icon" version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" preserveAspectRatio="xMidYMid meet" width="8px" height="8px" aria-hidden="true" role="presentation" focusable="false"><use xlink:href="#icon-chev-right"></use><foreignObject width="0" height="0"><div class="icon-fallback icon-chev-right-white-8"></div></foreignObject></svg></span></a>
+            <ul class="Footer-sitemap-list">
+              <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/our-work">Our Work</a></li>
+              <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/our-team">Our Team</a></li>
+              <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/press">Press</a></li>
+              <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/careers">Careers</a></li>
+              <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/contact">Contact Us</a></li>
+              <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/permissions">Reprints &amp; Permissions</a></li>
+            </ul>
+          </div>
+
+          <div class="Footer-sitemap-col">
+            <h6 class="Footer-sitemap-heading">Explore Our Topics</h6>
+            <ul class="Footer-sitemap-list">
+                <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/early-development">Early Development &amp; Well-Being</a></li>
+                <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/early-learning">Early Learning</a></li>
+                <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/parenting">Parenting</a></li>
+                <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/advocacy">Policy &amp; Advocacy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="Footer-sitemap-secondary">
+          <div class="Footer-sitemap-col">
+            <a class="Footer-sitemap-heading" href="https://www.zerotothree.org/resources" data-icon="{&quot;icon&quot;:&quot;chev-right&quot;, &quot;width&quot;:&quot;8px&quot;, &quot;orphans&quot;:&quot;1&quot;, &quot;fallback&quot;:&quot;chev-right-white-8&quot;}">Resources &amp; <span class="u-nowrap">Services<svg class="icon" version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" preserveAspectRatio="xMidYMid meet" width="8px" height="8px" aria-hidden="true" role="presentation" focusable="false"><use xlink:href="#icon-chev-right"></use><foreignObject width="0" height="0"><div class="icon-fallback icon-chev-right-white-8"></div></foreignObject></svg></span></a>
+            <ul class="Footer-sitemap-list">
+                <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/resources/series/featured-resources">Featured Resources</a></li>
+                <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/resources/series/the-bookstore">The Bookstore</a></li>
+                <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/resources/series/parent-favorites">Parent Favorites</a></li>
+                <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/resources/series/policymaker-advocate">Policymaker &amp; Advocate</a></li>
+                <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/resources/states">State-Based Resources</a></li>
+            </ul>
+          </div>
+
+          <div class="Footer-sitemap-col">
+            <a class="Footer-sitemap-heading" href="https://www.zerotothree.org/donate" data-icon="{&quot;icon&quot;:&quot;chev-right&quot;, &quot;width&quot;:&quot;8px&quot;, &quot;orphans&quot;:&quot;1&quot;, &quot;fallback&quot;:&quot;chev-right-white-8&quot;}">Support Our <span class="u-nowrap">Work<svg class="icon" version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" preserveAspectRatio="xMidYMid meet" width="8px" height="8px" aria-hidden="true" role="presentation" focusable="false"><use xlink:href="#icon-chev-right"></use><foreignObject width="0" height="0"><div class="icon-fallback icon-chev-right-white-8"></div></foreignObject></svg></span></a>
+            <ul class="Footer-sitemap-list">
+              <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/donate">Donate</a></li>
+              <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/get-involved">Get Involved</a></li>
+              <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/policy-network">Join the Policy Network</a></li>
+              <li class="Footer-sitemap-item"><a class="Footer-sitemap-link" href="https://www.zerotothree.org/advocate">Advocate for Babies and Toddlers</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="Footer-social">
+        <p class="Footer-social-heading">Connect</p>
+        <ul class="Footer-social-list">
+          <li class="Footer-social-item">
+            <a class="Footer-social-link -facebook" href="https://www.facebook.com/ZEROTOTHREE"><svg class="icon Footer-social-link-icon" viewBox="0 0 11 11" width="11" height="11" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="#icon-facebook"></use></svg>Facebook</a>
+          </li>
+          <li class="Footer-social-item">
+            <a class="Footer-social-link -twitter" href="https://twitter.com/ZEROTOTHREE"><svg class="icon Footer-social-link-icon" viewBox="0 0 13 13" width="13" height="13" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="#icon-twitter"></use></svg>Twitter</a>
+          </li>
+          <li class="Footer-social-item">
+            <a class="Footer-social-link -linkedin" href="https://www.linkedin.com/company/zero-to-three"><svg class="icon Footer-social-link-icon" viewBox="0 0 12 12" width="12" height="12" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="#icon-linkedin"></use></svg>LinkedIn</a>
+          </li>
+          <li class="Footer-social-item">
+            <a class="Footer-social-link -youtube" href="https://www.youtube.com/user/ZEROTOTHREE"><svg class="icon Footer-social-link-icon" viewBox="0 0 12 12" width="12" height="12" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="#icon-youtube"></use></svg>YouTube</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="Footer-legal">
+      <p class="Footer-legal-copyright">Copyright © 2016 ZERO TO THREE: National Center for Infants, Toddlers and Families. All rights reserved.</p>
+      <ul class="Footer-legal-list">
+        <li class="Footer-legal-item">
+          <a class="Footer-legal-link" href="https://www.zerotothree.org/privacy">Privacy Policy &amp; Disclaimers</a>
+        </li>
+        <li class="Footer-legal-item">
+          <a class="Footer-legal-link" href="https://www.zerotothree.org/terms">Terms &amp; Conditions</a>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+</div>
+
+    </div>
+
+<script src="https://s3.amazonaws.com/zero-to-three-salesforce/vendor-081ce593e548ae94909ac5570441429b5b8d925d4c621f3ff4c9d1deec301d6d.js" defer="defer" />
+<script src="https://s3.amazonaws.com/zero-to-three-salesforce/jquery-1.3.2.min.js" />
+  
+</body></html></apex:page>

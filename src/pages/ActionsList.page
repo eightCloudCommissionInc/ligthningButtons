@@ -1,0 +1,177 @@
+<apex:page Controller="kwac.KWAC_TakeActionCampaignDisplayController" showHeader="FALSE" sidebar="FALSE" standardStylesheets="FALSE" docType="html-5.0" cache="FALSE" >
+
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/>
+
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"/>
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"/>
+<apex:includeScript value="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"/>
+
+<style>
+
+img {
+max-width:100%;
+width:auto !important;
+height: auto !important;
+}
+
+a:link {color: #464646;}
+a:hover {color: #018dd1;text-decoration:underline;}
+
+.container {
+    width: 750px;
+    max-width: 90%;
+    margin:auto;
+}
+
+.break-word {
+   word-wrap: break-word;
+}
+
+.greybar {
+    background-color:#cccccc;
+    padding:5px;
+}
+
+.sectionheader{
+border-bottom: 1px solid #cccccc
+}
+
+
+h4 {
+border: 1px solid #cccccc;
+background-color: {!bHeaderColor};
+color: #ffffff;
+margin:left 10px;
+padding: 10px;
+display: block;
+}
+
+
+.form-group {
+margin-left: 30px;
+line-height: 1.1;
+}
+
+.form-group2 {
+margin: 0 auto;
+}
+
+
+.checkbox {
+margin-left: 30px;
+}
+
+radio {
+margin: 30px;
+}
+
+label {
+font-size: 12px;
+
+}
+
+.top-buffer { 
+margin-top:20px;
+ }
+
+.col-centered{
+text-align:center;
+}
+
+.btn-danger { 
+border-color: {!sButtonDisplayColor}; 
+background-color: {!sButtonDisplayColor};
+}
+
+.btn-danger:hover { 
+border-color: #000; 
+background-color: #000; 
+}
+
+.top-buffer { margin-top:20px; }
+
+</style>
+
+<script>
+var j$ = jQuery.noConflict();
+
+function getCampaignList (sState) {
+
+Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.KWAC_TakeActionCampaignDisplayController.getCampaignList}',
+                sState,
+         
+           function(result, event){
+                    if (event.status) {
+                        console.log(event.result);
+                        j$( "#CampaignList" ).empty();
+
+                        j$.each( result, function(index, value) {
+                            console.log(value);
+                            
+                            
+                            var j$newdiv1 = j$( "<div class='row'> <div class='col-md-12'><h4>" + value.kwac__Tagline__c + "</h4><div class='col-md-12'>" + value.kwac__Call_to_Action_Text__c + "</div></div>");
+
+                            var j$newdiv2 = j$("<div class='row top-buffer'><div class='col-md-2'><a href='" + value.kwac__URL_to_Share__c + "' class='btn btn-danger' role='button'>Take Action</a></div></div>");
+
+                            j$( "#CampaignList" ).append( j$newdiv1);
+                            j$( "#CampaignList" ).append( j$newdiv2);
+                                                
+                        });
+                
+                    }
+                 }, 
+                {escape: false}
+            );
+}
+</script>
+
+
+<script>      
+j$( document ).ready(function() {
+
+    j$("[id*='statefilter']").change(function(){
+        getCampaignList(j$("[id*='statefilter']").val());
+    });
+
+getCampaignList('');
+
+});
+
+</script>
+
+
+
+
+<apex:form >
+<div id="globalcontainer" class="container">
+<apex:image rendered="{!NOT(ISBLANK(sImageSource))}" url="{!sImageSource}"/>
+<br/>
+<br/>
+
+<apex:pageMessages ></apex:pageMessages>
+
+<apex:outputPanel id="Errors">
+
+</apex:outputPanel>
+
+
+<div id="Campaigns">
+
+                      <label>Filter by State</label>
+                      <apex:selectList id="statefilter" size="1" value="{!sStateFilter}">
+                      <apex:selectOptions value="{!slStates}"/>
+                      </apex:selectList>
+
+<div id="CampaignList">
+</div>
+
+
+
+</div>
+
+</div>
+</apex:form>
+
+</apex:page>

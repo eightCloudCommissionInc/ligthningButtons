@@ -1,0 +1,291 @@
+<apex:page standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false"
+            sidebar="false" showHeader="false" renderAs="pdf" readOnly="true"  controller="ViewCertificateCtrl">
+
+    <head>
+
+        <style type="text/css">
+        /* Pdf support only specific fonts - https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/pages_output_pdf_supported_fonts.htm
+        Arial Unicode MS - font supports unicode characters but doesn not allow making it bold
+        */
+
+        @page{
+
+            size: landscape;
+            margin: 0;
+            height:auto;
+
+         /* size: 29.7cm 21.0cm landscape; margin-top: 0cm; margin-left: 0cm; margin-right: 0cm; margin-bottom: 0cm; } */
+        font-family: Arial Unicode MS;
+       /* height:100%;*/
+      overflow: hidden;
+
+            page-break-after: avoid;
+            page-break-before: avoid;
+            page-break-inside: avoid;
+
+
+
+         /* @bottom { margin:0px; } */
+        /*margin-top: 1px; margin-left: 1px; margin-right: 1px; margin-bottom: 1px; */
+  /* Generic*/
+        }
+
+
+
+        html,body{
+            font-family: Arial Unicode MS;
+
+        }
+
+        body{
+            font-family: Arial Unicode MS;
+
+
+        }
+
+        .container{
+            font-family: Arial Unicode MS;
+            height:auto;
+
+        }
+        #box {
+            position:relative;
+            width:100%;
+
+            font-family: Arial Unicode MS;
+        }
+        #box img {
+            /*position:absolute;*/
+
+        }
+        #box div {
+            position:absolute;
+            width:100%;
+            height:auto;
+            color:black;
+            text-align:left;
+            bottom:41%;
+            font-size: 100%;
+            font-family: Arial Unicode MS;
+            
+        }
+        .namebold{
+            font-size: 130%;
+            font-weight: bold !important;
+            font-family: Times New Roman PS,Times New Roman, Times, serif,Arial Unicode MS;
+            font-style: italic;
+        }
+        .nameboldOnly{
+            font-size: 150%;
+            font-weight: bold !important;
+            font-family: Times New Roman PS,Times New Roman, Times, serif,Arial Unicode MS;
+            font-style: italic;
+        }
+         .numberboldOnly{
+            font-size: 125%;
+            font-weight: bold !important;
+            font-family: Times New Roman PS,Times New Roman, Times, serif,Arial Unicode MS;
+            font-style: italic;
+        }
+
+        /* .contName{
+            font-size: 150%;
+            font-family: Arial Unicode MS;
+            text-align: left;
+        }
+        .midcss{
+           font-family: Arial Unicode MS;
+           padding-bottom:15px;
+           font-size: 88%;
+           padding-left:30px;
+           border-spacing: 0px !important;
+        }
+        .topcss{
+           font-family: Arial Unicode MS;
+           font-size: 140%;
+           padding-bottom:8px;          
+           border-spacing: 0px !important;
+        }
+         .cont1Name{
+            font-size: 150%;
+            font-family: Arial Unicode MS;
+            
+        }
+        .text1css{
+          font-family: Arial Unicode MS;
+           border-spacing: 0px !important;
+        }
+         
+         .footertext{
+            width:100%;
+            height:100%;
+            font-size: small;
+            text-align: center;
+            padding-top:8px;
+            color:white;
+            padding-right:25px;
+            font-family: Arial Unicode MS;
+            padding-bottom:0 !important;
+        }
+        .namebold{
+            font-size: large;
+            font-weight: bold !important;
+            font-family: sans-serif;padding-bottom:-5px !important;
+        }
+         .titlename{
+            font-size: small;
+            font-weight: normal !important;
+            font-family: Arial Unicode MS;
+            vertical-align: top;
+        }
+        .midcss{
+           font-family: Arial Unicode MS;
+           padding-top:10px;
+           border-spacing: 0px !important;
+        }
+        .contName{
+            font-size: 150%;
+            font-family: Arial Unicode MS;
+            text-align: left;
+        }
+         .textcss{
+          font-family: Arial Unicode MS;
+           padding-top:25px;
+           text-align:left;
+           border-spacing: 0px !important;
+        }
+*/
+
+
+
+        </style>
+    </head>
+
+    <body>
+    <div class="container" id="box">
+       
+        <img src="{!$Resource.CEUCertificate}" width="98%" height="98%"/>
+        <div>
+            <table border="0" width="99%" >
+                <tr class="nameboldOnly">
+                <td width="99%" align="middle" style="padding-left:5px;text-align:center;padding-bottom:50px;">
+                    <apex:outputField value="{!ceus[0].Contact__r.name}"/>
+                    </td>
+               </tr>
+            </table>
+            <table border="0" width="99%" >
+ 
+          <tr class="namebold">                   
+                    <td width="99%" align="middle" style="padding-left:5px;text-align:center;padding-bottom:25px;">
+                    <apex:outputField value="{!ceus[0].name}"/>
+                    </td>                  
+                </tr>
+               
+            </table>
+
+            <table border="0" width="99%" >
+               <tr class="namebold">
+                <td width="25%">
+                    </td>
+                    <td width="6.5%" align="right" style="text-align:top;padding-bottom:7px;"><apex:outputField value="{!ceus[0].FON_Number_of_Credits__c}"/>
+                    </td>
+                    <td width="38%">
+                        
+                    </td>
+                    <td width="6%" align="right" style="padding-right:0px;text-align:top;padding-bottom:9px;">
+                        <apex:outputField value="{!ceus[0].FON_Contact_Hours__c}" />
+                        <!--<apex:outputText value="{0,number,0.00}" id="Connections">
+                                            <apex:param value="{!ceus[0].FON_Contact_Hours__c}"/>
+                                        </apex:outputText>-->
+                       </td>
+                        <td width="23%">
+                        
+                       </td>
+                </tr>               
+            </table>
+
+            <table border="0" width="99%" >
+               <tr class="namebold">
+                    <td>
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>              
+            </table>
+            <table border="0" width="99%" >
+                <tr class="namebold">
+                   <td width="53%">
+                        
+                    </td>
+                    <td width="47%" align="middle" style="padding-bottom:7px;text-align:top;">
+                        <apex:outputField value="{!ceus[0].FON_Awarded_Date__c}"/>
+                    </td>
+                    
+
+                </tr>
+               
+            </table>
+           <!-- <table border="0" width="99%" class="text1css">
+                <tr>
+                    <td class="cont1Name" width="100%" align="middle" style="padding-bottom:55px;text-align:top;padding-left: 430px;">
+                        <apex:outputField value="{!ceus[0].Contact__r.name}"/>
+                    </td>
+                </tr>
+               
+            </table>
+            <table border="0" width="99%" class="topcss">
+ 
+               <tr>
+                    <td width="100%" align="middle" style="padding-bottom:-5px;text-align:bottom;padding-left:450px;">
+                    <apex:outputField value="{!ceus[0].name}"/>
+                    </td>
+                    
+                    
+
+                </tr>
+
+               
+            </table>
+
+            <table border="0" width="99%" class="midcss">
+ 
+               <tr class="namebold">
+                    <td width="40%" align="right" style="padding-bottom:3px;text-align:top;padding-right: 92px;"><apex:outputField value="{!ceus[0].FON_Number_of_Credits__c}"/>
+                    </td>
+                    <td width="21%"  style="padding-bottom:2px;text-align:top;padding-left: 4px;" align="right">
+                        
+                    </td>
+                    <td width="39%" style="padding-bottom:3px;text-align:top;padding-left: 96px;"><apex:outputField value="{!ceus[0].FON_Contact_Hours__c}"/>
+                       </td>
+
+                </tr>
+
+               
+            </table>
+
+            <table border="0" width="99%" class="textcss">
+                <tr class="namebold">
+                    <td width="33%" >
+                    </td>
+                    <td width="27%" align="right" style="padding-bottom:3px;text-align:top;padding-left:262px;font-size: 90%;">
+                        <apex:outputField value="{!ceus[0].FON_Awarded_Date__c}"/>
+                    </td>
+                    <td width="39%" >
+                       </td>
+
+                </tr>
+               
+            </table>-->
+            
+
+        </div>
+
+
+    </div>
+
+    </body>
+
+
+
+</apex:page>

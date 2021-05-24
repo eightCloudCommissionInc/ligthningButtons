@@ -1,0 +1,22 @@
+<aura:component controller="FS_FoldersWithFilesController">
+    <aura:attribute name="asset" type="Object" />
+    <aura:attribute name="isLoading" type="Boolean" default="false" />
+    <div class="asset slds-grid slds-gutters slds-text-color--default slds-has-flexi-truncate">
+        <div class="slds-col slds-shrink-none">
+            <p class="slds-truncate" style="width: 450px"
+               title="{!v.asset.PagesApi__Title__c}">{!v.asset.PagesApi__Title__c}</p>
+        </div>
+        <div class="slds-col slds-grow-none">
+            <aura:if isTrue="{!v.isLoading}">
+                <div class="loader">
+                    <lightning:spinner alternativeText="Loading" size="small" />
+                </div>
+                <aura:set attribute="else">
+                    <lightning:button label="Download" title="Download"
+                                      value="{!v.asset.PagesApi__Path__c}"
+                                      onclick="{!c.handleClickDownload}"/>
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

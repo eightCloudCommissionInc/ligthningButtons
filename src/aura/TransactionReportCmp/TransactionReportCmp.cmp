@@ -1,0 +1,48 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="toDAteValue" type="String"/>
+    <aura:attribute name="fromdateValue" type="String"/>
+    <aura:attribute name="type" type="String" default="Cash"/>
+    <aura:attribute name="headerTitle" type="Aura.Component[]">
+        <h2>
+            <b>Run Transaction Report</b>
+        </h2>
+    </aura:attribute>
+    <lightning:card class="slds-text-heading_small" iconName="utility:metrics" title="{!v.headerTitle}">
+        <div class="slds-grid slds-wrap" style="background-color:white;">    
+            
+            
+            <div class="slds-col slds-size_4-of-12"></div>
+            <div class="slds-col slds-size_4-of-12">
+                <span><lightning:input label="From Date" type="date" aura:id="inputEffectivefromDate" value="{!v.fromdateValue}" displayDatePicker="true" format="yyyy-MM-dd"/></span>
+            </div>
+            <div class="slds-col slds-size_4-of-12"></div>
+            
+            <div class="slds-col slds-size_4-of-12"></div>
+            <div class="slds-col slds-size_4-of-12">
+                <span><lightning:input label="To date" type="date" aura:id="inputEffectiveToDate" value="{!v.toDAteValue}" displayDatePicker="true" format="yyyy-MM-dd"/></span>
+            </div> 
+            <div class="slds-col slds-size_4-of-12"></div>       
+            <!--
+        <div class="slds-col slds-size_4-of-12"></div>
+        <div class="slds-col slds-size_4-of-12">
+            <span>
+             <lightning:select name="select1" label="Type" required="true" value="{!v.type}">                    
+                    <option value="Cash">Cash</option>
+                    <option value="Receivable">Receivable</option>
+                    <option value="Adjustment">Adjustment</option>                    
+                </lightning:select>
+            </span>
+        </div>
+        <div class="slds-col slds-size_4-of-12"></div>
+  -->    	
+            <div class="slds-col slds-size_4-of-12"></div>
+            <div class="slds-col slds-size_4-of-12">
+                <span><center><lightning:button label="Run Report" title="Next" class="slds-m-top_medium" onclick="{!c.openRep}"/></center></span>
+            </div>
+            <div class="slds-col slds-size_4-of-12"></div>
+            
+            
+        </div>
+    </lightning:card>
+</aura:component>

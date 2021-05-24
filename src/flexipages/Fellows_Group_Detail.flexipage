@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>header</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>detailsTabLabel</name>
+                    <value>Details</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>engagementManagersOnly</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>engagementTabLabel</name>
+                    <value>Engagement</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>feedTabLabel</name>
+                    <value>Feed</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>recordId</name>
+                    <value>{!recordId}</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>relatedTabLabel</name>
+                    <value>Related</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:groupRecordHomeTabs</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>footer</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>customHeadTags</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>description</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>{!Record._Object}: {!Record._Title}</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:seoAssistant</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+    background-position: center left;
+            height:120px;
+    background-image: url(https://zerotothree--staging--c.cs34.content.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=0682f000001qqJO&amp;operationContext=CHATTER&amp;contentId=05T2f00000B3mhX);
+    background-size: 100%;    
+    background-repeat: no-repeat;&quot;&gt;&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>LTE:Navbar</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>contentHeader</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>efef189b-f2a7-4306-b9d1-bc091409e584</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>1</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>7e896400-5949-40d9-abd6-97d7a49ff57c</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>a2fd9</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>97a6b116-f34f-4e55-bf0c-da1dd637bf46</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>05b4a</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>facet-indirection-b3171fee-eb4d-4678-a5cb-520ca5e2826b</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>context</name>
+                    <value>RECORD</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>recordId</name>
+                    <value>{!recordId}</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>width</name>
+                    <value>MEDIUM</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:feedPublisher</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>canChangeSorting</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>defaultSortOrderHomeFeed</name>
+                    <value>Relevance</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>defaultSortOrderTopicsFeed</name>
+                    <value>Relevance</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>feedDesign</name>
+                    <value>DEFAULT</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hasFeedSearch</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>subjectId</name>
+                    <value>{!recordId}</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>type</name>
+                    <value>Record</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:forceCommunityFeed</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>efef189b-f2a7-4306-b9d1-bc091409e584</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>accessDeniedMessage</name>
+                    <value>You do not have access to files in this group.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>notLoggedInMessage</name>
+                    <value>You must be logged in to access files.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>uploadFieldId</name>
+                    <value>a2W2f000000kH7pEAE</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>uploadFormId</name>
+                    <value>a2a2f000000FIeqAAG</value>
+                </componentInstanceProperties>
+                <componentName>FS_FoldersWithFiles</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>7e896400-5949-40d9-abd6-97d7a49ff57c</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>97a6b116-f34f-4e55-bf0c-da1dd637bf46</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>recordId</name>
+                    <value>{!recordId}</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:groupHeadline</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>regions</name>
+                    <value>facet-indirection-b3171fee-eb4d-4678-a5cb-520ca5e2826b</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>tabsetConfig</name>
+                    <value>{&quot;UUID&quot;:&quot;b3171fee-eb4d-4678-a5cb-520ca5e2826b&quot;,&quot;activeTab&quot;:&quot;&quot;,&quot;useOverflowMenu&quot;:false,&quot;tabs&quot;:[{&quot;UUID&quot;:&quot;efef189b-f2a7-4306-b9d1-bc091409e584&quot;,&quot;tabName&quot;:&quot;Discussion posts&quot;,&quot;tabKey&quot;:&quot;1&quot;,&quot;locked&quot;:false,&quot;allowGuestUser&quot;:false,&quot;seedComponents&quot;:[]},{&quot;UUID&quot;:&quot;7e896400-5949-40d9-abd6-97d7a49ff57c&quot;,&quot;tabName&quot;:&quot;Documents&quot;,&quot;tabKey&quot;:&quot;a2fd9&quot;,&quot;locked&quot;:false,&quot;allowGuestUser&quot;:false,&quot;seedComponents&quot;:[]},{&quot;UUID&quot;:&quot;97a6b116-f34f-4e55-bf0c-da1dd637bf46&quot;,&quot;tabName&quot;:&quot;Webinars&quot;,&quot;tabKey&quot;:&quot;05b4a&quot;,&quot;locked&quot;:false,&quot;allowGuestUser&quot;:true,&quot;seedComponents&quot;:[]}]}</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:tabset</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>leftContent</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+background: linear-gradient(to bottom, #33ccff 0%, #3366cc 100%);
+min-height: 20px;
+Text-align: left;
+padding: 10px;
+text-align: left  ;
+background: rgb(0, 166, 228)
+;
+color: white;
+font-size: 15px;
+Font-family: Montserrat; &quot;&gt;
+    
+    &lt;p&gt;
+        Fellows Events
+    &lt;/p&gt;
+
+
+&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>LTE:FontevaGroupEvents</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+background: linear-gradient(to bottom, #33ccff 0%, #3366cc 100%);
+min-height: 20px;
+Text-align: left;
+padding: 10px;
+text-align: left  ;
+background: rgb(0, 166, 228);
+color: white;
+font-size: 15px;
+Font-family: Montserrat; &quot;&gt;
+    
+    &lt;p&gt;
+        Fellows Group Details
+    &lt;/p&gt;
+
+
+&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>headerLabel</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>recordId</name>
+                    <value>{!recordId}</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:groupDetail</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+background: linear-gradient(to bottom, #33ccff 0%, #3366cc 100%);
+min-height: 20px;
+Text-align: left;
+padding: 10px;
+text-align: left  ;
+background: rgb(0, 166, 228)
+;
+color: white;
+font-size: 15px;
+Font-family: Montserrat; &quot;&gt;
+    
+    &lt;p&gt;
+        Create a new post
+    &lt;/p&gt;
+
+
+&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>recordId</name>
+                    <value>{!recordId}</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:groupRelatedList</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>DRCTS:SearchDirectories</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>rightContent</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+    background-color: rgb(16,64,107);
+    height: 5px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;
+    background-position: center;
+    background-color: rgb(16,64,107);
+    background-image: url(https://zerotothree--staging--c.cs34.content.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Jpg&amp;versionId=0682f000001er0F&amp;operationContext=CHATTER&amp;contentId=05T2f000009bmhr);
+    height: 120px;
+    background-size: 20%;    
+    background-repeat: no-repeat;&quot;&gt;
+&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>contentFooter</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Group Detail</masterLabel>
+    <sobjectType>CollaborationGroup</sobjectType>
+    <template>
+        <name>LTE:FontevaPortalGroupDetailLayout</name>
+    </template>
+    <type>CommRecordPage</type>
+</FlexiPage>

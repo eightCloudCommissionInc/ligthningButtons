@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>header</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>filterName</name>
+                    <value>{!filterId}</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:groupObjectHome</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>footer</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>customHeadTags</name>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:seoAssistant</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+    background-color: rgb(16,64,107);
+            height: 5px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;
+    background-position: center left;
+    background-color: rgb(16,64,107);
+    height: 120px;
+    background-image: url(https://zerotothree--staging--c.cs34.content.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Jpg&amp;versionId=0682f000001eiiP&amp;operationContext=CHATTER&amp;contentId=05T2f000009bESJ);
+    background-size: 85%;    
+            background-repeat: no-repeat;&quot;&gt;&lt;/div&gt;
+
+&lt;div style=&quot;
+    background-color: rgb(16,64,107);
+            height: 5px;&quot;&gt;&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>LTE:Navbar</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>contentHeader</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;
+    background-color: rgb(16,64,107);
+    height: 5px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;
+    background-position: center;
+    background-color: rgb(16,64,107);
+    background-image: url(https://zerotothree--staging--c.cs34.content.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Jpg&amp;versionId=0682f000001er0F&amp;operationContext=CHATTER&amp;contentId=05T2f000009bmhr);
+    height: 120px;
+    background-size: 20%;    
+    background-repeat: no-repeat;&quot;&gt;
+&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:htmlBlock</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>contentFooter</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Group List</masterLabel>
+    <sobjectType>CollaborationGroup</sobjectType>
+    <template>
+        <name>LTE:FontevaPortalGroupListingLayout</name>
+    </template>
+    <type>CommObjectPage</type>
+</FlexiPage>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>HealthySteps Specialist</fullName>
+        <default>false</default>
+        <label>HealthySteps Specialist</label>
+    </customValue>
+    <customValue>
+        <fullName>HealthySteps Physician Champion</fullName>
+        <default>false</default>
+        <label>HealthySteps Physician Champion</label>
+    </customValue>
+    <customValue>
+        <fullName>HealthySteps Program Manager/Administrator</fullName>
+        <default>false</default>
+        <label>HealthySteps Program Manager/Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Administrative staff (not specific to HealthySteps)</fullName>
+        <default>false</default>
+        <label>Administrative staff (not specific to HealthySteps)</label>
+    </customValue>
+    <customValue>
+        <fullName>Physician (non-resident)</fullName>
+        <default>false</default>
+        <label>Physician (non-resident)</label>
+    </customValue>
+    <customValue>
+        <fullName>Resident</fullName>
+        <default>false</default>
+        <label>Resident</label>
+    </customValue>
+    <customValue>
+        <fullName>Nurse or Medical Assistant</fullName>
+        <default>false</default>
+        <label>Nurse or Medical Assistant</label>
+    </customValue>
+    <customValue>
+        <fullName>Nurse Practitioner or Physician Assistant</fullName>
+        <default>false</default>
+        <label>Nurse Practitioner or Physician Assistant</label>
+    </customValue>
+    <customValue>
+        <fullName>Behavioral health specialist (e.g., psychologist, social worker, community health worker, care coordinator)</fullName>
+        <default>false</default>
+        <label>Behavioral health specialist (e.g., psychologist, social worker, community health worker, care coordinator)</label>
+    </customValue>
+    <customValue>
+        <fullName>Data or research staff</fullName>
+        <default>false</default>
+        <label>Data or research staff</label>
+    </customValue>
+    <customValue>
+        <fullName>Business development or fundraising staff</fullName>
+        <default>false</default>
+        <label>Business development or fundraising staff</label>
+    </customValue>
+    <customValue>
+        <fullName>Billing, coding, or reimbursement staff</fullName>
+        <default>false</default>
+        <label>Billing, coding, or reimbursement staff</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>HealthySteps Specialist Supervisor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>HealthySteps Specialist Supervisor</label>
+    </customValue>
+    <customValue>
+        <fullName>Data analyst/manager</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Data analyst/manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Practice Manager</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Practice Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>IT staff</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>IT staff</label>
+    </customValue>
+    <masterLabel>HS Role</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

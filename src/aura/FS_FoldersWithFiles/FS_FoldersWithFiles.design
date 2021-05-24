@@ -1,0 +1,12 @@
+<!--
+ - Created by dfitzgerald on 6/11/20.
+ -->
+
+<design:component label="Folders With Files">
+
+    <design:attribute name="uploadFormId" label="Upload Form Id" />
+    <design:attribute name="uploadFieldId" label="Upload Field Id" />
+    <design:attribute name="notLoggedInMessage" label="User Not Logged In Message" />
+    <design:attribute name="accessDeniedMessage" label="User Lacks Access Rights Message" />
+
+</design:component>

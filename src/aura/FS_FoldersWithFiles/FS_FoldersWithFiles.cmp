@@ -1,0 +1,120 @@
+<!--
+ - Created by Jason Cookman on 6/10/20.
+ -->
+
+<aura:component description="FS_FoldersWithFiles" controller="FS_FoldersWithFilesController"
+                implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <!-- 0F92f000000CnCcCAK -->
+    <aura:attribute name="collaborationGroupId" type="Id"/>
+    <aura:attribute name="Sections" type="object"/>
+    <aura:attribute name="brandColor" type="String" default="#c41433"/>
+    <aura:attribute name="linkColor" type="String" default="#c41433"/>
+    <aura:attribute name="activeSections" type="List"/>
+    <aura:attribute name="activeSectionsMessage" type="String" default=""/>
+    <aura:attribute name="apexAssetList" type="List"/>
+    <aura:attribute name="workingAssetList" type="List"/>
+    <aura:attribute name="assetCollectionTitles" type="List"/>
+    <aura:attribute name="uploadFormId" type="String"/>
+    <aura:attribute name="uploadFieldId" type="String"/>
+    <aura:attribute name="notLoggedIn" type="boolean" default="false"/>
+    <aura:attribute name="accessDenied" type="boolean" default="false"/>
+    <aura:attribute name="searchIn" type="String"/>
+    <aura:attribute name="allSectionNames" type="List"/>
+    <aura:attribute name="fsIntervalId" type="Integer"/>
+    <aura:attribute name="notLoggedInMessage" type="String"/>
+    <aura:attribute name="accessDeniedMessage" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <article class="slds-card">
+        <div class="slds-card__header">
+            <span class="slds-text-heading--medium">Files</span>
+        </div>
+
+        <div class="slds-media__body">
+            <aura:if isTrue="{!v.notLoggedIn}">
+                {!v.notLoggedInMessage}
+            </aura:if>
+
+            <aura:if isTrue="{!v.accessDenied}">
+                {!v.accessDeniedMessage}
+            </aura:if>
+
+            <aura:if isTrue="{!and(not(v.notLoggedIn), not(v.accessDenied))}">
+
+                <div class="comp">
+
+                    <lightning:input name="searchInput" value="{!v.searchIn}" placeholder="Search..."
+                                     onchange="{!c.handleSearch}" class="slds-col--padded-medium"/>
+
+                    <lightning:accordion
+                            aura:id="accordion"
+                            allowMultipleSectionsOpen="true"
+                            onsectiontoggle="{! c.handleSectionToggle }"
+                            activeSectionName="{! v.activeSections }"
+                    >
+                        <aura:iteration items="{!v.workingAssetList}" var="collection">
+                            <lightning:accordionSection name="{!collection.Name}" label="{!collection.Name}"
+                                                        class=" fs-rounded">
+                                <!-- Upload Button -->
+<!--                                <aura:set attribute="actions">-->
+<!--                                    <lightning:button label="Upload File" title="Upload File" name="{!collection.Id}"-->
+<!--                                                      onclick="{!c.handleClickUpload}"/>-->
+<!--                                </aura:set>-->
+                                <aura:set attribute="body">
+                                    <div class="accordion-body slds-wrap">
+                                        <aura:iteration items="{!collection.PagesApi__Media_Assets__r}" var="asset">
+                                            <!-- New component for each item -->
+                                            <c:EC_MediaAssetListItem asset="{!asset}" />
+                                            
+                                            <!--div class="asset slds-grid slds-gutters slds-text-color-default slds-has-flexi-truncate"-->
+                                                <!--                            <div class="slds-col slds-grow-none">-->
+                                                <!--                                {!asset.Name}-->
+                                                <!--                            </div>-->
+                                                <!--div class="slds-col slds-shrink-none">
+                                                    <p class="slds-truncate" style="width: 450px"
+                                                       title="{!asset.PagesApi__Title__c}">{!asset.PagesApi__Title__c}</p>
+                                                </div-->
+                                                <!-- File Description -->
+<!--                                                <div class="slds-col slds-shrink-none">-->
+<!--                                                    <p class="slds-truncate" style="width: 300px"-->
+<!--                                                       title="{!asset.PagesApi__Short_Description__c}">{!asset.PagesApi__Short_Description__c}</p>-->
+<!--                                                </div>-->
+                                                <!--div class="slds-col slds-grow-none">
+                                                    <lightning:button label="Download" title="Download"
+                                                                      value="{!asset.PagesApi__Path__c}"
+                                                                      onclick="{!c.handleClickDownload}"/>
+                                                </div-->
+                                                <br/>
+                                            <!--/div-->
+                                        </aura:iteration>
+                                    </div>
+                                </aura:set>
+                            </lightning:accordionSection>
+                        </aura:iteration>
+                    </lightning:accordion>
+
+                </div>
+            </aura:if>
+        </div>
+    </article>
+    <!--        <lightning:accordionSection name="B" label="Accordion Title B">-->
+    <!--            <p>This is the content area for section B.</p>-->
+    <!--            <p>.</p>-->
+    <!--            <p>.</p>-->
+    <!--            <p>.</p>-->
+    <!--            <p>The section height expands to fit your content.</p>-->
+    <!--        </lightning:accordionSection>-->
+    <!--        <lightning:accordionSection name="C" label="Accordion Title C">-->
+    <!--            <p>This is the content area for section C.</p>-->
+    <!--            <p>.</p>-->
+    <!--            <p>.</p>-->
+    <!--            <p>.</p>-->
+    <!--            <p>The section height expands to fit your content.</p>-->
+    <!--        </lightning:accordionSection>-->
+    <!--    </lightning:accordion>-->
+
+</aura:component>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Training of Trainers and Trainer Certification</fullName>
+        <default>false</default>
+        <label>Training of Trainers and Trainer Certification</label>
+    </customValue>
+    <customValue>
+        <fullName>Faculty Institute</fullName>
+        <default>false</default>
+        <label>Faculty Institute</label>
+    </customValue>
+    <customValue>
+        <fullName>Coaching Program</fullName>
+        <default>false</default>
+        <label>Coaching Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Micro-Course, Area 1: Supporting Social-Emotional Development</fullName>
+        <default>false</default>
+        <label>Micro-Course, Area 1: Supporting Social-Emotional Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Micro-Course, Area 2: Supporting Cognitive Development</fullName>
+        <default>false</default>
+        <label>Micro-Course, Area 2: Supporting Cognitive Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Micro-Course, Area 3: Supporting Language and Literacy Development</fullName>
+        <default>false</default>
+        <label>Micro-Course, Area 3: Supporting Language and Literacy Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Full Course, Areas 1, 2, and 3</fullName>
+        <default>false</default>
+        <label>Full Course, Areas 1, 2, and 3</label>
+    </customValue>
+    <customValue>
+        <fullName>Seminars/Overview Trainings</fullName>
+        <default>false</default>
+        <label>Seminars/Overview Trainings</label>
+    </customValue>
+    <customValue>
+        <fullName>Official Two-Day Training for Clinicians</fullName>
+        <default>false</default>
+        <label>Official Two-Day Training for Clinicians</label>
+    </customValue>
+    <customValue>
+        <fullName>Training of Trainers and Trainer Certification (in pilot)</fullName>
+        <default>false</default>
+        <label>Training of Trainers and Trainer Certification (in pilot)</label>
+    </customValue>
+    <customValue>
+        <fullName>8-Lesson Online Course</fullName>
+        <default>false</default>
+        <label>8-Lesson Online Course</label>
+    </customValue>
+    <customValue>
+        <fullName>8-Lesson Online Course in Spanish</fullName>
+        <default>false</default>
+        <label>8-Lesson Online Course in Spanish</label>
+    </customValue>
+    <masterLabel>Course</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
